@@ -39,9 +39,15 @@ if ($swift_product_id <= 0 || $swift_action_url === '') {
     return;
 }
 
+if (! apply_filters('swift_buy_now_should_render', true, $product, (string) $context)) {
+    return;
+}
+
 $swift_label = isset($button['label']) && (string) $button['label'] !== ''
     ? (string) $button['label']
     : __('Buy now', 'swift');
+
+$swift_label = (string) apply_filters('swift_buy_now_button_label', $swift_label, $product, (string) $context);
 
 $swift_style = isset($settings['button_style']) ? (string) $settings['button_style'] : 'theme';
 if (! in_array($swift_style, ['theme', 'solid', 'outline'], true)) {

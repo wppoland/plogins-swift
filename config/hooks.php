@@ -12,11 +12,13 @@
 declare(strict_types=1);
 
 use Swift\Admin\Settings;
+use Swift\Service\ElementorWidgets;
 use Swift\Service\SwiftService;
 
 defined('ABSPATH') || exit;
 
 return [
     SwiftService::class,
+    ElementorWidgets::class,
     ...(is_admin() ? [Settings::class] : []),
 ];

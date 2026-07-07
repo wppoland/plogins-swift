@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 0.2.1
+Stable tag: 1.0.1
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -112,6 +112,9 @@ Swift does not connect to, send data to, or load anything from any external serv
 All of Swift's work happens on your server. It reads and writes a single settings option (`swift_settings`) and a schema-version marker (`swift_db_version`), and creates no custom database tables and no product meta. The Buy Now button adds the chosen product to the visitor's own WooCommerce cart and redirects them within your site to your checkout or cart page; nothing about the product, the cart or the shopper leaves your installation.
 
 == Changelog ==
+
+= 1.0.1 =
+* First stable release.
 
 = 0.2.1 =
 * Renamed to Plogins Swift for WooCommerce for a more distinctive plugin name.

@@ -1,0 +1,91 @@
+# wp.org Stable Readme translation (es_ES)
+msgid ""
+msgstr ""
+"Project-Id-Version: swift Stable Readme\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: plogins-i18n\n"
+
+msgid "Requires Plugins: woocommerce"
+msgstr "Requiere complementos: woocommerce"
+
+msgid "Add a Buy Now / quick buy button that takes shoppers straight to checkout, skipping the cart."
+msgstr "Añade un botón Comprar ahora/compra rápida que lleve a los compradores directamente al proceso de pago, omitiendo el carrito."
+
+msgid "Swift adds a \"Buy Now\" quick buy button to your WooCommerce products. One click adds the product to the cart and sends the shopper straight to checkout, skipping the cart page so a purchase takes one click instead of three."
+msgstr "Swift añade un botón de compra rápida \"Comprar ahora\" a sus productos WooCommerce. Un clic añade el producto al carrito y envía al comprador directamente al proceso de pago, omitiendo la página del carrito, por lo que la compra requiere un clic en lugar de tres."
+
+msgid "The button can appear on single product pages, on shop and archive loops, or both. You choose the label, where it redirects (checkout or cart), and whether the cart is emptied first so the buyer checks out with only the product they clicked."
+msgstr "El botón puede aparecer en páginas de un solo producto, en bucles de tienda y archivo, o en ambos. Usted elige la etiqueta, adónde redirige (pagar o carrito) y si el carrito se vacía primero para que el comprador pague solo con el producto en el que hizo clic."
+
+msgid "Swift is stateless: it stores no per-product data and creates no database tables. It handles the button hooks, nonce verification, cart handling and redirect, and nothing else."
+msgstr "Swift no tiene estado: no almacena datos por producto y no crea tablas de bases de datos. Maneja los ganchos de botón, la verificación nonce, el manejo y redireccionamiento del carrito, y nada más."
+
+msgid "Swift is developed in the open. Source code, bug reports and feature requests live at https://github.com/wppoland/plogins-swift."
+msgstr "Swift se desarrolla al aire libre. El código fuente, los informes de errores y las solicitudes de funciones se encuentran disponibles en https://github.com/wppoland/plogins-swift."
+
+msgid "* <strong>Documentation</strong> - https://plogins.com/plogins-swift/docs/\n* <strong>Plugin page</strong> - https://plogins.com/plogins-swift/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-swift\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-swift/issues"
+msgstr "* <strong>Documentación</strong> - https://plogins.com/es/plogins-swift/docs/\n* <strong>Página de complementos</strong> - https://plogins.com/es/plogins-swift/\n* <strong>Código fuente</strong> - https://github.com/wppoland/plogins-swift\n* <strong>Informes de errores y solicitudes de funciones</strong> - https://github.com/wppoland/plogins-swift/issues"
+
+msgid "* Adds a \"Buy Now\" button that adds-to-cart and redirects in one click.\n* Works on single product pages and/or shop and archive loops.\n* Place the button <strong>before or after</strong> the native add-to-cart button on single product pages.\n* Drop the button anywhere with the `[swift_buy_now]` shortcode (optionally targeting a product by id).\n* Redirects to the <strong>checkout</strong> (skip the cart) or to the <strong>cart</strong>, whichever you prefer.\n* Optionally empties the cart first so checkout shows only the chosen product.\n* Optionally <strong>respects the quantity</strong> chosen on the product page (simple products).\n* Pick a button <strong>style</strong>, theme default, solid, or outline, with an optional accent colour.\n* Honours stock and purchasability, the button is hidden for out-of-stock or non-purchasable products, and is not shown for variable products in loops."
+msgstr "* Añade un botón \"Comprar ahora\" que añade al carrito y redirige con un solo clic.\n* Funciona en páginas de productos individuales y/o bucles de compras y archivos.\n* Coloque el botón <strong>antes o después</strong> del botón nativo de añadir al carrito en páginas de un solo producto.\n* Suelte el botón en cualquier lugar con el código abreviado `[swift_buy_now]` (opcionalmente, apuntando a un producto por identificación).\n* Redirige al <strong>checkout</strong> (saltar el carrito) o al <strong>carrito</strong>, como prefieras.\n* Opcionalmente, primero vacía el carrito para que el proceso de pago muestre solo el producto elegido.\n* Opcionalmente <strong>respeta la cantidad</strong> elegida en la ficha del producto (productos simples).\n* Elija un <strong>estilo</strong> de botón, tema predeterminado, sólido o contorno, con un color de acento opcional.\n* Respeta el stock y la capacidad de compra, el botón está oculto para productos agotados o no adquiribles, y no se muestra para productos variables en bucles."
+
+msgid "A simple WooCommerce settings page (WooCommerce → Swift Quick Buy) lets you:"
+msgstr "Una página de configuración simple de WooCommerce (WooCommerce → Swift Quick Buy) le permite:"
+
+msgid "* Enable or disable the Buy Now button.\n* Set the button label.\n* Choose where the button appears (single product, shop loops, or both).\n* Choose whether it sits before or after the add-to-cart button on single products.\n* Choose where it redirects (checkout or cart).\n* Choose whether to empty the cart before adding.\n* Choose whether to respect the quantity selected on the product page.\n* Pick a button style (theme, solid, outline) and an optional accent colour."
+msgstr "* Activa o desactiva el botón Comprar Ahora.\n* Establecer la etiqueta del botón.\n* Elija dónde aparece el botón (producto único, bucles de compras o ambos).\n* Elija si se ubica antes o después del botón Añadir al carrito en productos individuales.\n* Elija a dónde redirige (pagar o carrito).\n* Elija si desea vaciar el carrito antes de añadir.\n* Elija si desea respetar la cantidad seleccionada en la página del producto.\n* Elija un estilo de botón (tema, sólido, contorno) y un color de acento opcional."
+
+msgid "Use `[swift_buy_now]` to render the Buy Now button anywhere, inside a page, post or block. It targets the current product by default; add an id to target a specific simple product:"
+msgstr "Utilice `[swift_buy_now]` para representar el botón Comprar ahora en cualquier lugar, dentro de una página, publicación o bloque. Se dirige al producto actual de forma predeterminada; añade una identificación para apuntar a un producto simple específico:"
+
+msgid "1. Upload the plugin to `/wp-content/plugins/plogins-swift`, or install via Plugins → Add New.\n2. Activate it. WooCommerce must be active.\n3. Visit <strong>WooCommerce → Swift Quick Buy</strong> to configure the button label, placement and redirect target."
+msgstr "1. Cargue el complemento en `/wp-content/plugins/plogins-swift`, o instálelo a través de Complementos → Añadir nuevo.\n2. Actívalo. WooCommerce debe estar activo.\n3. Visita <strong>WooCommerce → Swift Quick Buy</strong> para configurar la etiqueta del botón, la ubicación y el destino de redireccionamiento."
+
+msgid "Yes. Swift requires an active WooCommerce installation."
+msgstr "Sí. Swift requiere una instalación activa de WooCommerce."
+
+msgid "On single product pages and/or shop and archive product loops; you choose which in the settings. On loops it is shown only for simple, in-stock, purchasable products."
+msgstr "En páginas de productos individuales y/o en bucles de productos de compra y archivo; Tú eliges cuál en la configuración. En los bucles se muestra solo para productos simples, en stock y adquiribles."
+
+msgid "Yes, if you set the redirect target to \"Checkout\". The product is added to the cart and the shopper is taken straight to the checkout page. You can also choose to redirect to the cart instead."
+msgstr "Sí, si configura el objetivo de redireccionamiento en \"Pagar\". El producto se añade al carrito y el comprador es llevado directamente a la página de pago. También puedes optar por redirigir al carrito."
+
+msgid "Yes. Swift can clear the cart before adding the selected product, so direct checkout contains only the item the shopper clicked."
+msgstr "Sí. Swift puede borrar el carrito antes de añadir el producto seleccionado, por lo que el pago directo contiene solo el artículo en el que hizo clic el comprador."
+
+msgid "Yes for simple products on single product pages, when the \"respect quantity\" setting is enabled."
+msgstr "Sí, para productos simples en páginas de un solo producto, cuando la configuración \"respetar cantidad\" está habilitada."
+
+msgid "No. Swift is stateless, it stores only its settings (one option) and creates no custom tables or product meta."
+msgstr "No. Swift no tiene estado, almacena solo tu configuración (una opción) y no crea tablas personalizadas ni metadatos de productos."
+
+msgid "The free version is designed for simple products. On shop loops the button is shown for simple products only, since a variation must be chosen first. Full Buy Now support for variable products (with an inline variation picker) is planned for Swift Pro."
+msgstr "La versión gratuita está diseñada para productos sencillos. En los bucles de la tienda, el botón se muestra solo para productos simples, ya que primero se debe elegir una variación. Está previsto que Swift Pro admita completamente Comprar ahora para productos variables (con un selector de variaciones en línea)."
+
+msgid "Yes. Use `[swift_buy_now]` for the current product or `[swift_buy_now id=\"123\"]` for a specific simple product."
+msgstr "Sí. Utilice `[swift_buy_now]` para el producto actual o `[swift_buy_now id=\"123\"]` para un producto simple específico."
+
+msgid "1. The Buy Now button on a single product page.\n2. The Swift Quick Buy settings screen."
+msgstr "1. El botón Comprar ahora en la página de un solo producto.\n2. La pantalla de configuración de Swift Quick Buy."
+
+msgid "Swift does not connect to, send data to, or load anything from any external service. There is no SDK, no API client, no remote font, CDN or analytics endpoint, and no phone-home or licensing check, its CSS and JavaScript are bundled with the plugin and enqueued from your own site."
+msgstr "Swift no se conecta, envía datos ni carga nada desde ningún servicio externo. No hay SDK, ni cliente API, ni fuente remota, CDN o punto final de análisis, ni verificación de licencia ni llamada telefónica a casa; su CSS y JavaScript están incluidos con el complemento y se ponen en cola desde tu propio sitio."
+
+msgid "All of Swift's work happens on your server. It reads and writes a single settings option (`swift_settings`) and a schema-version marker (`swift_db_version`), and creates no custom database tables and no product meta. The Buy Now button adds the chosen product to the visitor's own WooCommerce cart and redirects them within your site to your checkout or cart page; nothing about the product, the cart or the shopper leaves your installation."
+msgstr "Todo el trabajo de Swift ocurre en su servidor. Lee y escribe una única opción de configuración (`swift_settings`) y un marcador de versión de esquema (`swift_db_version`), y no crea tablas de bases de datos personalizadas ni metadatos de productos. El botón Comprar ahora añade el producto elegido al carrito de WooCommerce del visitante y lo redirige dentro de tu sitio a su página de pago o carrito; nada sobre el producto, el carrito o el comprador sale de su instalación."
+
+msgid "* First stable release."
+msgstr "* Primera versión estable."
+
+msgid "* Renamed to Plogins Swift for WooCommerce for a more distinctive plugin name."
+msgstr "* Renombrado a Plogins Swift para WooCommerce para obtener un nombre de complemento más distintivo."
+
+msgid "* New: `[swift_buy_now]` shortcode to place the Buy Now button anywhere (optionally targeting a product by id).\n* New: choose whether the button sits before or after the add-to-cart button on single product pages.\n* New: optionally respect the quantity chosen on the product page (simple products).\n* New: button style options, theme default, solid, or outline, with an optional accent colour.\n* New: \"Settings\" link in the plugins list row.\n* New: uninstall cleanup removes the plugin's options (multisite-aware).\n* Improved: redesigned settings page with grouped cards, a live button preview, a Live/Off status indicator, and accessible \"?\" help tooltips on every option.\n* Improved: modern, themeable storefront button styles (CSS custom properties, dark-mode support, reduced-motion-safe transitions) with no layout shift.\n* Improved: accessibility, keyboard-operable help tooltips, visible focus styles, and ARIA roles throughout the admin.\n* Improved: robustness, the button never renders in a broken state for unpurchasable products, and the accent colour is scoped to Swift's own buttons."
+msgstr "* Nuevo: código abreviado `[swift_buy_now]` para colocar el botón Comprar ahora en cualquier lugar (opcionalmente, apuntando a un producto por identificación).\n* Nuevo: elija si el botón se ubica antes o después del botón Añadir al carrito en páginas de un solo producto.\n* Nuevo: opcionalmente respetar la cantidad elegida en la página del producto (productos simples).\n* Nuevo: opciones de estilo de botón, tema predeterminado, sólido o contorno, con un color de acento opcional.\n* Nuevo: enlace \"Configuración\" en la fila de la lista de complementos.\n* Nuevo: la limpieza de desinstalación elimina las opciones del complemento (con reconocimiento de múltiples sitios).\n* Mejorado: página de configuración rediseñada con tarjetas agrupadas, una vista previa del botón en vivo, un indicador de estado En vivo/Apagado y \"?\" Información sobre herramientas de ayuda sobre cada opción.\n* Mejorado: estilos de botones de escaparate modernos y temáticos (propiedades personalizadas de CSS, compatibilidad con modo oscuro, transiciones seguras con movimiento reducido) sin cambios de diseño.\n* Mejorado: accesibilidad, información sobre herramientas de ayuda operable por teclado, estilos de enfoque visibles y roles ARIA en todo el administrador.\n* Mejorado: robustez, el botón nunca se muestra en un estado roto para productos que no se pueden comprar y el color de acento se limita a los propios botones de Swift."
+
+msgid "* Initial release: a Buy Now button for WooCommerce that adds to cart and redirects straight to checkout (or cart), with a settings page for the label, placement and redirect target."
+msgstr "* Lanzamiento inicial: un botón Comprar ahora para WooCommerce que se añade al carrito y redirige directamente al pago (o al carrito), con una página de configuración para la etiqueta, la ubicación y el destino de redireccionamiento."
+

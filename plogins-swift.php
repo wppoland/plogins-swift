@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Plogins Swift - Buy Now Button for WooCommerce
+ * Plugin Name:       Swift - Buy Now Button for WooCommerce
  * Plugin URI:        https://plogins.com/plogins-swift/
  * Description:        Add a Buy Now button that takes shoppers straight to checkout, skipping the cart.
  * Version:           1.0.3

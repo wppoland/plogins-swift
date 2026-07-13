@@ -229,30 +229,3 @@
 code {
 	font-size: 12px;
 }
-
-@media (prefers-color-scheme: dark) {
-	.swift-admin {
-		--swift-card-bg: #1e1e1e;
-		--swift-card-border: #3c434a;
-		--swift-muted: #bbc0c4;
-		--swift-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-	}
-
-	.swift-help {
-		background: #2c3338;
-	}
-
-	.swift-preview {
-		background: #181818;
-	}
-
-	.swift-status--on {
-		background: #133a22;
-		color: #6fd99a;
-	}
-
-	.swift-status--off {
-		background: #3a1717;
-		color: #e89090;
-	}
-}

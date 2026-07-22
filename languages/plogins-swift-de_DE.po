@@ -106,7 +106,7 @@ msgstr "Zeige die Schaltfläche „Jetzt kaufen“ in deinem Shop an."
 
 #: src/Admin/Settings.php:173
 msgid "Button label"
-msgstr "Button-Beschriftung"
+msgstr "Knopfbeschriftung"
 
 #: src/Admin/Settings.php:174
 msgid ""
@@ -294,7 +294,7 @@ msgstr ""
 
 #: src/Admin/Settings.php:299 src/Admin/Settings.php:304
 msgid "Button style"
-msgstr "Button-Stil"
+msgstr "Knopfstil"
 
 #: src/Admin/Settings.php:300
 msgid ""

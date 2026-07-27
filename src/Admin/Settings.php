@@ -21,12 +21,20 @@ final class Settings implements HasHooks
     private const OPTION = 'swift_settings';
     private const PAGE   = 'swift-settings';
 
+    private ?ProUpsell $proUpsell = null;
+
+    private function proUpsell(): ProUpsell
+    {
+        return $this->proUpsell ??= new ProUpsell();
+    }
+
     public function registerHooks(): void
     {
         add_action('admin_menu', [$this, 'addMenuPage']);
         add_action('admin_init', [$this, 'registerSettings']);
         add_action('admin_enqueue_scripts', [$this, 'enqueueAssets']);
         add_filter('plugin_action_links_' . plugin_basename(\Swift\PLUGIN_FILE), [$this, 'actionLinks']);
+        $this->proUpsell()->registerHooks();
     }
 
     /**
@@ -138,6 +146,8 @@ final class Settings implements HasHooks
                     </span>
                 <?php endif; ?>
             </h1>
+
+            <?php $this->proUpsell()->banner(); ?>
 
             <p class="swift-admin__intro">
                 <?php esc_html_e('Swift adds a "Buy now" button so shoppers can go straight to checkout and skip the cart, fewer clicks, more completed orders. Configure where it appears and how it behaves below; changes apply to your storefront as soon as you save.', 'plogins-swift'); ?>
@@ -362,6 +372,8 @@ final class Settings implements HasHooks
 
                 <?php submit_button(); ?>
             </form>
+
+            <?php $this->proUpsell()->cards(); ?>
         </div>
         <?php
     }

@@ -17,7 +17,7 @@ Swift dodaje przycisk szybkiego zakupu „Kup teraz” do Twoich produktów WooC
 
 Przycisk może pojawiać się na stronach pojedynczych produktów, w pętlach sklepu i archiwum albo w obu miejscach. Ty wybierasz etykietę, cel przekierowania (kasa lub koszyk) oraz to, czy koszyk ma być najpierw opróżniany, aby kupujący finalizował zakup tylko z produktem, który kliknął.
 
-Swift jest bezstanowy: nie przechowuje danych dla poszczególnych produktów i nie tworzy tabel w bazie danych. Obsługuje hooki przycisku, weryfikację nonce, obsługę koszyka i przekierowanie — i nic więcej.
+Swift jest bezstanowy: nie przechowuje danych dla poszczególnych produktów i nie tworzy tabel w bazie danych. Obsługuje hooki przycisku, weryfikację nonce, obsługę koszyka i przekierowanie, i nic więcej.
 
 Swift jest rozwijany otwarcie (open source). Kod źródłowy, zgłoszenia błędów i propozycje funkcji znajdziesz na https://github.com/wppoland/plogins-swift.
 
@@ -35,10 +35,10 @@ Swift jest rozwijany otwarcie (open source). Kod źródłowy, zgłoszenia błęd
 * Działa na stronach pojedynczych produktów i/lub w pętlach sklepu i archiwum.
 * Umieść przycisk <strong>przed lub po</strong> natywnym przycisku „dodaj do koszyka” na stronach pojedynczych produktów.
 * Umieść przycisk w dowolnym miejscu za pomocą shortcode’u `[swift_buy_now]` (opcjonalnie wskazując produkt po identyfikatorze).
-* Przekierowuje do <strong>kasy</strong> (z pominięciem koszyka) lub do <strong>koszyka</strong> — w zależności od preferencji.
+* Przekierowuje do <strong>kasy</strong> (z pominięciem koszyka) lub do <strong>koszyka</strong>, w zależności od preferencji.
 * Opcjonalnie najpierw opróżnia koszyk, więc w kasie widoczny jest tylko wybrany produkt.
 * Opcjonalnie <strong>uwzględnia ilość</strong> wybraną na stronie produktu (produkty proste).
-* Wybierz <strong>styl</strong> przycisku — domyślny motywu, jednolity lub obrysowany — z opcjonalnym kolorem akcentu.
+* Wybierz <strong>styl</strong> przycisku, domyślny motywu, jednolity lub obrysowany, z opcjonalnym kolorem akcentu.
 * Respektuje stan magazynowy i możliwość zakupu; przycisk jest ukryty dla produktów niedostępnych lub niemożliwych do kupienia i nie pojawia się dla produktów zmiennych w pętlach.
 
 = Settings =
@@ -56,7 +56,7 @@ Prosta strona ustawień WooCommerce (WooCommerce → Swift Quick Buy) pozwala:
 
 = Shortcode =
 
-Użyj `[swift_buy_now]`, aby wyświetlić przycisk Kup teraz w dowolnym miejscu — na stronie, we wpisie lub w bloku. Domyślnie wskazuje bieżący produkt; dodaj identyfikator, aby wskazać konkretny produkt prosty:
+Użyj `[swift_buy_now]`, aby wyświetlić przycisk Kup teraz w dowolnym miejscu, na stronie, we wpisie lub w bloku. Domyślnie wskazuje bieżący produkt; dodaj identyfikator, aby wskazać konkretny produkt prosty:
 
 `[swift_buy_now id="123"]`
 
@@ -90,7 +90,7 @@ Tak, dla produktów prostych na stronach pojedynczych produktów, gdy włączone
 
 = Does it create database tables? =
 
-Nie. Swift jest bezstanowy — przechowuje tylko swoje ustawienia (jedna opcja) i nie tworzy niestandardowych tabel ani meta produktu.
+Nie. Swift jest bezstanowy, przechowuje tylko swoje ustawienia (jedna opcja) i nie tworzy niestandardowych tabel ani meta produktu.
 
 = Does it work with variable products? =
 
@@ -107,7 +107,7 @@ Tak. Użyj `[swift_buy_now]` dla bieżącego produktu lub `[swift_buy_now id="12
 
 == External Services ==
 
-Swift nie łączy się, nie wysyła danych ani niczego nie ładuje z żadnej usługi zewnętrznej. Nie ma pakietu SDK, klienta API, zdalnej czcionki, CDN ani punktu końcowego analityki, nie ma też połączeń zwrotnych (phone-home) ani sprawdzania licencji — jego CSS i JavaScript są dołączone do wtyczki i ładowane z Twojej własnej witryny.
+Swift nie łączy się, nie wysyła danych ani niczego nie ładuje z żadnej usługi zewnętrznej. Nie ma pakietu SDK, klienta API, zdalnej czcionki, CDN ani punktu końcowego analityki, nie ma też połączeń zwrotnych (phone-home) ani sprawdzania licencji, jego CSS i JavaScript są dołączone do wtyczki i ładowane z Twojej własnej witryny.
 
 Cała praca Swifta odbywa się na Twoim serwerze. Odczytuje i zapisuje jedną opcję ustawień (`swift_settings`) oraz znacznik wersji schematu (`swift_db_version`) i nie tworzy niestandardowych tabel bazy danych ani meta produktu. Przycisk Kup teraz dodaje wybrany produkt do koszyka WooCommerce odwiedzającego i przekierowuje go w obrębie Twojej witryny do strony kasy lub koszyka; żadne dane o produkcie, koszyku ani kupującym nie opuszczają Twojej instalacji.
 
@@ -130,13 +130,13 @@ Plogins Swift zawiera polskie, niemieckie i hiszpańskie tłumaczenia interfejsu
 * Nowość: shortcode `[swift_buy_now]` umożliwiający umieszczenie przycisku Kup teraz w dowolnym miejscu (opcjonalnie wskazanie produktu po identyfikatorze).
 * Nowość: wybór, czy przycisk znajduje się przed czy po przycisku „dodaj do koszyka” na stronach pojedynczych produktów.
 * Nowość: opcjonalne uwzględnianie ilości wybranej na stronie produktu (produkty proste).
-* Nowość: opcje stylu przycisku — domyślny motywu, jednolity lub obrysowany — z opcjonalnym kolorem akcentu.
+* Nowość: opcje stylu przycisku, domyślny motywu, jednolity lub obrysowany, z opcjonalnym kolorem akcentu.
 * Nowość: link „Ustawienia” w wierszu listy wtyczek.
 * Nowość: czyszczenie przy odinstalowaniu usuwa opcje wtyczki (z obsługą multisite).
 * Ulepszono: przeprojektowana strona ustawień z pogrupowanymi kartami, podglądem przycisku na żywo, wskaźnikiem stanu Na żywo/Wył. oraz dostępnymi podpowiedziami „?” przy każdej opcji.
 * Ulepszono: nowoczesne style przycisków dopasowane do motywu w sklepie (niestandardowe właściwości CSS, obsługa trybu ciemnego, przejścia bezpieczne przy ograniczonym ruchu) bez przeskoków układu.
-* Ulepszono: dostępność — podpowiedzi obsługiwane z klawiatury, widoczne style fokusu i role ARIA w całym panelu administracyjnym.
-* Ulepszono: niezawodność — przycisk nigdy nie renderuje się w błędnym stanie dla produktów niemożliwych do kupienia, a kolor akcentu jest ograniczony do własnych przycisków Swifta.
+* Ulepszono: dostępność, podpowiedzi obsługiwane z klawiatury, widoczne style fokusu i role ARIA w całym panelu administracyjnym.
+* Ulepszono: niezawodność, przycisk nigdy nie renderuje się w błędnym stanie dla produktów niemożliwych do kupienia, a kolor akcentu jest ograniczony do własnych przycisków Swifta.
 
 = 0.1.0 =
 * Pierwsza wersja: przycisk Kup teraz dla WooCommerce, który dodaje do koszyka i przekierowuje bezpośrednio do kasy (lub koszyka), ze stroną ustawień etykiety, położenia i celu przekierowania.

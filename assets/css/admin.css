@@ -1,5 +1,5 @@
 /**
- * Swift — admin settings page styles.
+ * Swift, admin settings page styles.
  *
  * A light, modern layer on top of WordPress's core admin styles. We keep WP's
  * form-table semantics (so the page feels native and stays accessible) but wrap
@@ -14,7 +14,7 @@
 	--swift-card-bg: #fff;
 	--swift-card-border: #dcdcde;
 	--swift-card-radius: 8px;
-	/* Velocity violet — Swift's storefront accent, carried into the admin so the
+	/* Velocity violet, Swift's storefront accent, carried into the admin so the
 	   live preview, help affordances and focus rings match the button merchants
 	   actually ship. Computed contrast on the wp-admin surface:
 	   #5b3df5 vs #fff = 6.12:1, vs #f0f0f1 = 5.37:1 (AA text 4.5:1 + UI 3:1);
@@ -105,7 +105,7 @@
 	font-weight: 600;
 }
 
-/* The "?" help affordance — a small, keyboard-focusable button. */
+/* The "?" help affordance, a small, keyboard-focusable button. */
 .swift-help {
 	all: unset;
 	display: inline-flex;
@@ -231,7 +231,7 @@ code {
 }
 
 /* ------------------------------------------------------------------ *
- * PRO upsell — dismissible banner + "what PRO adds" locked cards.
+ * PRO upsell, dismissible banner + "what PRO adds" locked cards.
  * Pure advertising (no disabled inputs), scoped to .swift-admin. Content
  * comes from config/pro-upsell.php (generated from the plogins.com registry).
  * ------------------------------------------------------------------ */

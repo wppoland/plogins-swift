@@ -19,8 +19,8 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: plogins-swift.php
-msgid "Swift – Quick Buy for WooCommerce"
-msgstr "Swift – szybki zakup dla WooCommerce"
+msgid "Swift, Quick Buy for WooCommerce"
+msgstr "Swift, szybki zakup dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: plogins-swift.php
@@ -51,8 +51,8 @@ msgid "Settings"
 msgstr "Ustawienia"
 
 #: src/Admin/Settings.php:83
-msgid "Swift – Quick Buy"
-msgstr "Swift – szybki zakup"
+msgid "Swift, Quick Buy"
+msgstr "Swift, szybki zakup"
 
 #: src/Admin/Settings.php:84
 msgid "Swift Quick Buy"
@@ -342,8 +342,8 @@ msgid "Sorry, this product could not be added to your cart."
 msgstr "Przepraszamy, nie udało się dodać tego produktu do koszyka."
 
 #: swift.php:47
-msgid "Swift – Quick Buy for WooCommerce requires WooCommerce to be active."
-msgstr "Swift – szybki zakup dla WooCommerce wymaga aktywnego WooCommerce."
+msgid "Swift, Quick Buy for WooCommerce requires WooCommerce to be active."
+msgstr "Swift, szybki zakup dla WooCommerce wymaga aktywnego WooCommerce."
 
 #: src/Admin/ProUpsell.php:78
 msgid "Wkrótce"

@@ -88,7 +88,7 @@ final class Settings implements HasHooks
     {
         add_submenu_page(
             'woocommerce',
-            __('Swift – Quick Buy', 'plogins-swift'),
+            __('Swift, Quick Buy', 'plogins-swift'),
             __('Swift Quick Buy', 'plogins-swift'),
             'manage_woocommerce',
             self::PAGE,
@@ -153,7 +153,6 @@ final class Settings implements HasHooks
                 <?php esc_html_e('Swift adds a "Buy now" button so shoppers can go straight to checkout and skip the cart, fewer clicks, more completed orders. Configure where it appears and how it behaves below; changes apply to your storefront as soon as you save.', 'plogins-swift'); ?>
             </p>
 
-            <div class="swift-cols">
             <form method="post" action="options.php">
                 <?php settings_fields(self::PAGE); ?>
 
@@ -374,9 +373,6 @@ final class Settings implements HasHooks
                 <?php submit_button(); ?>
             </form>
 
-                <?php $this->proUpsell()->aside(); ?>
-            </div>
-
             <?php $this->proUpsell()->cards(); ?>
         </div>
         <?php
@@ -388,7 +384,7 @@ final class Settings implements HasHooks
      * The button is keyboard-focusable and points at the tip via
      * `aria-describedby`. The admin script promotes the tip to a native popover
      * where supported and falls back to inline help (still announced via
-     * aria-describedby) where it is not — so the help is available to everyone
+     * aria-describedby) where it is not, so the help is available to everyone
      * regardless of JS or browser support.
      */
     private function help(string $key, string $text): void

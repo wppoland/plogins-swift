@@ -88,7 +88,7 @@ final class Settings implements HasHooks
     {
         add_submenu_page(
             'woocommerce',
-            __('Swift – Quick Buy', 'plogins-swift'),
+            __('Swift, Quick Buy', 'plogins-swift'),
             __('Swift Quick Buy', 'plogins-swift'),
             'manage_woocommerce',
             self::PAGE,
@@ -384,7 +384,7 @@ final class Settings implements HasHooks
      * The button is keyboard-focusable and points at the tip via
      * `aria-describedby`. The admin script promotes the tip to a native popover
      * where supported and falls back to inline help (still announced via
-     * aria-describedby) where it is not — so the help is available to everyone
+     * aria-describedby) where it is not, so the help is available to everyone
      * regardless of JS or browser support.
      */
     private function help(string $key, string $text): void

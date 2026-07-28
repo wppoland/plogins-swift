@@ -1,11 +1,11 @@
 /**
- * Swift — respect the on-page quantity.
+ * Swift, respect the on-page quantity.
  *
  * When the "respect quantity" option is on, the single-product Buy Now form
  * carries a hidden `quantity` field marked `data-swift-quantity`. On submit we
  * copy the value from WooCommerce's own quantity input (`input.qty` inside the
  * cart form) into that hidden field, so the buyer checks out with the quantity
- * they chose. Simple products only — variable products are a Swift Pro feature.
+ * they chose. Simple products only, variable products are a Swift Pro feature.
  *
  * No dependencies; plain DOM, no build step.
  */

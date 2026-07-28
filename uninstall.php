@@ -1,6 +1,6 @@
 <?php
 /**
- * Uninstall cleanup for Swift – Quick Buy for WooCommerce.
+ * Uninstall cleanup for Swift, Quick Buy for WooCommerce.
  *
  * Runs when the plugin is deleted from the WordPress admin. Swift is stateless
  * (no custom tables, no product meta); it stores only its settings option and a

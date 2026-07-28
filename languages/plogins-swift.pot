@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Swift – Quick Buy for WooCommerce 0.2.0\n"
+"Project-Id-Version: Swift, Quick Buy for WooCommerce 0.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/swift\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: plogins-swift.php
-msgid "Swift – Quick Buy for WooCommerce"
+msgid "Swift, Quick Buy for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -46,7 +46,7 @@ msgid "Settings"
 msgstr ""
 
 #: src/Admin/Settings.php:83
-msgid "Swift – Quick Buy"
+msgid "Swift, Quick Buy"
 msgstr ""
 
 #: src/Admin/Settings.php:84
@@ -294,7 +294,7 @@ msgid "Sorry, this product could not be added to your cart."
 msgstr ""
 
 #: swift.php:47
-msgid "Swift – Quick Buy for WooCommerce requires WooCommerce to be active."
+msgid "Swift, Quick Buy for WooCommerce requires WooCommerce to be active."
 msgstr ""
 
 #: src/Admin/ProUpsell.php:78

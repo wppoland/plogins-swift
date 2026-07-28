@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Swift – Quick Buy for WooCommerce 0.2.0\n"
+"Project-Id-Version: Swift, Quick Buy for WooCommerce 0.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/swift\n"
 "POT-Creation-Date: 2026-06-16T20:25:23+00:00\n"
 "PO-Revision-Date: 2026-06-16T20:25:23+00:00\n"
@@ -18,8 +18,8 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: plogins-swift.php
-msgid "Swift – Quick Buy for WooCommerce"
-msgstr "Swift – Schnellkauf für WooCommerce"
+msgid "Swift, Quick Buy for WooCommerce"
+msgstr "Swift, Schnellkauf für WooCommerce"
 
 #. Plugin URI of the plugin
 #: plogins-swift.php
@@ -50,8 +50,8 @@ msgid "Settings"
 msgstr "Einstellungen"
 
 #: src/Admin/Settings.php:83
-msgid "Swift – Quick Buy"
-msgstr "Swift – Schnellkauf"
+msgid "Swift, Quick Buy"
+msgstr "Swift, Schnellkauf"
 
 #: src/Admin/Settings.php:84
 msgid "Swift Quick Buy"
@@ -351,8 +351,8 @@ msgstr ""
 "Leider konnte dieses Produkt nicht zu deinem Warenkorb hinzugefügt werden."
 
 #: swift.php:47
-msgid "Swift – Quick Buy for WooCommerce requires WooCommerce to be active."
-msgstr "Für Swift – Quick Buy für WooCommerce muss WooCommerce aktiv sein."
+msgid "Swift, Quick Buy for WooCommerce requires WooCommerce to be active."
+msgstr "Für Swift, Quick Buy für WooCommerce muss WooCommerce aktiv sein."
 
 #: src/Admin/ProUpsell.php:78
 msgid "Wkrótce"

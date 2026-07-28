@@ -17,7 +17,7 @@ Swift fügt deinen WooCommerce-Produkten einen Schnellkauf-Button „Jetzt kaufe
 
 Der Button kann auf einzelnen Produktseiten, in Shop- und Archivschleifen oder auf beidem erscheinen. Du wählst die Bezeichnung, wohin weitergeleitet wird (zur Kasse oder in den Warenkorb) und ob der Warenkorb zuerst geleert wird, sodass der Käufer nur mit dem Produkt auscheckt, auf das er geklickt hat.
 
-Swift ist zustandslos: Es speichert keine Produktdaten und erstellt keine Datenbanktabellen. Es kümmert sich um die Button-Hooks, die Nonce-Verifizierung, die Warenkorb-Behandlung und die Weiterleitung – und sonst nichts.
+Swift ist zustandslos: Es speichert keine Produktdaten und erstellt keine Datenbanktabellen. Es kümmert sich um die Button-Hooks, die Nonce-Verifizierung, die Warenkorb-Behandlung und die Weiterleitung, und sonst nichts.
 
 Swift wird quelloffen entwickelt. Quellcode, Fehlerberichte und Funktionswünsche findest du unter https://github.com/wppoland/plogins-swift.
 
@@ -25,8 +25,8 @@ Swift wird quelloffen entwickelt. Quellcode, Fehlerberichte und Funktionswünsch
 
 * <strong>Dokumentation</strong> - https://plogins.com/de/plogins-swift/docs/
 * <strong>Plugin-Seite</strong> - https://plogins.com/de/plogins-swift/
-* <strong>Quellcode</strong> – https://github.com/wppoland/plogins-swift
-* <strong>Fehlerberichte und Funktionswünsche</strong> – https://github.com/wppoland/plogins-swift/issues
+* <strong>Quellcode</strong>, https://github.com/wppoland/plogins-swift
+* <strong>Fehlerberichte und Funktionswünsche</strong>, https://github.com/wppoland/plogins-swift/issues
 
 
 = What it does =
@@ -38,7 +38,7 @@ Swift wird quelloffen entwickelt. Quellcode, Fehlerberichte und Funktionswünsch
 * Leitet zur <strong>Kasse</strong> (Warenkorb überspringen) oder zum <strong>Warenkorb</strong> weiter, je nachdem, was du bevorzugst.
 * Leert optional zuerst den Warenkorb, sodass an der Kasse nur das ausgewählte Produkt angezeigt wird.
 * Berücksichtigt optional die auf der Produktseite <strong>ausgewählte Menge</strong> (einfache Produkte).
-* Wähle einen <strong>Stil</strong> für den Button – Theme-Standard, Vollfläche oder Umriss – optional mit einer Akzentfarbe.
+* Wähle einen <strong>Stil</strong> für den Button, Theme-Standard, Vollfläche oder Umriss, optional mit einer Akzentfarbe.
 * Berücksichtigt Lagerbestand und Kaufbarkeit: Der Button ist für nicht vorrätige oder nicht käufliche Produkte ausgeblendet und wird für variable Produkte in Schleifen nicht angezeigt.
 
 = Settings =
@@ -56,7 +56,7 @@ Eine einfache WooCommerce-Einstellungsseite (WooCommerce → Swift Quick Buy) er
 
 = Shortcode =
 
-Verwende `[swift_buy_now]`, um den Button „Jetzt kaufen“ an einer beliebigen Stelle darzustellen – innerhalb einer Seite, eines Beitrags oder eines Blocks. Standardmäßig zielt er auf das aktuelle Produkt; füge eine ID hinzu, um ein bestimmtes einfaches Produkt anzusprechen:
+Verwende `[swift_buy_now]`, um den Button „Jetzt kaufen“ an einer beliebigen Stelle darzustellen, innerhalb einer Seite, eines Beitrags oder eines Blocks. Standardmäßig zielt er auf das aktuelle Produkt; füge eine ID hinzu, um ein bestimmtes einfaches Produkt anzusprechen:
 
 `[swift_buy_now id="123"]`
 
@@ -107,7 +107,7 @@ Ja. Verwende `[swift_buy_now]` für das aktuelle Produkt oder `[swift_buy_now id
 
 == External Services ==
 
-Swift stellt keine Verbindung zu externen Diensten her, sendet keine Daten an sie und lädt nichts von ihnen. Es gibt kein SDK, keinen API-Client, keine externe Schriftart, kein CDN und keinen Analyse-Endpunkt und keine Phone-Home- oder Lizenzprüfung – sein CSS und JavaScript sind im Plugin gebündelt und werden von deiner eigenen Website geladen.
+Swift stellt keine Verbindung zu externen Diensten her, sendet keine Daten an sie und lädt nichts von ihnen. Es gibt kein SDK, keinen API-Client, keine externe Schriftart, kein CDN und keinen Analyse-Endpunkt und keine Phone-Home- oder Lizenzprüfung, sein CSS und JavaScript sind im Plugin gebündelt und werden von deiner eigenen Website geladen.
 
 Die gesamte Arbeit von Swift findet auf deinem Server statt. Es liest und schreibt eine einzige Einstellungs-Option (`swift_settings`) und eine Schema-Versionsmarkierung (`swift_db_version`) und erstellt keine benutzerdefinierten Datenbanktabellen und keine Produkt-Meta. Der Button „Jetzt kaufen“ legt das ausgewählte Produkt in den eigenen WooCommerce-Warenkorb der besuchenden Person und leitet sie innerhalb deiner Website zu deiner Kassen- oder Warenkorbseite weiter; nichts über das Produkt, den Warenkorb oder die Käuferschaft verlässt deine Installation.
 
@@ -130,13 +130,13 @@ Plogins Swift enthält deutsche, polnische und spanische Übersetzungen für die
 * Neu: Shortcode `[swift_buy_now]`, um den Button „Jetzt kaufen“ an beliebiger Stelle zu platzieren (optional mit Ausrichtung auf ein Produkt per ID).
 * Neu: Wähle, ob der Button auf einzelnen Produktseiten vor oder nach dem Button „In den Warenkorb“ sitzt.
 * Neu: optional die auf der Produktseite gewählte Menge berücksichtigen (einfache Produkte).
-* Neu: Button-Stil-Optionen – Theme-Standard, Vollfläche oder Umriss – mit optionaler Akzentfarbe.
+* Neu: Button-Stil-Optionen, Theme-Standard, Vollfläche oder Umriss, mit optionaler Akzentfarbe.
 * Neu: Link „Einstellungen“ in der Plugin-Listenzeile.
 * Neu: Die Deinstallations-Bereinigung entfernt die Optionen des Plugins (Multisite-fähig).
 * Verbessert: neu gestaltete Einstellungsseite mit gruppierten Karten, einer Live-Vorschau des Buttons, einer Live/Aus-Statusanzeige und barrierefreien „?“-Hilfe-Tooltips zu jeder Option.
 * Verbessert: moderne, an das Theme anpassbare Button-Stile im Shop (benutzerdefinierte CSS-Eigenschaften, Dark-Mode-Unterstützung, auf reduzierte Bewegung Rücksicht nehmende Übergänge) ohne Layout-Verschiebung.
-* Verbessert: Barrierefreiheit – per Tastatur bedienbare Hilfe-Tooltips, sichtbare Fokus-Stile und ARIA-Rollen im gesamten Adminbereich.
-* Verbessert: Robustheit – der Button wird bei nicht käuflichen Produkten nie in einem defekten Zustand dargestellt und die Akzentfarbe ist auf Swifts eigene Buttons beschränkt.
+* Verbessert: Barrierefreiheit, per Tastatur bedienbare Hilfe-Tooltips, sichtbare Fokus-Stile und ARIA-Rollen im gesamten Adminbereich.
+* Verbessert: Robustheit, der Button wird bei nicht käuflichen Produkten nie in einem defekten Zustand dargestellt und die Akzentfarbe ist auf Swifts eigene Buttons beschränkt.
 
 = 0.1.0 =
 * Erstveröffentlichung: ein Button „Jetzt kaufen“ für WooCommerce, der zum Warenkorb hinzufügt und direkt zur Kasse (oder zum Warenkorb) weiterleitet, mit einer Einstellungsseite für Label, Platzierung und Weiterleitungsziel.

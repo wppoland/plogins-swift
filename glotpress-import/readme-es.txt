@@ -38,7 +38,7 @@ Swift se desarrolla de forma abierta (código abierto). El código fuente, los i
 * Redirige al <strong>pago</strong> (saltándose el carrito) o al <strong>carrito</strong>, lo que prefieras.
 * Opcionalmente vacía primero el carrito para que en el pago aparezca solo el producto elegido.
 * Opcionalmente <strong>respeta la cantidad</strong> elegida en la página del producto (productos simples).
-* Elige un <strong>estilo</strong> de botón —predeterminado del tema, sólido o contorno— con un color de acento opcional.
+* Elige un <strong>estilo</strong> de botón, predeterminado del tema, sólido o contorno, con un color de acento opcional.
 * Respeta el stock y la posibilidad de compra: el botón se oculta para productos agotados o no comprables y no se muestra para productos variables en los bucles.
 
 = Settings =
@@ -130,7 +130,7 @@ Plogins Swift incluye traducciones al polaco, alemán y español para la interfa
 * Nuevo: shortcode `[swift_buy_now]` para colocar el botón Comprar ahora en cualquier lugar (opcionalmente, apuntando a un producto por ID).
 * Nuevo: elige si el botón se ubica antes o después del botón Añadir al carrito en las páginas de producto individuales.
 * Nuevo: opcionalmente respetar la cantidad elegida en la página del producto (productos simples).
-* Nuevo: opciones de estilo de botón —predeterminado del tema, sólido o contorno— con un color de acento opcional.
+* Nuevo: opciones de estilo de botón, predeterminado del tema, sólido o contorno, con un color de acento opcional.
 * Nuevo: enlace «Ajustes» en la fila de la lista de plugins.
 * Nuevo: la limpieza de desinstalación elimina las opciones del plugin (compatible con multisitio).
 * Mejorado: página de ajustes rediseñada con tarjetas agrupadas, una vista previa del botón en directo, un indicador de estado Activo/Apagado y tooltips de ayuda «?» accesibles en cada opción.

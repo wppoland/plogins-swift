@@ -1,13 +1,13 @@
 /**
- * Swift — Buy Now button styles (storefront).
+ * Swift, Buy Now button styles (storefront).
  *
  * Self-contained, CWV-native styling so the Buy Now form sits cleanly next to
  * the native add-to-cart button (single product) and within the loop item.
  *
- * The moment: the press. Buy Now is the decisive instant-buy — one tap that
+ * The moment: the press. Buy Now is the decisive instant-buy, one tap that
  * launches the shopper straight past the cart to checkout. So the button does
  * not merely "click": on press it *thrusts forward*, label and all, with a
- * single light streak sweeping in the direction of travel — a launch cue, not a
+ * single light streak sweeping in the direction of travel, a launch cue, not a
  * generic depress. The accent is "velocity violet", a charged forward hue that
  * is deliberately not default-blue and reads as motion rather than chrome.
  *
@@ -23,7 +23,7 @@
  */
 
 .swift-buy-now {
-	/* Velocity violet — Swift's forward-launch accent. Override via the admin
+	/* Velocity violet, Swift's forward-launch accent. Override via the admin
 	   "Accent colour" option or a child theme; falls back to the charged hue. */
 	--swift-accent: var(--swift-accent-color, #5b3df5);
 	--swift-accent-contrast: var(--swift-accent-contrast-color, #fff);
@@ -46,7 +46,7 @@
 
 .swift-buy-now-button {
 	/* Reserve space so the button never jumps once the theme's button styles
-	   load — keeps Cumulative Layout Shift at zero. */
+	   load, keeps Cumulative Layout Shift at zero. */
 	position: relative;
 	overflow: hidden;
 	inline-size: 100%;
@@ -74,7 +74,7 @@
 }
 
 /* The thrust streak: a single light band, parked off the leading edge, that
-   sweeps across in the direction of travel on press — the launch toward
+   sweeps across in the direction of travel on press, the launch toward
    checkout. Presentation-only; gated entirely behind reduced-motion below. */
 .swift-buy-now-button__thrust {
 	position: absolute;
@@ -115,7 +115,7 @@
 	);
 }
 
-/* Interaction feedback — only the self-styled variants, so we never fight the
+/* Interaction feedback, only the self-styled variants, so we never fight the
    theme's own button states on the `theme` style. */
 @media (prefers-reduced-motion: no-preference) {
 	.swift-buy-now-button--solid,
@@ -139,7 +139,7 @@
 		box-shadow: 0 4px 14px -5px color-mix(in srgb, var(--swift-accent) 60%, transparent);
 	}
 
-	/* THE MOMENT — the press launches forward. The whole button leans into the
+	/* THE MOMENT, the press launches forward. The whole button leans into the
 	   direction of travel, the label thrusts ahead of it, and the streak sweeps
 	   across once: a one-tap launch toward checkout, not a generic depress. */
 	.swift-buy-now-button--solid:active,

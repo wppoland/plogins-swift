@@ -1,5 +1,5 @@
 /**
- * Swift — admin settings enhancements.
+ * Swift, admin settings enhancements.
  *
  * Two small, dependency-free enhancements (no jQuery, no build step):
  *

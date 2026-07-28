@@ -17,7 +17,7 @@ defined('ABSPATH') || exit;
  * feature is enabled, resolve the merchant settings, and render the button
  * template. The button hooks, nonce, cart handling and redirect are handled by
  * {@see DirectCheckoutEngine}; this class supplies localisation, option storage
- * and the button markup. Stateless — no DB.
+ * and the button markup. Stateless, no DB.
  *
  * On top of that it adds presentation controls: single-product placement
  * (before/after the add-to-cart button), a `[swift_buy_now]` shortcode, button

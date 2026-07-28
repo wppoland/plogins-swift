@@ -92,8 +92,8 @@ msgstr "Habilitar Comprar ahora"
 
 #: src/Admin/Settings.php:156
 msgid ""
-"The master switch. When off, Swift adds no button, scripts or styles to your"
-" storefront at all, a clean, zero-footprint disable."
+"The master switch. When off, Swift adds no button, scripts or styles to your "
+"storefront at all, a clean, zero-footprint disable."
 msgstr ""
 "El interruptor maestro. Cuando está desactivado, Swift no añade ningún "
 "botón, secuencias de comandos o estilos a su escaparate, una desactivación "
@@ -170,8 +170,8 @@ msgid ""
 "variation."
 msgstr ""
 "Cuadrículas de productos en las páginas de tienda y categorías. Permite a "
-"los compradores comprar sin abrir cada producto. Sólo productos simples; Los"
-" productos variables necesitan una variación elegida."
+"los compradores comprar sin abrir cada producto. Sólo productos simples; Los "
+"productos variables necesitan una variación elegida."
 
 #: src/Admin/Settings.php:208 src/Admin/Settings.php:213
 msgid "Position on single product"
@@ -179,8 +179,8 @@ msgstr "Posición en un solo producto"
 
 #: src/Admin/Settings.php:209
 msgid ""
-"Whether Swift's button sits above or below WooCommerce's own \"Add to cart\""
-" button on the product page."
+"Whether Swift's button sits above or below WooCommerce's own \"Add to cart\" "
+"button on the product page."
 msgstr ""
 "Si el botón de Swift se encuentra encima o debajo del botón \"Añadir al "
 "carrito\" de WooCommerce en la página del producto."
@@ -246,11 +246,11 @@ msgstr ""
 #: src/Admin/Settings.php:285
 msgid ""
 "Recommended for a true \"buy just this\" flow. If a shopper already has "
-"items in their cart, this removes them so the Buy now purchase stands alone."
-" Turn off to add to the existing cart instead."
+"items in their cart, this removes them so the Buy now purchase stands alone. "
+"Turn off to add to the existing cart instead."
 msgstr ""
-"Recomendado para un verdadero flujo de \"compra sólo esto\". Si un comprador"
-" ya tiene artículos en su carrito, esto los elimina para que la compra "
+"Recomendado para un verdadero flujo de \"compra sólo esto\". Si un comprador "
+"ya tiene artículos en su carrito, esto los elimina para que la compra "
 "Comprar ahora sea independiente. Desactívelo para agregarlo al carrito "
 "existente."
 
@@ -269,8 +269,8 @@ msgstr ""
 #: src/Admin/Settings.php:286
 msgid ""
 "When on, the quantity the shopper picks in the product's quantity box is "
-"used for the Buy now purchase. When off, exactly one unit is bought. Single,"
-" simple products only."
+"used for the Buy now purchase. When off, exactly one unit is bought. Single, "
+"simple products only."
 msgstr ""
 "Cuando está activado, la cantidad que el comprador elige en el cuadro de "
 "cantidad del producto se utiliza para la compra Comprar ahora. Cuando está "
@@ -281,8 +281,7 @@ msgid "Appearance"
 msgstr "Apariencia"
 
 #: src/Admin/Settings.php:294
-msgid ""
-"How the button looks. Use the live preview above to check your choices."
+msgid "How the button looks. Use the live preview above to check your choices."
 msgstr ""
 "Cómo se ve el botón. Utilice la vista previa en vivo de arriba para "
 "verificar sus opciones."
@@ -298,8 +297,8 @@ msgid ""
 "out from the standard add-to-cart button."
 msgstr ""
 "\"Tema predeterminado\" hereda el aspecto del botón de su tema (el más "
-"seguro, se integra). \"Sólido\" y \"Contorno\" utilizan el color de acento a"
-" continuación para que el botón se destaque del botón estándar de añadir al "
+"seguro, se integra). \"Sólido\" y \"Contorno\" utilizan el color de acento a "
+"continuación para que el botón se destaque del botón estándar de añadir al "
 "carrito."
 
 #: src/Admin/Settings.php:313
@@ -349,3 +348,55 @@ msgstr "Lo sentimos, este producto no se pudo añadir a su carrito."
 msgid "Swift – Quick Buy for WooCommerce requires WooCommerce to be active."
 msgstr ""
 "Swift: Quick Buy para WooCommerce requiere que WooCommerce esté activo."
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Próximamente"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Próximamente"
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr "desde %d zł/año"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "desde %1$s%2$d/año"
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr "Mejora a PRO"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr "Permiso denegado."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr "Haz más con %s"
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:183
+#, php-format
+msgid "What %s adds"
+msgstr "Lo que añade %s"

@@ -26,7 +26,9 @@ msgstr ""
 
 #. Description of the plugin
 #: plogins-swift.php
-msgid "Add a Buy Now button that takes shoppers straight to checkout, skipping the cart."
+msgid ""
+"Add a Buy Now button that takes shoppers straight to checkout, skipping the "
+"cart."
 msgstr ""
 
 #. Author of the plugin
@@ -51,10 +53,8 @@ msgstr ""
 msgid "Swift Quick Buy"
 msgstr ""
 
-#: src/Admin/Settings.php:123
-#: src/Admin/Settings.php:462
-#: src/Service/SwiftService.php:49
-#: templates/buy-now-button.php:43
+#: src/Admin/Settings.php:123 src/Admin/Settings.php:462
+#: src/Service/SwiftService.php:49 templates/buy-now-button.php:43
 msgid "Buy now"
 msgstr ""
 
@@ -67,7 +67,11 @@ msgid "Off"
 msgstr ""
 
 #: src/Admin/Settings.php:143
-msgid "Swift adds a \"Buy now\" button so shoppers can go straight to checkout and skip the cart, fewer clicks, more completed orders. Configure where it appears and how it behaves below; changes apply to your storefront as soon as you save."
+msgid ""
+"Swift adds a \"Buy now\" button so shoppers can go straight to checkout and "
+"skip the cart, fewer clicks, more completed orders. Configure where it "
+"appears and how it behaves below; changes apply to your storefront as soon "
+"as you save."
 msgstr ""
 
 #: src/Admin/Settings.php:150
@@ -79,7 +83,9 @@ msgid "Enable Buy Now"
 msgstr ""
 
 #: src/Admin/Settings.php:156
-msgid "The master switch. When off, Swift adds no button, scripts or styles to your storefront at all, a clean, zero-footprint disable."
+msgid ""
+"The master switch. When off, Swift adds no button, scripts or styles to your "
+"storefront at all, a clean, zero-footprint disable."
 msgstr ""
 
 #: src/Admin/Settings.php:167
@@ -91,11 +97,15 @@ msgid "Button label"
 msgstr ""
 
 #: src/Admin/Settings.php:174
-msgid "The wording on the button. Short, action-led labels convert best, try \"Buy now\", \"Get it now\" or \"Express checkout\"."
+msgid ""
+"The wording on the button. Short, action-led labels convert best, try \"Buy "
+"now\", \"Get it now\" or \"Express checkout\"."
 msgstr ""
 
 #: src/Admin/Settings.php:185
-msgid "Text shown on the Buy Now button. Leave empty to use the default (\"Buy now\")."
+msgid ""
+"Text shown on the Buy Now button. Leave empty to use the default (\"Buy "
+"now\")."
 msgstr ""
 
 #: src/Admin/Settings.php:192
@@ -119,7 +129,9 @@ msgid "Show the button on single product pages."
 msgstr ""
 
 #: src/Admin/Settings.php:203
-msgid "The product detail page. This is the highest-intent spot, the shopper is already looking at the item."
+msgid ""
+"The product detail page. This is the highest-intent spot, the shopper is "
+"already looking at the item."
 msgstr ""
 
 #: src/Admin/Settings.php:204
@@ -127,20 +139,25 @@ msgid "Shop & archive loops"
 msgstr ""
 
 #: src/Admin/Settings.php:204
-msgid "Show the button on shop and archive product loops (simple products only)."
+msgid ""
+"Show the button on shop and archive product loops (simple products only)."
 msgstr ""
 
 #: src/Admin/Settings.php:204
-msgid "Product grids on the shop and category pages. Lets shoppers buy without opening each product. Simple products only; variable products need a chosen variation."
+msgid ""
+"Product grids on the shop and category pages. Lets shoppers buy without "
+"opening each product. Simple products only; variable products need a chosen "
+"variation."
 msgstr ""
 
-#: src/Admin/Settings.php:208
-#: src/Admin/Settings.php:213
+#: src/Admin/Settings.php:208 src/Admin/Settings.php:213
 msgid "Position on single product"
 msgstr ""
 
 #: src/Admin/Settings.php:209
-msgid "Whether Swift's button sits above or below WooCommerce's own \"Add to cart\" button on the product page."
+msgid ""
+"Whether Swift's button sits above or below WooCommerce's own \"Add to cart\" "
+"button on the product page."
 msgstr ""
 
 #: src/Admin/Settings.php:222
@@ -167,13 +184,15 @@ msgstr ""
 msgid "What happens when a shopper clicks Buy now."
 msgstr ""
 
-#: src/Admin/Settings.php:254
-#: src/Admin/Settings.php:259
+#: src/Admin/Settings.php:254 src/Admin/Settings.php:259
 msgid "Redirect to"
 msgstr ""
 
 #: src/Admin/Settings.php:255
-msgid "Where the shopper lands after clicking. \"Checkout\" is the fast path that skips the cart entirely; \"Cart\" sends them to the cart page to review first."
+msgid ""
+"Where the shopper lands after clicking. \"Checkout\" is the fast path that "
+"skips the cart entirely; \"Cart\" sends them to the cart page to review "
+"first."
 msgstr ""
 
 #: src/Admin/Settings.php:268
@@ -189,11 +208,16 @@ msgid "Empty the cart first"
 msgstr ""
 
 #: src/Admin/Settings.php:285
-msgid "Clear the cart before adding, so the buyer checks out with only the chosen product."
+msgid ""
+"Clear the cart before adding, so the buyer checks out with only the chosen "
+"product."
 msgstr ""
 
 #: src/Admin/Settings.php:285
-msgid "Recommended for a true \"buy just this\" flow. If a shopper already has items in their cart, this removes them so the Buy now purchase stands alone. Turn off to add to the existing cart instead."
+msgid ""
+"Recommended for a true \"buy just this\" flow. If a shopper already has "
+"items in their cart, this removes them so the Buy now purchase stands alone. "
+"Turn off to add to the existing cart instead."
 msgstr ""
 
 #: src/Admin/Settings.php:286
@@ -201,11 +225,16 @@ msgid "Respect quantity"
 msgstr ""
 
 #: src/Admin/Settings.php:286
-msgid "Carry the quantity chosen on the product page into the Buy Now purchase (single, simple products)."
+msgid ""
+"Carry the quantity chosen on the product page into the Buy Now purchase "
+"(single, simple products)."
 msgstr ""
 
 #: src/Admin/Settings.php:286
-msgid "When on, the quantity the shopper picks in the product's quantity box is used for the Buy now purchase. When off, exactly one unit is bought. Single, simple products only."
+msgid ""
+"When on, the quantity the shopper picks in the product's quantity box is "
+"used for the Buy now purchase. When off, exactly one unit is bought. Single, "
+"simple products only."
 msgstr ""
 
 #: src/Admin/Settings.php:293
@@ -216,13 +245,15 @@ msgstr ""
 msgid "How the button looks. Use the live preview above to check your choices."
 msgstr ""
 
-#: src/Admin/Settings.php:299
-#: src/Admin/Settings.php:304
+#: src/Admin/Settings.php:299 src/Admin/Settings.php:304
 msgid "Button style"
 msgstr ""
 
 #: src/Admin/Settings.php:300
-msgid "\"Theme default\" inherits your theme's button look (safest, blends in). \"Solid\" and \"Outline\" use the accent colour below so the button stands out from the standard add-to-cart button."
+msgid ""
+"\"Theme default\" inherits your theme's button look (safest, blends in). "
+"\"Solid\" and \"Outline\" use the accent colour below so the button stands "
+"out from the standard add-to-cart button."
 msgstr ""
 
 #: src/Admin/Settings.php:313
@@ -242,11 +273,16 @@ msgid "Accent colour"
 msgstr ""
 
 #: src/Admin/Settings.php:343
-msgid "A hex colour used by the Solid and Outline styles. Leave empty to use Swift's velocity violet (#5b3df5). Pick a high-contrast brand colour so the button is easy to see and tap. Ignored by the \"Theme default\" style."
+msgid ""
+"A hex colour used by the Solid and Outline styles. Leave empty to use "
+"Swift's velocity violet (#5b3df5). Pick a high-contrast brand colour so the "
+"button is easy to see and tap. Ignored by the \"Theme default\" style."
 msgstr ""
 
 #: src/Admin/Settings.php:356
-msgid "Hex colour for the Solid / Outline styles. Leave empty for Swift's velocity violet (#5b3df5)."
+msgid ""
+"Hex colour for the Solid / Outline styles. Leave empty for Swift's velocity "
+"violet (#5b3df5)."
 msgstr ""
 
 #: src/Admin/Settings.php:386
@@ -259,4 +295,56 @@ msgstr ""
 
 #: swift.php:47
 msgid "Swift – Quick Buy for WooCommerce requires WooCommerce to be active."
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr ""
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr ""
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:183
+#, php-format
+msgid "What %s adds"
 msgstr ""

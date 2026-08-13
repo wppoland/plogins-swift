@@ -103,7 +103,6 @@ final class DirectCheckoutEngine
         }
 
         $quantity = isset($_REQUEST['quantity']) ? max(1, absint(wp_unslash($_REQUEST['quantity']))) : 1;
-        $variationId = isset($_REQUEST['variation_id']) ? absint(wp_unslash($_REQUEST['variation_id'])) : 0;
 
         if (! WC()->cart instanceof \WC_Cart) {
             return;
@@ -113,7 +112,10 @@ final class DirectCheckoutEngine
             WC()->cart->empty_cart();
         }
 
-        $added = WC()->cart->add_to_cart($productId, $quantity, $variationId);
+        // Simple products only. This plugin has no way to choose a variation, so
+        // it does not accept one: carrying variation handling it could not reach
+        // is what WordPress.org reads as a locked feature.
+        $added = WC()->cart->add_to_cart($productId, $quantity);
 
         if ($added === false) {
             wc_add_notice($this->message('add_failed_text', 'add_failed'), 'error');

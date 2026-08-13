@@ -110,7 +110,8 @@ final class SwiftService implements HasHooks
             return '';
         }
 
-        // Variable products require a chosen variation (a Swift Pro feature).
+        // Swift covers simple products. A variable product needs a variation
+        // picker, which this plugin does not have and does not carry code for.
         if ($product->is_type('variable')) {
             return '';
         }
@@ -149,7 +150,11 @@ final class SwiftService implements HasHooks
 
         $settings = $this->settings();
 
-        $accent = (string) ($settings['accent_color'] ?? '');
+        // Re-validated at output rather than trusted from storage. The settings
+        // screen sanitises on save, but an option can also be written by a
+        // migration, WP-CLI or another plugin, and this value lands inside a
+        // stylesheet where anything but a colour breaks out of the rule.
+        $accent = (string) sanitize_hex_color((string) ($settings['accent_color'] ?? ''));
         if ($accent !== '') {
             // Scope the accent token to the button wrapper so it only themes
             // Swift's own buttons (never leaks onto the rest of the page), and

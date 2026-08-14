@@ -210,7 +210,7 @@ final class Settings implements HasHooks
                     <table class="form-table" role="presentation">
                         <tbody>
                             <?php
-                            $this->checkboxRow('show_on_single', __('Single product page', 'plogins-swift'), __('Show the button on single product pages.', 'plogins-swift'), $settings, __('The product detail page. This is the highest-intent spot, the shopper is already looking at the item.', 'plogins-swift'));
+                            $this->checkboxRow('show_on_single', __('Single product page', 'plogins-swift'), __('Show the button on single product pages (simple products only).', 'plogins-swift'), $settings, __('The product detail page. This is the highest-intent spot, the shopper is already looking at the item. Simple products only; a variable product needs a chosen variation, so Swift leaves those to the normal add-to-cart button.', 'plogins-swift'));
                             $this->checkboxRow('show_on_loop', __('Shop & archive loops', 'plogins-swift'), __('Show the button on shop and archive product loops (simple products only).', 'plogins-swift'), $settings, __('Product grids on the shop and category pages. Lets shoppers buy without opening each product. Simple products only; variable products need a chosen variation.', 'plogins-swift'));
                             ?>
                             <tr>
@@ -449,7 +449,11 @@ final class Settings implements HasHooks
             $raw = [];
         }
 
-        $defaults = $this->settings();
+        // `settings()` is the CURRENT state (packaged defaults with the stored
+        // option merged over them), not the packaged defaults. It is the right
+        // base for array_merge() below, so keys that have no form field survive
+        // a save, but it must never be used as the "revert to default" source.
+        $current = $this->settings();
 
         $buttonText = isset($raw['button_text']) ? sanitize_text_field((string) $raw['button_text']) : '';
         $target     = isset($raw['redirect_target']) ? sanitize_key((string) $raw['redirect_target']) : 'checkout';
@@ -469,9 +473,16 @@ final class Settings implements HasHooks
             $style = 'theme';
         }
 
-        return array_merge($defaults, [
+        return array_merge($current, [
             'enabled'          => ! empty($raw['enabled']),
-            'button_text'      => $buttonText !== '' ? $buttonText : (string) ($defaults['button_text'] ?? __('Buy now', 'plogins-swift')),
+            // Store the empty label as empty. The field says "leave empty to
+            // use the default", but this line used to fall back to the current
+            // stored label, so a merchant who cleared "Black Friday, buy now"
+            // was told the save succeeded and the shop kept printing "Black
+            // Friday, buy now". Empty now reaches storage, and the button
+            // template and the engine both fall back to the translated
+            // "Buy now" at render time.
+            'button_text'      => $buttonText,
             'show_on_single'   => ! empty($raw['show_on_single']),
             'show_on_loop'     => ! empty($raw['show_on_loop']),
             'single_position'  => $position,

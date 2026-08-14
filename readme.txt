@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -39,7 +39,7 @@ Swift is developed in the open. Source code, bug reports and feature requests li
 * Optionally empties the cart first so checkout shows only the chosen product.
 * Optionally **respects the quantity** chosen on the product page (simple products).
 * Pick a button **style**, theme default, solid, or outline, with an optional accent colour.
-* Honours stock and purchasability, the button is hidden for out-of-stock or non-purchasable products, and is not shown for variable products in loops.
+* Honours stock and purchasability, the button is hidden for out-of-stock or non-purchasable products, and is not shown for variable products.
 
 = Settings =
 
@@ -74,7 +74,7 @@ Yes. Swift requires an active WooCommerce installation.
 
 = Where does the Buy Now button appear? =
 
-On single product pages and/or shop and archive product loops; you choose which in the settings. On loops it is shown only for simple, in-stock, purchasable products.
+On single product pages and/or shop and archive product loops; you choose which in the settings. Everywhere it shows, it is shown only for simple, in-stock, purchasable products.
 
 = Does it skip the cart? =
 
@@ -94,7 +94,7 @@ No. Swift is stateless, it stores only its settings (one option) and creates no 
 
 = Does it work with variable products? =
 
-The free version is designed for simple products. On shop loops the button is shown for simple products only, since a variation must be chosen first. Full Buy Now support for variable products (with an inline variation picker) is planned for Swift Pro.
+The free version is designed for simple products. The button is shown for simple products only, on single product pages as well as on loops, since a variation must be chosen first. Full Buy Now support for variable products (with an inline variation picker) is planned for Swift Pro.
 
 = Can I place the button with a shortcode? =
 
@@ -116,6 +116,10 @@ All of Swift's work happens on your server. It reads and writes a single setting
 Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.10 =
+* Clearing the button label now works. The field says leaving it empty restores the default "Buy now", but the old label was quietly kept and your storefront went on showing it. Empty means "Buy now" again.
+* The Buy Now button no longer appears on variable product pages, where it could not work. Clicking it gave the shopper an error notice instead of a checkout, because a variation has to be chosen first. The placement setting and the FAQ now say plainly that Swift covers simple products.
 
 = 1.0.9 =
 * Removed variation handling that this plugin had no way to reach. The bundled checkout engine accepted a `variation_id` on the request while nothing here could choose a variation, and the code said the capability belonged to the paid edition. Swift is a Buy Now button for simple products and the package now contains only that.

@@ -22,8 +22,8 @@ return [
     ],
     'features'   => [
         [
-            'en' => ['title' => 'Buy Now for variations', 'desc' => 'A Buy Now form on variable product pages, variation selection wired to WooCommerce events, reusing the free direct-checkout handler.'],
-            'pl' => ['title' => 'Kup teraz dla wariantów', 'desc' => 'Formularz Kup teraz na karcie produktu wariantowego, wybór wariacji, ten sam handler co w Swift FREE, przycisk aktywny dopiero po wyborze opcji.'],
+            'en' => ['title' => 'Buy Now for variations', 'desc' => 'A Buy Now form on variable product pages, variation selection wired to WooCommerce events, and a dedicated PRO checkout handler.'],
+            'pl' => ['title' => 'Kup teraz dla wariantów', 'desc' => 'Formularz Kup teraz na karcie produktu wariantowego, wybór wariacji i własny handler PRO, przycisk aktywny dopiero po wyborze opcji.'],
         ],
         [
             'en' => ['title' => 'Sticky Buy Now bar', 'desc' => 'A bar fixed to the bottom of the viewport on single product pages for quick access while scrolling.'],

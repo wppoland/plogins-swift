@@ -24,7 +24,7 @@ namespace {
 
 namespace Swift {
     if (! defined('Swift\\VERSION')) {
-        define('Swift\\VERSION', '0.2.0');
+        define('Swift\\VERSION', '1.0.11');
     }
     if (! defined('Swift\\PLUGIN_FILE')) {
         define('Swift\\PLUGIN_FILE', '/tmp/swift/swift.php');

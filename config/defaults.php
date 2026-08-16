@@ -22,7 +22,8 @@ return [
     // Button label.
     'button_text' => 'Buy now',
 
-    // Where the button appears.
+    // Where the button appears. Simple products only in both places: a variable
+    // product needs a chosen variation, which this plugin never asks for.
     'show_on_single' => true,
     'show_on_loop'   => false,
 

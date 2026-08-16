@@ -61,7 +61,13 @@ final class DirectCheckoutEngine
             return;
         }
 
-        if (! $product->is_purchasable() || ! $product->is_in_stock()) {
+        // Simple products only, the same rule the loop button and the shortcode
+        // already apply. This hook also fires inside WooCommerce's variation
+        // add-to-cart template, so a variable product used to show a Buy Now
+        // button next to its variation picker, and clicking it posted the
+        // parent id to a handler that cannot choose a variation: the shopper
+        // got a failure notice instead of a checkout.
+        if (! $product->is_purchasable() || ! $product->is_in_stock() || $product->is_type('variable')) {
             return;
         }
 
@@ -102,8 +108,15 @@ final class DirectCheckoutEngine
             return;
         }
 
+        // A bookmarked or hand-built link can still carry a variable parent id.
+        // Adding it would put an unbuyable parent in the cart, so refuse here
+        // as well and let the shopper stay on the product page and pick their
+        // options the normal way.
+        if ($product->is_type('variable')) {
+            return;
+        }
+
         $quantity = isset($_REQUEST['quantity']) ? max(1, absint(wp_unslash($_REQUEST['quantity']))) : 1;
-        $variationId = isset($_REQUEST['variation_id']) ? absint(wp_unslash($_REQUEST['variation_id'])) : 0;
 
         if (! WC()->cart instanceof \WC_Cart) {
             return;
@@ -113,7 +126,10 @@ final class DirectCheckoutEngine
             WC()->cart->empty_cart();
         }
 
-        $added = WC()->cart->add_to_cart($productId, $quantity, $variationId);
+        // Simple products only. This plugin has no way to choose a variation, so
+        // it does not accept one: carrying variation handling it could not reach
+        // is what WordPress.org reads as a locked feature.
+        $added = WC()->cart->add_to_cart($productId, $quantity);
 
         if ($added === false) {
             wc_add_notice($this->message('add_failed_text', 'add_failed'), 'error');

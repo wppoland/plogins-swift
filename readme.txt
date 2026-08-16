@@ -2,9 +2,9 @@
 Contributors: motylanogha
 Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.7
+Stable tag: 1.0.11
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -34,12 +34,12 @@ Swift is developed in the open. Source code, bug reports and feature requests li
 * Adds a "Buy Now" button that adds-to-cart and redirects in one click.
 * Works on single product pages and/or shop and archive loops.
 * Place the button **before or after** the native add-to-cart button on single product pages.
-* Drop the button anywhere with the `[swift_buy_now]` shortcode (optionally targeting a product by id).
+* Drop the button anywhere with the `[swift_buy_now]` shortcode or the Elementor "Buy Now Button" widget (optionally targeting a product by id).
 * Redirects to the **checkout** (skip the cart) or to the **cart**, whichever you prefer.
 * Optionally empties the cart first so checkout shows only the chosen product.
 * Optionally **respects the quantity** chosen on the product page (simple products).
 * Pick a button **style**, theme default, solid, or outline, with an optional accent colour.
-* Honours stock and purchasability, the button is hidden for out-of-stock or non-purchasable products, and is not shown for variable products in loops.
+* Honours stock and purchasability, the button is hidden for out-of-stock or non-purchasable products, and is not shown for variable products.
 
 = Settings =
 
@@ -54,11 +54,13 @@ A simple WooCommerce settings page (WooCommerce → Swift Quick Buy) lets you:
 * Choose whether to respect the quantity selected on the product page.
 * Pick a button style (theme, solid, outline) and an optional accent colour.
 
-= Shortcode =
+= Shortcode and Elementor =
 
 Use `[swift_buy_now]` to render the Buy Now button anywhere, inside a page, post or block. It targets the current product by default; add an id to target a specific simple product:
 
 `[swift_buy_now id="123"]`
+
+If Elementor is active, the same button is available as a "Buy Now Button" widget. The Product ID control is the shortcode's `id` argument: leave it at 0 on a product page.
 
 == Installation ==
 
@@ -74,7 +76,7 @@ Yes. Swift requires an active WooCommerce installation.
 
 = Where does the Buy Now button appear? =
 
-On single product pages and/or shop and archive product loops; you choose which in the settings. On loops it is shown only for simple, in-stock, purchasable products.
+On single product pages and/or shop and archive product loops; you choose which in the settings. Everywhere it shows, it is shown only for simple, in-stock, purchasable products.
 
 = Does it skip the cart? =
 
@@ -94,11 +96,11 @@ No. Swift is stateless, it stores only its settings (one option) and creates no 
 
 = Does it work with variable products? =
 
-The free version is designed for simple products. On shop loops the button is shown for simple products only, since a variation must be chosen first. Full Buy Now support for variable products (with an inline variation picker) is planned for Swift Pro.
+The free version is designed for simple products. The button is shown for simple products only, on single product pages as well as on loops, since a variation must be chosen first. Full Buy Now support for variable products (with an inline variation picker) is planned for Swift Pro.
 
-= Can I place the button with a shortcode? =
+= Can I place the button with a shortcode or Elementor? =
 
-Yes. Use `[swift_buy_now]` for the current product or `[swift_buy_now id="123"]` for a specific simple product.
+Yes. Use `[swift_buy_now]` for the current product or `[swift_buy_now id="123"]` for a specific simple product. The same control is the Elementor "Buy Now Button" widget when Elementor is active.
 
 == Screenshots ==
 
@@ -113,9 +115,24 @@ All of Swift's work happens on your server. It reads and writes a single setting
 
 == Translations ==
 
-Plogins Swift includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-swift`, so WordPress.org language packs can also override or extend these bundled translations.
+Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.11 =
+* New: Elementor "Buy Now Button" widget. Same output as the `[swift_buy_now]` shortcode, loaded only when Elementor is active.
+
+= 1.0.10 =
+* Clearing the button label now works. The field says leaving it empty restores the default "Buy now", but the old label was quietly kept and your storefront went on showing it. Empty means "Buy now" again.
+* The Buy Now button no longer appears on variable product pages, where it could not work. Clicking it gave the shopper an error notice instead of a checkout, because a variation has to be chosen first. The placement setting and the FAQ now say plainly that Swift covers simple products.
+
+= 1.0.9 =
+* Removed variation handling that this plugin had no way to reach. The bundled checkout engine accepted a `variation_id` on the request while nothing here could choose a variation, and the code said the capability belonged to the paid edition. Swift is a Buy Now button for simple products and the package now contains only that.
+* The accent colour is re-validated when it is written into the stylesheet, instead of being trusted from storage. The settings screen already sanitised it on save, but an option can also be set by a migration, WP-CLI or another plugin.
+
+= 1.0.8 =
+* Corrected the Translations section. It said the package bundles Polish, German and Spanish files; it does not, and must not: .distignore strips every .po and .mo because WordPress.org serves translations from translate.wordpress.org. The .pot template ships as before.
+* The build now names the package folder from the plugin's Text Domain instead of the local checkout directory, so the artifact is plogins-swift rather than swift.
 
 = 1.0.4 =
 * Translations: completed Polish, German and Spanish for the PRO upgrade panel.

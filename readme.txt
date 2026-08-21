@@ -19,14 +19,14 @@ The button can appear on single product pages, on shop and archive loops, or bot
 
 Swift is stateless: it stores no per-product data and creates no database tables. It handles the button hooks, nonce verification, cart handling and redirect, and nothing else.
 
-Swift is developed in the open. Source code, bug reports and feature requests live at https://github.com/wppoland/plogins-swift.
+Swift is developed in the open. Source code, bug reports and feature requests live at [github.com/wppoland/plogins-swift](https://github.com/wppoland/plogins-swift).
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/plogins-swift/docs/
-* **Plugin page** - https://plogins.com/plogins-swift/
-* **Source code** - https://github.com/wppoland/plogins-swift
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-swift/issues
+* **Documentation**: [plogins.com/plogins-swift/docs/](https://plogins.com/plogins-swift/docs/)
+* **Plugin page**: [plogins.com/plogins-swift/](https://plogins.com/plogins-swift/)
+* **Source code**: [github.com/wppoland/plogins-swift](https://github.com/wppoland/plogins-swift)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-swift/issues](https://github.com/wppoland/plogins-swift/issues)
 
 
 = What it does =

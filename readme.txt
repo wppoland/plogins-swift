@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.11
+Stable tag: 1.0.12
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -118,6 +118,9 @@ All of Swift's work happens on your server. It reads and writes a single setting
 Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.12 =
+* Fixed the PRO promo on the settings screen quoting a price in PLN. PRO is priced and charged in EUR, so an admin on a Polish site was shown a zloty amount and then billed in euro, and the zloty figure was a fixed conversion that drifted from the real charge as the rate moved. The promo now shows the euro price that is actually taken.
 
 = 1.0.11 =
 * New: Elementor "Buy Now Button" widget. Same output as the `[swift_buy_now]` shortcode, loaded only when Elementor is active.

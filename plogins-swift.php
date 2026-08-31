@@ -25,7 +25,7 @@ namespace Swift;
 
 defined('ABSPATH') || exit;
 
-const VERSION     = '1.0.11';
+const VERSION     = '1.0.13';
 const PLUGIN_FILE = __FILE__;
 
 define('SWIFT_DIR', plugin_dir_path(__FILE__));

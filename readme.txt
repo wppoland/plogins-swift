@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.13
+Stable tag: 1.0.14
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -118,6 +118,9 @@ All of Swift's work happens on your server. It reads and writes a single setting
 Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.14 =
+* Fixed: the plugin reported an older version number internally than the one it was released under. That number versions the stylesheets and scripts the admin screen loads, so a browser holding the previous files kept them after an update instead of fetching the corrected ones.
 
 = 1.0.13 =
 * Declared compatibility with WooCommerce 11.0.

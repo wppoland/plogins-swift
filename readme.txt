@@ -62,6 +62,24 @@ Use `[swift_buy_now]` to render the Buy Now button anywhere, inside a page, post
 
 If Elementor is active, the same button is available as a "Buy Now Button" widget. The Product ID control is the shortcode's `id` argument: leave it at 0 on a product page.
 
+== Plogins Swift PRO ==
+
+The free plugin is complete for what it does: a Buy Now button that skips the
+cart, on simple products, with nothing time-limited and no account to create.
+**Plogins Swift PRO** is a separate add-on for stores that want the rest:
+
+* **Buy Now on variable products** - on the product page and in shop loops, with a compact attribute picker that stays disabled until a purchasable variation is chosen
+* **Sticky Buy Now bar** - a fixed bar that slides in on scroll, mirroring the selected variation
+* **Per-product rules** - hide the button, change its label, or send that product to the cart instead of checkout
+* **Express checkout shortcuts** - place Apple Pay and Google Pay buttons beside Buy Now when WooCommerce Payments or Stripe already provides them
+* **Buy Now analytics** - clicks, direct-checkout conversions, conversion rate and attributed revenue per product, with CSV export
+
+Swift PRO requires the free plugin and does not replace it. If the free plugin
+is missing or disabled, PRO stays dormant and says so rather than half-working.
+
+* **Plogins Swift PRO** - [plogins.com/swift-pro/](https://plogins.com/swift-pro/)
+* **Pricing** - [plogins.com/swift-pro/pricing/](https://plogins.com/swift-pro/pricing/)
+
 == Installation ==
 
 1. Upload the plugin to `/wp-content/plugins/plogins-swift`, or install via Plugins → Add New.
@@ -96,7 +114,7 @@ No. Swift is stateless, it stores only its settings (one option) and creates no 
 
 = Does it work with variable products? =
 
-The free version is designed for simple products. The button is shown for simple products only, on single product pages as well as on loops, since a variation must be chosen first. Full Buy Now support for variable products (with an inline variation picker) is planned for Swift Pro.
+The free version is designed for simple products. The button is shown for simple products only, on single product pages as well as on loops, since a variation must be chosen first. Buy Now for variable products, with an inline variation picker on the product page and in shop loops, ships in Swift PRO.
 
 = Can I place the button with a shortcode or Elementor? =
 

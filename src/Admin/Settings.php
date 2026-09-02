@@ -88,8 +88,8 @@ final class Settings implements HasHooks
     {
         add_submenu_page(
             'woocommerce',
-            __('Swift, Quick Buy', 'plogins-swift'),
-            __('Swift Quick Buy', 'plogins-swift'),
+            __('Buy Now Button', 'plogins-swift'),
+            __('Buy Now Button', 'plogins-swift'),
             'manage_woocommerce',
             self::PAGE,
             [$this, 'renderPage'],

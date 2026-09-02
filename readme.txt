@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.14
+Stable tag: 1.0.15
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -43,7 +43,7 @@ Swift is developed in the open. Source code, bug reports and feature requests li
 
 = Settings =
 
-A simple WooCommerce settings page (WooCommerce → Swift Quick Buy) lets you:
+A simple WooCommerce settings page (WooCommerce → Buy Now Button) lets you:
 
 * Enable or disable the Buy Now button.
 * Set the button label.
@@ -84,7 +84,7 @@ is missing or disabled, PRO stays dormant and says so rather than half-working.
 
 1. Upload the plugin to `/wp-content/plugins/plogins-swift`, or install via Plugins → Add New.
 2. Activate it. WooCommerce must be active.
-3. Visit **WooCommerce → Swift Quick Buy** to configure the button label, placement and redirect target.
+3. Visit **WooCommerce → Buy Now Button** to configure the button label, placement and redirect target.
 
 == Frequently Asked Questions ==
 
@@ -123,7 +123,7 @@ Yes. Use `[swift_buy_now]` for the current product or `[swift_buy_now id="123"]`
 == Screenshots ==
 
 1. The Buy Now button on a single product page.
-2. The Swift Quick Buy settings screen.
+2. The Buy Now Button settings screen.
 
 == External Services ==
 
@@ -133,9 +133,13 @@ All of Swift's work happens on your server. It reads and writes a single setting
 
 == Translations ==
 
-Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
+Swift is fully translatable and ships the `plogins-swift.pot` template, along with complete Polish, German, Spanish, French and Italian translations ready for import on translate.wordpress.org. Translations are delivered by WordPress.org language packs; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.15 =
+* Translations: added complete French and Italian, and refreshed Polish, German and Spanish for the current plugin interface and readme. Fixed three carry-over mistakes in the existing Polish, German and Spanish files: the plugin name was mistranslated as a description sentence instead of kept as-is, the plugin page URL pointed at the pre-rename slug, and "WPPoland.com" was shortened to "WPPoland".
+* Fixed: the "WooCommerce is required" admin notice and the uninstall cleanup comment still named the plugin "Swift, Quick Buy" from before the rename; the settings menu label under WooCommerce still read "Swift Quick Buy" instead of "Buy Now Button".
 
 = 1.0.14 =
 * Fixed: the plugin reported an older version number internally than the one it was released under. That number versions the stylesheets and scripts the admin screen loads, so a browser holding the previous files kept them after an update instead of fetching the corrected ones.

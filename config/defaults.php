@@ -19,8 +19,12 @@ defined('ABSPATH') || exit;
 return [
     'enabled' => true,
 
-    // Button label.
-    'button_text' => 'Buy now',
+    // Button label. Empty on purpose: an English sentence here is not a gettext
+    // call, so it never reaches the .pot and no language pack can translate it,
+    // yet it was merged under the stored option and printed to the shopper.
+    // Empty means "use Swift\Service\Texts", which is translated; anything the
+    // merchant types still wins and is stored exactly as typed.
+    'button_text' => '',
 
     // Where the button appears. Simple products only in both places: a variable
     // product needs a chosen variation, which this plugin never asks for.
@@ -49,6 +53,7 @@ return [
     // Empty string means "use the theme colour".
     'accent_color' => '',
 
-    // Front-end fallback string used when add-to-cart fails.
-    'add_failed_text' => 'Sorry, this product could not be added to your cart.',
+    // Front-end notice shown when add-to-cart fails. Empty for the same reason
+    // as `button_text` above: see Swift\Service\Texts for the translated value.
+    'add_failed_text' => '',
 ];

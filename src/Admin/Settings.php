@@ -7,6 +7,7 @@ namespace Swift\Admin;
 defined('ABSPATH') || exit;
 
 use Swift\Contract\HasHooks;
+use Swift\Service\Texts;
 
 /**
  * Admin settings page registered under the WooCommerce menu.
@@ -126,9 +127,13 @@ final class Settings implements HasHooks
         $position = (string) ($settings['single_position'] ?? 'after');
         $style    = (string) ($settings['button_style'] ?? 'theme');
         $enabled  = (bool) ($settings['enabled'] ?? false);
+        // The preview shows what a shopper would see, so the empty label is
+        // resolved here. The FIELD below stays raw: rendering the resolved text
+        // as its value would save one language back into the option.
+        $default  = Texts::defaults()['button_text'];
         $label    = (string) ($settings['button_text'] ?? '');
-        if ($label === '') {
-            $label = __('Buy now', 'plogins-swift');
+        if (trim($label) === '') {
+            $label = $default;
         }
         ?>
         <div class="wrap swift-admin">
@@ -189,10 +194,19 @@ final class Settings implements HasHooks
                                         id="swift_button_text"
                                         name="<?php echo esc_attr(self::OPTION); ?>[button_text]"
                                         value="<?php echo esc_attr((string) ($settings['button_text'] ?? '')); ?>"
+                                        placeholder="<?php echo esc_attr($default); ?>"
                                         class="regular-text"
                                         maxlength="60"
                                     />
-                                    <p class="description"><?php esc_html_e('Text shown on the Buy Now button. Leave empty to use the default ("Buy now").', 'plogins-swift'); ?></p>
+                                    <p class="description">
+                                        <?php
+                                        printf(
+                                            /* translators: %s: the translated default button label, e.g. "Buy now". */
+                                            esc_html__('Text shown on the Buy Now button. Leave empty to use the default (%s), which follows your site language.', 'plogins-swift'),
+                                            '"' . esc_html($default) . '"'
+                                        );
+                                        ?>
+                                    </p>
                                 </td>
                             </tr>
                         </tbody>
@@ -495,7 +509,12 @@ final class Settings implements HasHooks
     }
 
     /**
-     * Stored settings merged over packaged defaults.
+     * Stored settings merged over packaged defaults, RAW.
+     *
+     * Deliberately not passed through {@see Texts::apply()}: the settings form
+     * renders these values back into its fields and `sanitize()` merges over
+     * this array, so a resolved string here would be written into the option on
+     * the next save and freeze one language into the database.
      *
      * @return array<string, mixed>
      */

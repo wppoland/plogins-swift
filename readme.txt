@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.15
+Stable tag: 1.0.16
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -136,6 +136,10 @@ All of Swift's work happens on your server. It reads and writes a single setting
 Swift is fully translatable and ships the `plogins-swift.pot` template, along with complete Polish, German, Spanish, French and Italian translations ready for import on translate.wordpress.org. Translations are delivered by WordPress.org language packs; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.16 =
+* Fixed: the "Buy now" button label and the "Sorry, this product could not be added to your cart." notice were plain English text in a config file, not translatable strings. They were never in the translation template, so no language pack could reach them: a shop running in Polish, German, Spanish, French or Italian showed those two strings in English, and saving the settings screen once wrote the English into the database permanently. Both are translatable now and follow the site language as soon as a translation exists, and a stored value that is still exactly the old English default is cleared on update so a translation can take over. Translations come from WordPress.org language packs rather than in this download, so both stay English until a pack is published. A label you typed yourself, including your own translation of it, is left exactly as you typed it.
+* Settings: the button label field now shows the translated default as its placeholder, so it is clear what an empty field will render.
 
 = 1.0.15 =
 * Translations: added complete French and Italian, and refreshed Polish, German and Spanish for the current plugin interface and readme. Fixed three carry-over mistakes in the existing Polish, German and Spanish files: the plugin name was mistranslated as a description sentence instead of kept as-is, the plugin page URL pointed at the pre-rename slug, and "WPPoland.com" was shortened to "WPPoland".

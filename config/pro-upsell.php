@@ -41,8 +41,8 @@ return [
             'pl' => ['title' => 'Kup teraz w pętlach sklepu', 'desc' => 'Dropdowny wariantów i przycisk Kup teraz na listach kategorii dla produktów wariantowych (wymaga włączenia pętli w Swift FREE).'],
         ],
         [
-            'en' => ['title' => 'Buy Now analytics', 'desc' => 'Track clicks, direct-checkout conversions, conversion rate and attributed revenue per product, WooCommerce → Buy Now Analytics.'],
-            'pl' => ['title' => 'Analityka Kup teraz', 'desc' => 'Kliknięcia, konwersje direct checkout, współczynnik konwersji i przychód per produkt, panel WooCommerce → Buy Now Analytics.'],
+            'en' => ['title' => 'Buy Now analytics', 'desc' => 'Track clicks, direct-checkout conversions, conversion rate and attributed revenue per product, WooCommerce > Buy Now Analytics.'],
+            'pl' => ['title' => 'Analityka Kup teraz', 'desc' => 'Kliknięcia, konwersje direct checkout, współczynnik konwersji i przychód per produkt, panel WooCommerce > Buy Now Analytics.'],
         ],
     ],
 ];

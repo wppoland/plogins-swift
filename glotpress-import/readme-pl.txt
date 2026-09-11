@@ -43,7 +43,7 @@ Swift jest rozwijany otwarcie (open source). Kod źródłowy, zgłoszenia błęd
 
 = Settings =
 
-Prosta strona ustawień WooCommerce (WooCommerce → Swift Quick Buy) pozwala:
+Prosta strona ustawień WooCommerce (WooCommerce > Swift Quick Buy) pozwala:
 
 * Włączyć lub wyłączyć przycisk Kup teraz.
 * Ustawić etykietę przycisku.
@@ -62,9 +62,9 @@ Użyj `[swift_buy_now]`, aby wyświetlić przycisk Kup teraz w dowolnym miejscu,
 
 == Installation ==
 
-1. Prześlij wtyczkę do `/wp-content/plugins/plogins-swift` lub zainstaluj przez Wtyczki → Dodaj nową.
+1. Prześlij wtyczkę do `/wp-content/plugins/plogins-swift` lub zainstaluj przez Wtyczki > Dodaj nową.
 2. Włącz ją. WooCommerce musi być aktywne.
-3. Wejdź w <strong>WooCommerce → Swift Quick Buy</strong>, aby skonfigurować etykietę, położenie i cel przekierowania przycisku.
+3. Wejdź w <strong>WooCommerce > Swift Quick Buy</strong>, aby skonfigurować etykietę, położenie i cel przekierowania przycisku.
 
 == Frequently Asked Questions ==
 

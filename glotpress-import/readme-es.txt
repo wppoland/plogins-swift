@@ -43,7 +43,7 @@ Swift se desarrolla de forma abierta (código abierto). El código fuente, los i
 
 = Settings =
 
-Una sencilla página de ajustes de WooCommerce (WooCommerce → Swift Quick Buy) te permite:
+Una sencilla página de ajustes de WooCommerce (WooCommerce > Swift Quick Buy) te permite:
 
 * Activar o desactivar el botón Comprar ahora.
 * Establecer la etiqueta del botón.
@@ -62,9 +62,9 @@ Usa `[swift_buy_now]` para mostrar el botón Comprar ahora en cualquier lugar: d
 
 == Installation ==
 
-1. Sube el plugin a `/wp-content/plugins/plogins-swift` o instálalo desde Plugins → Añadir nuevo.
+1. Sube el plugin a `/wp-content/plugins/plogins-swift` o instálalo desde Plugins > Añadir nuevo.
 2. Actívalo. WooCommerce debe estar activo.
-3. Entra en <strong>WooCommerce → Swift Quick Buy</strong> para configurar la etiqueta, la ubicación y el destino de redirección del botón.
+3. Entra en <strong>WooCommerce > Swift Quick Buy</strong> para configurar la etiqueta, la ubicación y el destino de redirección del botón.
 
 == Frequently Asked Questions ==
 

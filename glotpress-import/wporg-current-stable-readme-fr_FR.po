@@ -156,16 +156,16 @@ msgid "Does it require WooCommerce?"
 msgstr "Nécessite-t-il WooCommerce ?"
 
 #. Found in installation list item.
-msgid "Visit <strong>WooCommerce → Swift Quick Buy</strong> to configure the button label, placement and redirect target."
-msgstr "Rendez-vous dans <strong>WooCommerce → Swift Quick Buy</strong> pour configurer le libellé du bouton, son emplacement et la destination de redirection."
+msgid "Visit <strong>WooCommerce > Swift Quick Buy</strong> to configure the button label, placement and redirect target."
+msgstr "Rendez-vous dans <strong>WooCommerce > Swift Quick Buy</strong> pour configurer le libellé du bouton, son emplacement et la destination de redirection."
 
 #. Found in installation list item.
 msgid "Activate it. WooCommerce must be active."
 msgstr "Activez-la. WooCommerce doit être actif."
 
 #. Found in installation list item.
-msgid "Upload the plugin to <code>/wp-content/plugins/plogins-swift</code>, or install via Plugins → Add New."
-msgstr "Téléversez l'extension dans <code>/wp-content/plugins/plogins-swift</code>, ou installez-la via Extensions → Ajouter."
+msgid "Upload the plugin to <code>/wp-content/plugins/plogins-swift</code>, or install via Plugins > Add New."
+msgstr "Téléversez l'extension dans <code>/wp-content/plugins/plogins-swift</code>, ou installez-la via Extensions > Ajouter."
 
 #. Found in description paragraph.
 msgid "Swift is fully translatable and ships the <code>plogins-swift.pot</code> template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files."
@@ -188,8 +188,8 @@ msgid "Use <code>[swift_buy_now]</code> to render the Buy Now button anywhere, i
 msgstr "Utilisez <code>[swift_buy_now]</code> pour afficher le bouton Acheter maintenant n'importe où, dans une page, un article ou un bloc. Il cible le produit en cours par défaut ; ajoutez un id pour cibler un produit simple spécifique :"
 
 #. Found in description paragraph.
-msgid "A simple WooCommerce settings page (WooCommerce → Swift Quick Buy) lets you:"
-msgstr "Une simple page de réglages WooCommerce (WooCommerce → Swift Quick Buy) vous permet de :"
+msgid "A simple WooCommerce settings page (WooCommerce > Swift Quick Buy) lets you:"
+msgstr "Une simple page de réglages WooCommerce (WooCommerce > Swift Quick Buy) vous permet de :"
 
 #. Found in description paragraph.
 msgid "Swift is stateless: it stores no per-product data and creates no database tables. It handles the button hooks, nonce verification, cart handling and redirect, and nothing else."

@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.18
+Stable tag: 1.0.19
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -43,7 +43,7 @@ Swift is developed in the open. Source code, bug reports and feature requests li
 
 = Settings =
 
-A simple WooCommerce settings page (WooCommerce → Buy Now Button) lets you:
+A simple WooCommerce settings page (WooCommerce > Buy Now Button) lets you:
 
 * Enable or disable the Buy Now button.
 * Set the button label.
@@ -82,9 +82,9 @@ is missing or disabled, PRO stays dormant and says so rather than half-working.
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/plogins-swift`, or install via Plugins → Add New.
+1. Upload the plugin to `/wp-content/plugins/plogins-swift`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be active.
-3. Visit **WooCommerce → Buy Now Button** to configure the button label, placement and redirect target.
+3. Visit **WooCommerce > Buy Now Button** to configure the button label, placement and redirect target.
 
 == Frequently Asked Questions ==
 
@@ -133,9 +133,13 @@ All of Swift's work happens on your server. It reads and writes a single setting
 
 == Translations ==
 
-Swift is fully translatable and ships the `plogins-swift.pot` template, along with complete Polish, German, Spanish, French and Italian translations ready for import on translate.wordpress.org. Translations are delivered by WordPress.org language packs; the package itself carries no compiled translation files.
+Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs built from translate.wordpress.org, and none has been published for Swift yet, so the interface is currently English in every locale. The package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.19 =
+* Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
+* Fixed: arrow glyphs in the admin menu paths, and in the strings handed to translators. An arrow inside a translatable string makes the glyph every translator's problem and changes the layout in any locale that drops it.
 
 = 1.0.18 =
 * Changed: the PRO feature cards printed an arrow glyph in menu paths where the rest of the plugin and the documentation use a plain ">". Same navigation, one character that renders everywhere.

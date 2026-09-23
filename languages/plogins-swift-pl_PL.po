@@ -164,7 +164,7 @@ msgstr ""
 msgid ""
 "Text shown on the Buy Now button. Leave empty to use the default (%s), which "
 "follows your site language."
-msgstr ""
+msgstr "Tekst na przycisku Kup teraz. Zostaw puste, aby użyć domyślnego (%s), zgodnego z językiem witryny."
 
 #: src/Admin/Settings.php:216
 msgid "Live preview:"

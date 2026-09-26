@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.11
+Stable tag: 1.0.19
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -19,14 +19,14 @@ The button can appear on single product pages, on shop and archive loops, or bot
 
 Swift is stateless: it stores no per-product data and creates no database tables. It handles the button hooks, nonce verification, cart handling and redirect, and nothing else.
 
-Swift is developed in the open. Source code, bug reports and feature requests live at https://github.com/wppoland/plogins-swift.
+Swift is developed in the open. Source code, bug reports and feature requests live at [github.com/wppoland/plogins-swift](https://github.com/wppoland/plogins-swift).
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/plogins-swift/docs/
-* **Plugin page** - https://plogins.com/plogins-swift/
-* **Source code** - https://github.com/wppoland/plogins-swift
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-swift/issues
+* **Documentation**: [plogins.com/plogins-swift/docs/](https://plogins.com/plogins-swift/docs/)
+* **Plugin page**: [plogins.com/plogins-swift/](https://plogins.com/plogins-swift/)
+* **Source code**: [github.com/wppoland/plogins-swift](https://github.com/wppoland/plogins-swift)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-swift/issues](https://github.com/wppoland/plogins-swift/issues)
 
 
 = What it does =
@@ -43,7 +43,7 @@ Swift is developed in the open. Source code, bug reports and feature requests li
 
 = Settings =
 
-A simple WooCommerce settings page (WooCommerce → Swift Quick Buy) lets you:
+A simple WooCommerce settings page (WooCommerce > Buy Now Button) lets you:
 
 * Enable or disable the Buy Now button.
 * Set the button label.
@@ -62,11 +62,29 @@ Use `[swift_buy_now]` to render the Buy Now button anywhere, inside a page, post
 
 If Elementor is active, the same button is available as a "Buy Now Button" widget. The Product ID control is the shortcode's `id` argument: leave it at 0 on a product page.
 
+== Plogins Swift PRO ==
+
+The free plugin is complete for what it does: a Buy Now button that skips the
+cart, on simple products, with nothing time-limited and no account to create.
+**Plogins Swift PRO** is a separate add-on for stores that want the rest:
+
+* **Buy Now on variable products** - on the product page and in shop loops, with a compact attribute picker that stays disabled until a purchasable variation is chosen
+* **Sticky Buy Now bar** - a fixed bar that slides in on scroll, mirroring the selected variation
+* **Per-product rules** - hide the button, change its label, or send that product to the cart instead of checkout
+* **Express checkout shortcuts** - place Apple Pay and Google Pay buttons beside Buy Now when WooCommerce Payments or Stripe already provides them
+* **Buy Now analytics** - clicks, direct-checkout conversions, conversion rate and attributed revenue per product, with CSV export
+
+Swift PRO requires the free plugin and does not replace it. If the free plugin
+is missing or disabled, PRO stays dormant and says so rather than half-working.
+
+* **Plogins Swift PRO** - [plogins.com/swift-pro/](https://plogins.com/swift-pro/)
+* **Pricing** - [plogins.com/swift-pro/pricing/](https://plogins.com/swift-pro/pricing/)
+
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/plogins-swift`, or install via Plugins → Add New.
+1. Upload the plugin to `/wp-content/plugins/plogins-swift`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be active.
-3. Visit **WooCommerce → Swift Quick Buy** to configure the button label, placement and redirect target.
+3. Visit **WooCommerce > Buy Now Button** to configure the button label, placement and redirect target.
 
 == Frequently Asked Questions ==
 
@@ -96,7 +114,7 @@ No. Swift is stateless, it stores only its settings (one option) and creates no 
 
 = Does it work with variable products? =
 
-The free version is designed for simple products. The button is shown for simple products only, on single product pages as well as on loops, since a variation must be chosen first. Full Buy Now support for variable products (with an inline variation picker) is planned for Swift Pro.
+The free version is designed for simple products. The button is shown for simple products only, on single product pages as well as on loops, since a variation must be chosen first. Buy Now for variable products, with an inline variation picker on the product page and in shop loops, ships in Swift PRO.
 
 = Can I place the button with a shortcode or Elementor? =
 
@@ -105,7 +123,7 @@ Yes. Use `[swift_buy_now]` for the current product or `[swift_buy_now id="123"]`
 == Screenshots ==
 
 1. The Buy Now button on a single product page.
-2. The Swift Quick Buy settings screen.
+2. The Buy Now Button settings screen.
 
 == External Services ==
 
@@ -115,9 +133,36 @@ All of Swift's work happens on your server. It reads and writes a single setting
 
 == Translations ==
 
-Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
+Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs built from translate.wordpress.org, and none has been published for Swift yet, so the interface is currently English in every locale. The package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.19 =
+* Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
+* Fixed: arrow glyphs in the admin menu paths, and in the strings handed to translators. An arrow inside a translatable string makes the glyph every translator's problem and changes the layout in any locale that drops it.
+
+= 1.0.18 =
+* Changed: the PRO feature cards printed an arrow glyph in menu paths where the rest of the plugin and the documentation use a plain ">". Same navigation, one character that renders everywhere.
+
+= 1.0.17 =
+* Fixed: deleting the plugin left the per-user "dismiss" flag from the PRO notice in the database. Uninstall now removes it for every user, not just the one who dismissed it.
+
+= 1.0.16 =
+* Fixed: the "Buy now" button label and the "Sorry, this product could not be added to your cart." notice were plain English text in a config file, not translatable strings. They were never in the translation template, so no language pack could reach them: a shop running in Polish, German, Spanish, French or Italian showed those two strings in English, and saving the settings screen once wrote the English into the database permanently. Both are translatable now and follow the site language as soon as a translation exists, and a stored value that is still exactly the old English default is cleared on update so a translation can take over. Translations come from WordPress.org language packs rather than in this download, so both stay English until a pack is published. A label you typed yourself, including your own translation of it, is left exactly as you typed it.
+* Settings: the button label field now shows the translated default as its placeholder, so it is clear what an empty field will render.
+
+= 1.0.15 =
+* Translations: added complete French and Italian, and refreshed Polish, German and Spanish for the current plugin interface and readme. Fixed three carry-over mistakes in the existing Polish, German and Spanish files: the plugin name was mistranslated as a description sentence instead of kept as-is, the plugin page URL pointed at the pre-rename slug, and "WPPoland.com" was shortened to "WPPoland".
+* Fixed: the "WooCommerce is required" admin notice and the uninstall cleanup comment still named the plugin "Swift, Quick Buy" from before the rename; the settings menu label under WooCommerce still read "Swift Quick Buy" instead of "Buy Now Button".
+
+= 1.0.14 =
+* Fixed: the plugin reported an older version number internally than the one it was released under. That number versions the stylesheets and scripts the admin screen loads, so a browser holding the previous files kept them after an update instead of fetching the corrected ones.
+
+= 1.0.13 =
+* Declared compatibility with WooCommerce 11.0.
+
+= 1.0.12 =
+* Fixed the PRO promo on the settings screen quoting a price in PLN. PRO is priced and charged in EUR, so an admin on a Polish site was shown a zloty amount and then billed in euro, and the zloty figure was a fixed conversion that drifted from the real charge as the rate moved. The promo now shows the euro price that is actually taken.
 
 = 1.0.11 =
 * New: Elementor "Buy Now Button" widget. Same output as the `[swift_buy_now]` shortcode, loaded only when Elementor is active.

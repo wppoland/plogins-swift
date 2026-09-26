@@ -1,30 +1,30 @@
-# Copyright (C) 2026 WPPoland
+# Copyright (C) 2026 WPPoland.com
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Swift, Quick Buy for WooCommerce 0.2.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/swift\n"
-"POT-Creation-Date: 2026-06-16T20:25:23+00:00\n"
-"PO-Revision-Date: 2026-06-16T20:25:23+00:00\n"
-"Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
-"Language-Team: German <de@li.org>\n"
-"Language: de_DE\n"
+"Project-Id-Version: Swift - Buy Now Button for WooCommerce 1.0.14\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plogins-swift\n"
+"POT-Creation-Date: 2026-09-08T13:42:18+00:00\n"
+"PO-Revision-Date: 2026-09-02T00:00:00+00:00\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: German\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Domain: plogins-swift\n"
 "X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: plogins-swift\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Plugin Name of the plugin
 #: plogins-swift.php
-msgid "Swift, Quick Buy for WooCommerce"
-msgstr "Swift, Schnellkauf für WooCommerce"
+msgid "Swift - Buy Now Button for WooCommerce"
+msgstr "Swift - Buy Now Button for WooCommerce"
 
 #. Plugin URI of the plugin
 #: plogins-swift.php
-msgid "https://plogins.com/swift/"
-msgstr "https://plogins.com/de/swift/"
+msgid "https://plogins.com/plogins-swift/"
+msgstr "https://plogins.com/plogins-swift/"
 
 #. Description of the plugin
 #: plogins-swift.php
@@ -32,327 +32,24 @@ msgid ""
 "Add a Buy Now button that takes shoppers straight to checkout, skipping the "
 "cart."
 msgstr ""
-"Füge eine Schaltfläche „Jetzt kaufen“ hinzu, die Käufer direkt zur Kasse "
+"Fügt eine „Jetzt kaufen“-Schaltfläche hinzu, die Käufer direkt zur Kasse "
 "führt und den Warenkorb überspringt."
 
 #. Author of the plugin
 #: plogins-swift.php
-msgid "WPPoland"
-msgstr "WPPoland"
+msgid "WPPoland.com"
+msgstr "WPPoland.com"
 
 #. Author URI of the plugin
 #: plogins-swift.php
-msgid "https://plogins.com/"
-msgstr "https://plogins.com/"
+msgid "https://wppoland.com"
+msgstr "https://wppoland.com"
 
-#: src/Admin/Settings.php:71
-msgid "Settings"
-msgstr "Einstellungen"
-
-#: src/Admin/Settings.php:83
-msgid "Swift, Quick Buy"
-msgstr "Swift, Schnellkauf"
-
-#: src/Admin/Settings.php:84
-msgid "Swift Quick Buy"
-msgstr "Swift Schnellkauf"
-
-#: src/Admin/Settings.php:123 src/Admin/Settings.php:462
-#: src/Service/SwiftService.php:49 templates/buy-now-button.php:43
-msgid "Buy now"
-msgstr "Jetzt kaufen"
-
-#: src/Admin/Settings.php:132
-msgid "Live"
-msgstr "Aktiv"
-
-#: src/Admin/Settings.php:137
-msgid "Off"
-msgstr "Aus"
-
-#: src/Admin/Settings.php:143
+#: plogins-swift.php:48
 msgid ""
-"Swift adds a \"Buy now\" button so shoppers can go straight to checkout and "
-"skip the cart, fewer clicks, more completed orders. Configure where it "
-"appears and how it behaves below; changes apply to your storefront as soon "
-"as you save."
+"Swift - Buy Now Button for WooCommerce requires WooCommerce to be active."
 msgstr ""
-"Swift fügt eine Schaltfläche „Jetzt kaufen“ hinzu, damit Käufer direkt zur "
-"Kasse gehen und den Warenkorb überspringen können, weniger Klicks und mehr "
-"abgeschlossene Bestellungen. Konfiguriere unten, wo es angezeigt wird und "
-"wie es sich verhält. Änderungen werden auf deine Storefront angewendet, "
-"sobald du speichern."
-
-#: src/Admin/Settings.php:150
-msgid "Basics"
-msgstr "Grundlagen"
-
-#: src/Admin/Settings.php:155
-msgid "Enable Buy Now"
-msgstr "Aktiviere „Jetzt kaufen“."
-
-#: src/Admin/Settings.php:156
-msgid ""
-"The master switch. When off, Swift adds no button, scripts or styles to your "
-"storefront at all, a clean, zero-footprint disable."
-msgstr ""
-"Der Hauptschalter. Wenn die Option deaktiviert ist, fügt Swift deiner "
-"Storefront überhaupt keine Schaltflächen, Skripte oder Stile hinzu, eine "
-"saubere, platzsparende Deaktivierung."
-
-#: src/Admin/Settings.php:167
-msgid "Show the Buy Now button on your store."
-msgstr "Zeige die Schaltfläche „Jetzt kaufen“ in deinem Shop an."
-
-#: src/Admin/Settings.php:173
-msgid "Button label"
-msgstr "Knopfbeschriftung"
-
-#: src/Admin/Settings.php:174
-msgid ""
-"The wording on the button. Short, action-led labels convert best, try \"Buy "
-"now\", \"Get it now\" or \"Express checkout\"."
-msgstr ""
-"Der Wortlaut auf dem Button. Kurze, aktionsorientierte Etiketten "
-"konvertieren am besten. Versuche es mit „Jetzt kaufen“, „Jetzt kaufen“ oder "
-"„Express-Kaufabwicklung“."
-
-#: src/Admin/Settings.php:185
-msgid ""
-"Text shown on the Buy Now button. Leave empty to use the default (\"Buy "
-"now\")."
-msgstr ""
-"Text, der auf der Schaltfläche „Jetzt kaufen“ angezeigt wird. Lass das Feld "
-"leer, um die Standardeinstellung („Jetzt kaufen“) zu verwenden."
-
-#: src/Admin/Settings.php:192
-msgid "Live preview:"
-msgstr "Live-Vorschau:"
-
-#: src/Admin/Settings.php:198
-msgid "Placement"
-msgstr "Platzierung"
-
-#: src/Admin/Settings.php:199
-msgid "Choose where the button shows up across your store."
-msgstr "Wähle aus, wo die Schaltfläche in deinem Shop angezeigt werden soll."
-
-#: src/Admin/Settings.php:203
-msgid "Single product page"
-msgstr "Einzelne Produktseite"
-
-#: src/Admin/Settings.php:203
-msgid "Show the button on single product pages."
-msgstr "Zeige den Button auf einzelnen Produktseiten an."
-
-#: src/Admin/Settings.php:203
-msgid ""
-"The product detail page. This is the highest-intent spot, the shopper is "
-"already looking at the item."
-msgstr ""
-"Die Produktdetailseite. Dies ist die Stelle mit der höchsten Kaufabsicht, "
-"der Käufer schaut sich den Artikel bereits an."
-
-#: src/Admin/Settings.php:204
-msgid "Shop & archive loops"
-msgstr "Shop- und Archivschleifen"
-
-#: src/Admin/Settings.php:204
-msgid ""
-"Show the button on shop and archive product loops (simple products only)."
-msgstr ""
-"Zeige die Schaltfläche in Shop- und Archivproduktschleifen an (nur einfache "
-"Produkte)."
-
-#: src/Admin/Settings.php:204
-msgid ""
-"Product grids on the shop and category pages. Lets shoppers buy without "
-"opening each product. Simple products only; variable products need a chosen "
-"variation."
-msgstr ""
-"Produktraster auf den Shop- und Kategorieseiten. Ermöglicht Käufern den "
-"Kauf, ohne jedes Produkt öffnen zu müssen. Nur einfache Produkte; Variable "
-"Produkte benötigen eine ausgewählte Variation."
-
-#: src/Admin/Settings.php:208 src/Admin/Settings.php:213
-msgid "Position on single product"
-msgstr "Position auf einzelnem Produkt"
-
-#: src/Admin/Settings.php:209
-msgid ""
-"Whether Swift's button sits above or below WooCommerce's own \"Add to cart\" "
-"button on the product page."
-msgstr ""
-"Ob sich der Swift-Button über oder unter dem WooCommerce-eigenen „In den "
-"Warenkorb“-Button auf der Produktseite befindet."
-
-#: src/Admin/Settings.php:222
-msgid "After the add-to-cart button"
-msgstr "Nach der Schaltfläche „Zum Warenkorb hinzufügen“."
-
-#: src/Admin/Settings.php:233
-msgid "Before the add-to-cart button"
-msgstr "Vor der Schaltfläche „In den Warenkorb“."
-
-#: src/Admin/Settings.php:237
-msgid "Tip: you can also drop the button anywhere with the"
-msgstr ""
-"Tipp: Du kannst die Schaltfläche auch mit dem an einer beliebigen Stelle "
-"ablegen"
-
-#: src/Admin/Settings.php:239
-msgid "shortcode, add id=\"123\" to target a specific product."
-msgstr ""
-"Shortcode, id=\"123\" hinzufügen, um auf ein bestimmtes Produkt abzuzielen."
-
-#: src/Admin/Settings.php:248
-msgid "Behaviour"
-msgstr "Verhalten"
-
-#: src/Admin/Settings.php:249
-msgid "What happens when a shopper clicks Buy now."
-msgstr "Was passiert, wenn ein Käufer auf „Jetzt kaufen“ klickt?"
-
-#: src/Admin/Settings.php:254 src/Admin/Settings.php:259
-msgid "Redirect to"
-msgstr "Weiterleiten an"
-
-#: src/Admin/Settings.php:255
-msgid ""
-"Where the shopper lands after clicking. \"Checkout\" is the fast path that "
-"skips the cart entirely; \"Cart\" sends them to the cart page to review "
-"first."
-msgstr ""
-"Wo der Käufer landet, nachdem er geklickt hat. „Zur Kasse gehen“ ist der "
-"schnelle Weg, der den Warenkorb vollständig überspringt; „Warenkorb“ leitet "
-"sie zur Warenkorbseite weiter, damit sie sie zunächst überprüfen können."
-
-#: src/Admin/Settings.php:268
-msgid "Checkout (skip the cart)"
-msgstr "Zur Kasse (den Warenkorb überspringen)"
-
-#: src/Admin/Settings.php:279
-msgid "Cart"
-msgstr "Warenkorb"
-
-#: src/Admin/Settings.php:285
-msgid "Empty the cart first"
-msgstr "Leere zuerst den Einkaufswagen"
-
-#: src/Admin/Settings.php:285
-msgid ""
-"Clear the cart before adding, so the buyer checks out with only the chosen "
-"product."
-msgstr ""
-"Leere den Warenkorb, bevor du ihn hinzufügen, damit der Käufer nur mit dem "
-"ausgewählten Produkt zur Kasse geht."
-
-#: src/Admin/Settings.php:285
-msgid ""
-"Recommended for a true \"buy just this\" flow. If a shopper already has "
-"items in their cart, this removes them so the Buy now purchase stands alone. "
-"Turn off to add to the existing cart instead."
-msgstr ""
-"Empfohlen für einen echten „Kauf genau das“-Flow. Wenn ein Käufer bereits "
-"Artikel in seinem Warenkorb hat, werden diese entfernt, sodass der Kauf "
-"„Jetzt kaufen“ alleine bleibt. Deaktiviere die Option, um sie stattdessen "
-"zum vorhandenen Warenkorb hinzuzufügen."
-
-#: src/Admin/Settings.php:286
-msgid "Respect quantity"
-msgstr "Respektiere die Menge"
-
-#: src/Admin/Settings.php:286
-msgid ""
-"Carry the quantity chosen on the product page into the Buy Now purchase "
-"(single, simple products)."
-msgstr ""
-"Trage die auf der Produktseite ausgewählte Menge in den Sofortkauf-Kauf ein "
-"(einzelne, einfache Produkte)."
-
-#: src/Admin/Settings.php:286
-msgid ""
-"When on, the quantity the shopper picks in the product's quantity box is "
-"used for the Buy now purchase. When off, exactly one unit is bought. Single, "
-"simple products only."
-msgstr ""
-"Wenn diese Option aktiviert ist, wird die Menge, die der Käufer im "
-"Mengenfeld des Produkts auswählt, für den Kauf „Jetzt kaufen“ verwendet. "
-"Wenn diese Option deaktiviert ist, wird genau eine Einheit gekauft. Nur "
-"einzelne, einfache Produkte."
-
-#: src/Admin/Settings.php:293
-msgid "Appearance"
-msgstr "Aussehen"
-
-#: src/Admin/Settings.php:294
-msgid "How the button looks. Use the live preview above to check your choices."
-msgstr ""
-"So sieht der Button aus. Nutze die Live-Vorschau oben, um deine Auswahl zu "
-"überprüfen."
-
-#: src/Admin/Settings.php:299 src/Admin/Settings.php:304
-msgid "Button style"
-msgstr "Knopfstil"
-
-#: src/Admin/Settings.php:300
-msgid ""
-"\"Theme default\" inherits your theme's button look (safest, blends in). "
-"\"Solid\" and \"Outline\" use the accent colour below so the button stands "
-"out from the standard add-to-cart button."
-msgstr ""
-"„Theme-Standard“ übernimmt das Aussehen der Schaltflächen Ihres Themes (am "
-"sichersten, fügt sich ein). „Solid“ und „Outline“ verwenden die Akzentfarbe "
-"unten, damit sich die Schaltfläche von der Standardschaltfläche „In den "
-"Warenkorb“ abhebt."
-
-#: src/Admin/Settings.php:313
-msgid "Theme default"
-msgstr "Theme-Standard"
-
-#: src/Admin/Settings.php:324
-msgid "Solid (accent colour)"
-msgstr "Einfarbig (Akzentfarbe)"
-
-#: src/Admin/Settings.php:335
-msgid "Outline (accent colour)"
-msgstr "Umriss (Akzentfarbe)"
-
-#: src/Admin/Settings.php:342
-msgid "Accent colour"
-msgstr "Akzentfarbe"
-
-#: src/Admin/Settings.php:343
-msgid ""
-"A hex colour used by the Solid and Outline styles. Leave empty to use "
-"Swift's velocity violet (#5b3df5). Pick a high-contrast brand colour so the "
-"button is easy to see and tap. Ignored by the \"Theme default\" style."
-msgstr ""
-"Eine Hexadezimalfarbe, die von den Solid- und Outline-Stilen verwendet wird. "
-"Lass das Feld leer, um Swifts Geschwindigkeitsviolett (#5b3df5) zu "
-"verwenden. Wähle eine kontrastreiche Markenfarbe, damit die Schaltfläche gut "
-"sichtbar und leicht anzutippen ist. Wird vom Stil „Theme-Standard“ ignoriert."
-
-#: src/Admin/Settings.php:356
-msgid ""
-"Hex colour for the Solid / Outline styles. Leave empty for Swift's velocity "
-"violet (#5b3df5)."
-msgstr ""
-"Hex-Farbe für die Solid-/Outline-Stile. Für Swifts Geschwindigkeitsviolett "
-"(#5b3df5) leer lassen."
-
-#: src/Admin/Settings.php:386
-msgid "Help"
-msgstr "Hilfe"
-
-#: src/Service/SwiftService.php:50
-msgid "Sorry, this product could not be added to your cart."
-msgstr ""
-"Leider konnte dieses Produkt nicht zu deinem Warenkorb hinzugefügt werden."
-
-#: swift.php:47
-msgid "Swift, Quick Buy for WooCommerce requires WooCommerce to be active."
-msgstr "Für Swift, Quick Buy für WooCommerce muss WooCommerce aktiv sein."
+"Swift - Buy Now Button for WooCommerce benötigt ein aktives WooCommerce."
 
 #: src/Admin/ProUpsell.php:78
 msgid "Wkrótce"
@@ -362,46 +59,364 @@ msgstr "Demnächst"
 msgid "Coming soon"
 msgstr "Demnächst"
 
-#. translators: %d: yearly price in PLN
-#: src/Admin/ProUpsell.php:83
-#, php-format
-msgid "od %d zł/rok"
-msgstr "ab %d zł/Jahr"
-
 #. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:88
+#: src/Admin/ProUpsell.php:84
 #, php-format
 msgid "from %1$s%2$d/yr"
 msgstr "ab %1$s%2$d/Jahr"
 
-#: src/Admin/ProUpsell.php:97
+#: src/Admin/ProUpsell.php:93
 msgid "Upgrade to PRO"
 msgstr "Auf PRO upgraden"
 
-#: src/Admin/ProUpsell.php:98
+#: src/Admin/ProUpsell.php:94
 msgid "Powiadom mnie"
 msgstr "Benachrichtige mich"
 
-#: src/Admin/ProUpsell.php:98
+#: src/Admin/ProUpsell.php:94
 msgid "Get notified"
 msgstr "Benachrichtige mich"
 
-#: src/Admin/ProUpsell.php:128
+#: src/Admin/ProUpsell.php:124
 msgid "Permission denied."
 msgstr "Zugriff verweigert."
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:158
+#: src/Admin/ProUpsell.php:154
 #, php-format
 msgid "Do more with %s"
 msgstr "Mehr erreichen mit %s"
 
-#: src/Admin/ProUpsell.php:165
+#: src/Admin/ProUpsell.php:161
 msgid "Dismiss this notice"
 msgstr "Diesen Hinweis ausblenden"
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:183
+#: src/Admin/ProUpsell.php:179
 #, php-format
 msgid "What %s adds"
-msgstr "Was %s ergänzt"
+msgstr "Das bietet %s zusätzlich"
+
+#: src/Admin/Settings.php:80
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: src/Admin/Settings.php:92 src/Admin/Settings.php:93
+#: src/Elementor/BuyNowWidget.php:42
+msgid "Buy Now Button"
+msgstr "Jetzt-kaufen-Button"
+
+#: src/Admin/Settings.php:145
+msgid "Live"
+msgstr "Aktiv"
+
+#: src/Admin/Settings.php:150
+msgid "Off"
+msgstr "Aus"
+
+#: src/Admin/Settings.php:158
+msgid ""
+"Swift adds a \"Buy now\" button so shoppers can go straight to checkout and "
+"skip the cart, fewer clicks, more completed orders. Configure where it "
+"appears and how it behaves below; changes apply to your storefront as soon "
+"as you save."
+msgstr ""
+"Swift fügt eine „Jetzt kaufen“-Schaltfläche hinzu, mit der Käufer direkt zur "
+"Kasse gelangen und den Warenkorb überspringen können, weniger Klicks, mehr "
+"abgeschlossene Bestellungen. Lege unten fest, wo die Schaltfläche erscheint "
+"und wie sie sich verhält; Änderungen werden sofort nach dem Speichern in "
+"deinem Shop wirksam."
+
+#: src/Admin/Settings.php:165
+msgid "Basics"
+msgstr "Grundeinstellungen"
+
+#: src/Admin/Settings.php:170
+msgid "Enable Buy Now"
+msgstr "„Jetzt kaufen“ aktivieren"
+
+#: src/Admin/Settings.php:171
+msgid ""
+"The master switch. When off, Swift adds no button, scripts or styles to your "
+"storefront at all, a clean, zero-footprint disable."
+msgstr ""
+"Der Hauptschalter. Wenn diese Option deaktiviert ist, fügt Swift deinem Shop "
+"keinerlei Schaltflächen, Skripte oder Stile hinzu, eine saubere "
+"Deaktivierung ohne Spuren."
+
+#: src/Admin/Settings.php:182
+msgid "Show the Buy Now button on your store."
+msgstr "Zeigt die Schaltfläche „Jetzt kaufen“ in deinem Shop an."
+
+#: src/Admin/Settings.php:188
+msgid "Button label"
+msgstr "Beschriftung der Schaltfläche"
+
+#: src/Admin/Settings.php:189
+msgid ""
+"The wording on the button. Short, action-led labels convert best, try \"Buy "
+"now\", \"Get it now\" or \"Express checkout\"."
+msgstr ""
+"Der Text auf der Schaltfläche. Kurze, handlungsorientierte Formulierungen "
+"konvertieren am besten, zum Beispiel „Jetzt kaufen“, „Jetzt sichern“ oder "
+"„Express-Kasse“."
+
+#. translators: %s: the translated default button label, e.g. "Buy now".
+#: src/Admin/Settings.php:205
+#, php-format
+msgid ""
+"Text shown on the Buy Now button. Leave empty to use the default (%s), which "
+"follows your site language."
+msgstr ""
+
+#: src/Admin/Settings.php:216
+msgid "Live preview:"
+msgstr "Live-Vorschau:"
+
+#: src/Admin/Settings.php:222
+msgid "Placement"
+msgstr "Platzierung"
+
+#: src/Admin/Settings.php:223
+msgid "Choose where the button shows up across your store."
+msgstr "Lege fest, wo die Schaltfläche in deinem Shop angezeigt wird."
+
+#: src/Admin/Settings.php:227
+msgid "Single product page"
+msgstr "Einzelne Produktseite"
+
+#: src/Admin/Settings.php:227
+msgid "Show the button on single product pages (simple products only)."
+msgstr ""
+"Zeigt die Schaltfläche auf einzelnen Produktseiten an (nur einfache "
+"Produkte)."
+
+#: src/Admin/Settings.php:227
+msgid ""
+"The product detail page. This is the highest-intent spot, the shopper is "
+"already looking at the item. Simple products only; a variable product needs "
+"a chosen variation, so Swift leaves those to the normal add-to-cart button."
+msgstr ""
+"Die Produktdetailseite. Hier ist die Kaufabsicht am höchsten, der Käufer "
+"betrachtet das Produkt bereits. Nur einfache Produkte; ein variables Produkt "
+"benötigt eine ausgewählte Variante, deshalb überlässt Swift diese der "
+"normalen Schaltfläche „In den Warenkorb“."
+
+#: src/Admin/Settings.php:228
+msgid "Shop & archive loops"
+msgstr "Shop- und Archivseiten"
+
+#: src/Admin/Settings.php:228
+msgid ""
+"Show the button on shop and archive product loops (simple products only)."
+msgstr ""
+"Zeigt die Schaltfläche in den Produktübersichten von Shop- und Archivseiten "
+"an (nur einfache Produkte)."
+
+#: src/Admin/Settings.php:228
+msgid ""
+"Product grids on the shop and category pages. Lets shoppers buy without "
+"opening each product. Simple products only; variable products need a chosen "
+"variation."
+msgstr ""
+"Produktraster auf den Shop- und Kategorieseiten. Ermöglicht Käufern den "
+"Kauf, ohne jedes Produkt einzeln zu öffnen. Nur einfache Produkte; variable "
+"Produkte benötigen eine ausgewählte Variante."
+
+#: src/Admin/Settings.php:232 src/Admin/Settings.php:237
+msgid "Position on single product"
+msgstr "Position auf der Produktseite"
+
+#: src/Admin/Settings.php:233
+msgid ""
+"Whether Swift's button sits above or below WooCommerce's own \"Add to cart\" "
+"button on the product page."
+msgstr ""
+"Legt fest, ob die Swift-Schaltfläche über oder unter der WooCommerce-"
+"Schaltfläche „In den Warenkorb“ auf der Produktseite erscheint."
+
+#: src/Admin/Settings.php:246
+msgid "After the add-to-cart button"
+msgstr "Nach der Schaltfläche „In den Warenkorb“"
+
+#: src/Admin/Settings.php:257
+msgid "Before the add-to-cart button"
+msgstr "Vor der Schaltfläche „In den Warenkorb“"
+
+#: src/Admin/Settings.php:261
+msgid "Tip: you can also drop the button anywhere with the"
+msgstr "Tipp: Du kannst die Schaltfläche auch überall mit dem"
+
+#: src/Admin/Settings.php:263
+msgid "shortcode, add id=\"123\" to target a specific product."
+msgstr ""
+"Shortcode platzieren, füge id=\"123\" hinzu, um ein bestimmtes Produkt "
+"anzuzeigen."
+
+#: src/Admin/Settings.php:272
+msgid "Behaviour"
+msgstr "Verhalten"
+
+#: src/Admin/Settings.php:273
+msgid "What happens when a shopper clicks Buy now."
+msgstr "Was passiert, wenn ein Käufer auf „Jetzt kaufen“ klickt."
+
+#: src/Admin/Settings.php:278 src/Admin/Settings.php:283
+msgid "Redirect to"
+msgstr "Weiterleitung zu"
+
+#: src/Admin/Settings.php:279
+msgid ""
+"Where the shopper lands after clicking. \"Checkout\" is the fast path that "
+"skips the cart entirely; \"Cart\" sends them to the cart page to review "
+"first."
+msgstr ""
+"Wohin der Käufer nach dem Klick gelangt. „Zur Kasse“ ist der schnelle Weg, "
+"der den Warenkorb komplett überspringt; „Warenkorb“ führt ihn zunächst zur "
+"Warenkorbseite, damit er die Bestellung dort noch prüfen kann."
+
+#: src/Admin/Settings.php:292
+msgid "Checkout (skip the cart)"
+msgstr "Zur Kasse (Warenkorb überspringen)"
+
+#: src/Admin/Settings.php:303
+msgid "Cart"
+msgstr "Warenkorb"
+
+#: src/Admin/Settings.php:309
+msgid "Empty the cart first"
+msgstr "Warenkorb zuerst leeren"
+
+#: src/Admin/Settings.php:309
+msgid ""
+"Clear the cart before adding, so the buyer checks out with only the chosen "
+"product."
+msgstr ""
+"Leert den Warenkorb vor dem Hinzufügen, sodass der Käufer nur mit dem "
+"ausgewählten Produkt zur Kasse geht."
+
+#: src/Admin/Settings.php:309
+msgid ""
+"Recommended for a true \"buy just this\" flow. If a shopper already has "
+"items in their cart, this removes them so the Buy now purchase stands alone. "
+"Turn off to add to the existing cart instead."
+msgstr ""
+"Empfohlen für einen echten „nur dieses kaufen“-Ablauf. Hat der Käufer "
+"bereits Artikel im Warenkorb, werden diese entfernt, sodass der Jetzt-kaufen-"
+"Einkauf für sich steht. Deaktiviere die Option, um stattdessen zum "
+"bestehenden Warenkorb hinzuzufügen."
+
+#: src/Admin/Settings.php:310
+msgid "Respect quantity"
+msgstr "Menge berücksichtigen"
+
+#: src/Admin/Settings.php:310
+msgid ""
+"Carry the quantity chosen on the product page into the Buy Now purchase "
+"(single, simple products)."
+msgstr ""
+"Übernimmt die auf der Produktseite gewählte Menge in den Jetzt-kaufen-"
+"Einkauf (einzelne, einfache Produkte)."
+
+#: src/Admin/Settings.php:310
+msgid ""
+"When on, the quantity the shopper picks in the product's quantity box is "
+"used for the Buy now purchase. When off, exactly one unit is bought. Single, "
+"simple products only."
+msgstr ""
+"Ist diese Option aktiviert, wird die vom Käufer im Mengenfeld des Produkts "
+"gewählte Menge für den Jetzt-kaufen-Einkauf verwendet. Ist sie deaktiviert, "
+"wird genau eine Einheit gekauft. Nur einzelne, einfache Produkte."
+
+#: src/Admin/Settings.php:317
+msgid "Appearance"
+msgstr "Aussehen"
+
+#: src/Admin/Settings.php:318
+msgid "How the button looks. Use the live preview above to check your choices."
+msgstr ""
+"Wie die Schaltfläche aussieht. Nutze die Live-Vorschau oben, um deine "
+"Auswahl zu überprüfen."
+
+#: src/Admin/Settings.php:323 src/Admin/Settings.php:328
+msgid "Button style"
+msgstr "Schaltflächenstil"
+
+#: src/Admin/Settings.php:324
+msgid ""
+"\"Theme default\" inherits your theme's button look (safest, blends in). "
+"\"Solid\" and \"Outline\" use the accent colour below so the button stands "
+"out from the standard add-to-cart button."
+msgstr ""
+"„Theme-Standard“ übernimmt das Erscheinungsbild der Schaltflächen deines "
+"Themes (am sichersten, fügt sich nahtlos ein). „Ausgefüllt“ und „Umrandet“ "
+"verwenden die Akzentfarbe unten, damit sich die Schaltfläche von der "
+"Standard-Schaltfläche „In den Warenkorb“ abhebt."
+
+#: src/Admin/Settings.php:337
+msgid "Theme default"
+msgstr "Theme-Standard"
+
+#: src/Admin/Settings.php:348
+msgid "Solid (accent colour)"
+msgstr "Ausgefüllt (Akzentfarbe)"
+
+#: src/Admin/Settings.php:359
+msgid "Outline (accent colour)"
+msgstr "Umrandet (Akzentfarbe)"
+
+#: src/Admin/Settings.php:366
+msgid "Accent colour"
+msgstr "Akzentfarbe"
+
+#: src/Admin/Settings.php:367
+msgid ""
+"A hex colour used by the Solid and Outline styles. Leave empty to use "
+"Swift's velocity violet (#5b3df5). Pick a high-contrast brand colour so the "
+"button is easy to see and tap. Ignored by the \"Theme default\" style."
+msgstr ""
+"Ein Hex-Farbwert für die Stile „Ausgefüllt“ und „Umrandet“. Leer lassen, um "
+"Swifts violette Markenfarbe (#5b3df5) zu verwenden. Wähle eine "
+"kontrastreiche Markenfarbe, damit die Schaltfläche gut sichtbar und leicht "
+"antippbar ist. Wird beim Stil „Theme-Standard“ ignoriert."
+
+#: src/Admin/Settings.php:380
+msgid ""
+"Hex colour for the Solid / Outline styles. Leave empty for Swift's velocity "
+"violet (#5b3df5)."
+msgstr ""
+"Hex-Farbwert für die Stile „Ausgefüllt“/„Umrandet“. Leer lassen für Swifts "
+"violette Markenfarbe (#5b3df5)."
+
+#: src/Admin/Settings.php:412
+msgid "Help"
+msgstr "Hilfe"
+
+#: src/Elementor/BuyNowWidget.php:80
+msgid "Buy Now button"
+msgstr "Jetzt-kaufen-Button"
+
+#: src/Elementor/BuyNowWidget.php:86
+msgid "Product ID"
+msgstr "Produkt-ID"
+
+#: src/Elementor/BuyNowWidget.php:90
+msgid "Leave 0 to use the current product on a product page."
+msgstr "0 lassen, um das aktuelle Produkt auf einer Produktseite zu verwenden."
+
+#: src/Service/SwiftService.php:49 src/Service/Texts.php:33
+#: templates/buy-now-button.php:43
+msgid "Buy now"
+msgstr "Jetzt kaufen"
+
+#: src/Service/SwiftService.php:50 src/Service/Texts.php:34
+msgid "Sorry, this product could not be added to your cart."
+msgstr ""
+"Dieses Produkt konnte leider nicht zu deinem Warenkorb hinzugefügt werden."
+
+#~ msgid ""
+#~ "Text shown on the Buy Now button. Leave empty to use the default (\"Buy "
+#~ "now\")."
+#~ msgstr ""
+#~ "Text, der auf der Schaltfläche „Jetzt kaufen“ angezeigt wird. Leer "
+#~ "lassen, um die Standardbeschriftung („Jetzt kaufen“) zu verwenden."

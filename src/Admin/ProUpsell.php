@@ -48,6 +48,13 @@ final class ProUpsell
     /** Whether to render the promo at all (filterable for white-label builds). */
     public function enabled(): bool
     {
+
+        // Somebody running the paid edition has already bought what this sells.
+        // Only the banner was ever dismissible, so without this the sidebar promo
+        // and the locked cards followed a paying customer around for ever.
+        if (defined('Swift\\Pro\\VERSION')) {
+            return false;
+        }
         /**
          * Filters whether the Swift PRO promo is shown on the settings screen.
          *
@@ -78,10 +85,6 @@ final class ProUpsell
             return $this->isPolish() ? __('Wkrótce', 'plogins-swift') : __('Coming soon', 'plogins-swift');
         }
         $d = $this->data();
-        if ($this->isPolish() && ! empty($d['price_pln'])) {
-            /* translators: %d: yearly price in PLN */
-            return sprintf(__('od %d zł/rok', 'plogins-swift'), (int) $d['price_pln']);
-        }
         if (! empty($d['price_from'])) {
             $cur = ($d['currency'] ?? 'EUR') === 'EUR' ? '€' : (string) $d['currency'] . ' ';
             /* translators: 1: currency symbol, 2: yearly price */

@@ -180,7 +180,12 @@ final class SwiftService implements HasHooks
     }
 
     /**
-     * Stored settings merged over packaged defaults.
+     * Stored settings merged over packaged defaults, with every empty
+     * customer-facing string resolved to its translated default.
+     *
+     * This is the storefront's view of the settings: the engine, the shortcode
+     * and the button template all read it. The admin screen keeps its own
+     * unresolved copy, so saving never writes a translation into the option.
      *
      * @return array<string, mixed>
      */
@@ -195,7 +200,7 @@ final class SwiftService implements HasHooks
         /** @var array<string, mixed> $defaults */
         $defaults = require SWIFT_DIR . 'config/defaults.php';
 
-        return array_merge($defaults, $stored);
+        return Texts::apply(array_merge($defaults, $stored));
     }
 
     /**

@@ -1,4 +1,4 @@
-# Translation of Plugins - Swift &#8211; Buy Now Button for WooCommerce - Stable Readme (latest release) in Polish
+# Translation of Plugins - Swift &#8211; Buy Now Button for WooCommerce - Stable Readme (latest release) in French
 # This file is distributed under the same license as the Plugins - Swift &#8211; Buy Now Button for WooCommerce - Stable Readme (latest release) package.
 msgid ""
 msgstr ""
@@ -6,15 +6,15 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: GlotPress/4.1.0\n"
-"Language: pl\n"
+"Language: fr\n"
 "Project-Id-Version: Plugins - Swift &#8211; Buy Now Button for WooCommerce - Stable Readme (latest release)\n"
 
 #. Short description.
 #, gp-priority: high
 msgid "Add a Buy Now / quick buy button that takes shoppers straight to checkout, skipping the cart."
-msgstr "Dodaj przycisk Kup teraz / szybkiego zakupu, który przenosi klientów prosto do kasy, z pominięciem koszyka."
+msgstr "Ajoute un bouton Achat rapide / Acheter maintenant qui envoie les clients directement au paiement, en sautant le panier."
 
 #. Plugin name.
 #, gp-priority: high
@@ -26,8 +26,8 @@ msgid ""
 "Swift PRO requires the free plugin and does not replace it. If the free plugin\n"
 "is missing or disabled, PRO stays dormant and says so rather than half-working."
 msgstr ""
-"Swift PRO wymaga darmowej wtyczki i jej nie zastępuje. Jeśli darmowa wtyczka\n"
-"jest nieobecna lub wyłączona, PRO pozostaje nieaktywne i wyraźnie to sygnalizuje, zamiast działać połowicznie."
+"Swift PRO nécessite l'extension gratuite et ne la remplace pas. Si l'extension gratuite\n"
+"est absente ou désactivée, PRO reste inactive et l'indique clairement plutôt que de fonctionner à moitié."
 
 #. Found in description paragraph.
 msgid ""
@@ -35,13 +35,13 @@ msgid ""
 "cart, on simple products, with nothing time-limited and no account to create.\n"
 "<strong>Plogins Swift PRO</strong> is a separate add-on for stores that want the rest:"
 msgstr ""
-"Darmowa wtyczka jest kompletna w tym, co robi: przycisk Kup teraz, który pomija\n"
-"koszyk, dla produktów prostych, bez żadnych ograniczeń czasowych i bez zakładania konta.\n"
-"<strong>Plogins Swift PRO</strong> to osobny dodatek dla sklepów, które chcą więcej:"
+"L'extension gratuite est complète pour ce qu'elle fait : un bouton Acheter maintenant qui saute le\n"
+"panier, sur les produits simples, sans rien de limité dans le temps ni de compte à créer.\n"
+"<strong>Plogins Swift PRO</strong> est une extension complémentaire séparée pour les boutiques qui veulent le reste :"
 
 #. Found in description list item.
 msgid "<strong>Pricing</strong> - <a href=\"https://plogins.com/swift-pro/pricing/\">plogins.com/swift-pro/pricing/</a>"
-msgstr "<strong>Cennik</strong> - <a href=\"https://plogins.com/swift-pro/pricing/\">plogins.com/swift-pro/pricing/</a>"
+msgstr "<strong>Tarifs</strong> - <a href=\"https://plogins.com/swift-pro/pricing/\">plogins.com/swift-pro/pricing/</a>"
 
 #. Found in description list item.
 msgid "<strong>Plogins Swift PRO</strong> - <a href=\"https://plogins.com/swift-pro/\">plogins.com/swift-pro/</a>"
@@ -49,23 +49,23 @@ msgstr "<strong>Plogins Swift PRO</strong> - <a href=\"https://plogins.com/swift
 
 #. Found in description list item.
 msgid "<strong>Buy Now analytics</strong> - clicks, direct-checkout conversions, conversion rate and attributed revenue per product, with CSV export"
-msgstr "<strong>Analityka Kup teraz</strong> - kliknięcia, konwersje bezpośrednio do kasy, współczynnik konwersji i przypisany przychód na produkt, z eksportem do CSV"
+msgstr "<strong>Statistiques Acheter maintenant</strong> - clics, conversions en paiement direct, taux de conversion et revenu attribué par produit, avec export CSV"
 
 #. Found in description list item.
 msgid "<strong>Express checkout shortcuts</strong> - place Apple Pay and Google Pay buttons beside Buy Now when WooCommerce Payments or Stripe already provides them"
-msgstr "<strong>Skróty szybkiej płatności</strong> - umieść przyciski Apple Pay i Google Pay obok Kup teraz, gdy WooCommerce Payments lub Stripe już je udostępniają"
+msgstr "<strong>Raccourcis de paiement express</strong> - place les boutons Apple Pay et Google Pay à côté d'Acheter maintenant lorsque WooCommerce Payments ou Stripe les fournissent déjà"
 
 #. Found in description list item.
 msgid "<strong>Per-product rules</strong> - hide the button, change its label, or send that product to the cart instead of checkout"
-msgstr "<strong>Reguły dla poszczególnych produktów</strong> - ukryj przycisk, zmień jego etykietę lub wyślij dany produkt do koszyka zamiast do kasy"
+msgstr "<strong>Règles par produit</strong> - masquer le bouton, changer son libellé, ou envoyer ce produit vers le panier plutôt que vers le paiement"
 
 #. Found in description list item.
 msgid "<strong>Sticky Buy Now bar</strong> - a fixed bar that slides in on scroll, mirroring the selected variation"
-msgstr "<strong>Przyklejony pasek Kup teraz</strong> - stały pasek, który wysuwa się przy przewijaniu, odzwierciedlając wybrany wariant"
+msgstr "<strong>Barre Acheter maintenant fixe</strong> - une barre fixe qui apparaît au défilement, reflétant la variation sélectionnée"
 
 #. Found in description list item.
 msgid "<strong>Buy Now on variable products</strong> - on the product page and in shop loops, with a compact attribute picker that stays disabled until a purchasable variation is chosen"
-msgstr "<strong>Kup teraz dla produktów zmiennych</strong> - na stronie produktu i na listach sklepu, z kompaktowym selektorem atrybutów, który pozostaje nieaktywny, dopóki nie zostanie wybrany wariant możliwy do kupienia"
+msgstr "<strong>Acheter maintenant sur les produits variables</strong> - sur la page produit et dans les listes de la boutique, avec un sélecteur d'attributs compact qui reste désactivé tant qu'aucune variation achetable n'est choisie"
 
 #. Found in description header.
 msgid "Plogins Swift PRO"
@@ -73,362 +73,362 @@ msgstr "Plogins Swift PRO"
 
 #. Found in description paragraph.
 msgid "Swift is developed in the open. Source code, bug reports and feature requests live at <a href=\"https://github.com/wppoland/plogins-swift\">github.com/wppoland/plogins-swift</a>."
-msgstr "Swift jest rozwijany w pełni jawnie. Kod źródłowy, zgłoszenia błędów i propozycje funkcji znajdziesz na <a href=\"https://github.com/wppoland/plogins-swift\">github.com/wppoland/plogins-swift</a>."
+msgstr "Swift est développé en open source. Le code source, les rapports de bugs et les demandes de fonctionnalités se trouvent sur <a href=\"https://github.com/wppoland/plogins-swift\">github.com/wppoland/plogins-swift</a>."
 
 #. Found in description list item.
 msgid "<strong>Bug reports and feature requests</strong>: <a href=\"https://github.com/wppoland/plogins-swift/issues\">github.com/wppoland/plogins-swift/issues</a>"
-msgstr "<strong>Zgłoszenia błędów i propozycje funkcji</strong>: <a href=\"https://github.com/wppoland/plogins-swift/issues\">github.com/wppoland/plogins-swift/issues</a>"
+msgstr "<strong>Rapports de bugs et demandes de fonctionnalités</strong> : <a href=\"https://github.com/wppoland/plogins-swift/issues\">github.com/wppoland/plogins-swift/issues</a>"
 
 #. Found in description list item.
 msgid "<strong>Source code</strong>: <a href=\"https://github.com/wppoland/plogins-swift\">github.com/wppoland/plogins-swift</a>"
-msgstr "<strong>Kod źródłowy</strong>: <a href=\"https://github.com/wppoland/plogins-swift\">github.com/wppoland/plogins-swift</a>"
+msgstr "<strong>Code source</strong> : <a href=\"https://github.com/wppoland/plogins-swift\">github.com/wppoland/plogins-swift</a>"
 
 #. Found in description list item.
 msgid "<strong>Plugin page</strong>: <a href=\"https://plogins.com/plogins-swift/\">plogins.com/plogins-swift/</a>"
-msgstr "<strong>Strona wtyczki</strong>: <a href=\"https://plogins.com/plogins-swift/\">plogins.com/plogins-swift/</a>"
+msgstr "<strong>Page de l'extension</strong> : <a href=\"https://plogins.com/plogins-swift/\">plogins.com/plogins-swift/</a>"
 
 #. Found in description list item.
 msgid "<strong>Documentation</strong>: <a href=\"https://plogins.com/plogins-swift/docs/\">plogins.com/plogins-swift/docs/</a>"
-msgstr "<strong>Dokumentacja</strong>: <a href=\"https://plogins.com/plogins-swift/docs/\">plogins.com/plogins-swift/docs/</a>"
+msgstr "<strong>Documentation</strong> : <a href=\"https://plogins.com/plogins-swift/docs/\">plogins.com/plogins-swift/docs/</a>"
 
 #. Found in faq paragraph.
 msgid "Yes. Use <code>[swift_buy_now]</code> for the current product or <code>[swift_buy_now id=\"123\"]</code> for a specific simple product. The same control is the Elementor \"Buy Now Button\" widget when Elementor is active."
-msgstr "Tak. Użyj <code>[swift_buy_now]</code> dla bieżącego produktu lub <code>[swift_buy_now id=\"123\"]</code> dla konkretnego produktu prostego. Ta sama funkcja jest dostępna jako widget Elementora \"Buy Now Button\", gdy Elementor jest aktywny."
+msgstr "Oui. Utilisez <code>[swift_buy_now]</code> pour le produit en cours ou <code>[swift_buy_now id=\"123\"]</code> pour un produit simple spécifique. Le même élément est disponible sous forme de widget Elementor « Bouton Acheter maintenant » lorsque Elementor est actif."
 
 #. Found in faq paragraph.
 msgid "The free version is designed for simple products. The button is shown for simple products only, on single product pages as well as on loops, since a variation must be chosen first. Buy Now for variable products, with an inline variation picker on the product page and in shop loops, ships in Swift PRO."
-msgstr "Darmowa wersja jest przeznaczona dla produktów prostych. Przycisk jest wyświetlany wyłącznie dla produktów prostych, zarówno na stronach pojedynczych produktów, jak i na listach, ponieważ najpierw trzeba wybrać wariant. Funkcja Kup teraz dla produktów zmiennych, z wbudowanym selektorem wariantów na stronie produktu i na listach sklepu, jest dostępna w Swift PRO."
+msgstr "La version gratuite est conçue pour les produits simples. Le bouton s'affiche uniquement pour les produits simples, sur les pages produit comme dans les listes, car une variation doit d'abord être choisie. Acheter maintenant pour les produits variables, avec un sélecteur de variation intégré sur la page produit et dans les listes de la boutique, est disponible dans Swift PRO."
 
 #. Found in faq paragraph.
 msgid "No. Swift is stateless, it stores only its settings (one option) and creates no custom tables or product meta."
-msgstr "Nie. Swift jest bezstanowy, przechowuje wyłącznie swoje ustawienia (jedną opcję) i nie tworzy żadnych własnych tabel ani meta danych produktu."
+msgstr "Non. Swift est sans état : il ne stocke que ses réglages (une seule option) et ne crée aucune table personnalisée ni méta de produit."
 
 #. Found in faq paragraph.
 msgid "Yes for simple products on single product pages, when the \"respect quantity\" setting is enabled."
-msgstr "Tak, dla produktów prostych na stronach pojedynczych produktów, gdy włączone jest ustawienie \"uwzględniaj ilość\"."
+msgstr "Oui, pour les produits simples sur les pages produit, lorsque le réglage « respecter la quantité » est activé."
 
 #. Found in faq paragraph.
 msgid "Yes. Swift can clear the cart before adding the selected product, so direct checkout contains only the item the shopper clicked."
-msgstr "Tak. Swift może wyczyścić koszyk przed dodaniem wybranego produktu, dzięki czemu bezpośrednia kasa zawiera tylko produkt, który kliknął klient."
+msgstr "Oui. Swift peut vider le panier avant d'ajouter le produit sélectionné, de sorte que le paiement direct ne contient que l'article sur lequel le client a cliqué."
 
 #. Found in faq paragraph.
 msgid "Yes, if you set the redirect target to \"Checkout\". The product is added to the cart and the shopper is taken straight to the checkout page. You can also choose to redirect to the cart instead."
-msgstr "Tak, jeśli ustawisz cel przekierowania na \"Kasa\". Produkt jest dodawany do koszyka, a klient jest przenoszony prosto na stronę kasy. Możesz też wybrać przekierowanie do koszyka."
+msgstr "Oui, si vous réglez la destination de redirection sur « Paiement ». Le produit est ajouté au panier et le client est envoyé directement vers la page de paiement. Vous pouvez aussi choisir de rediriger vers le panier à la place."
 
 #. Found in faq paragraph.
 msgid "On single product pages and/or shop and archive product loops; you choose which in the settings. Everywhere it shows, it is shown only for simple, in-stock, purchasable products."
-msgstr "Na stronach pojedynczych produktów i/lub na listach sklepu i archiwum produktów; wybierasz to w ustawieniach. Wszędzie tam, gdzie się pojawia, jest wyświetlany wyłącznie dla produktów prostych, dostępnych w magazynie i możliwych do kupienia."
+msgstr "Sur les pages produit et/ou dans les listes de produits de la boutique et des archives ; vous choisissez lesquelles dans les réglages. Partout où il s'affiche, il n'apparaît que pour les produits simples, en stock et achetables."
 
 #. Found in faq paragraph.
 msgid "Yes. Swift requires an active WooCommerce installation."
-msgstr "Tak. Swift wymaga aktywnej instalacji WooCommerce."
+msgstr "Oui. Swift nécessite une installation WooCommerce active."
 
 #. Found in faq header.
 msgid "Can I place the button with a shortcode or Elementor?"
-msgstr "Czy mogę umieścić przycisk za pomocą shortcode'a lub Elementora?"
+msgstr "Peut-on placer le bouton avec un shortcode ou Elementor ?"
 
 #. Found in faq header.
 msgid "Does it work with variable products?"
-msgstr "Czy działa z produktami zmiennymi?"
+msgstr "Fonctionne-t-il avec les produits variables ?"
 
 #. Found in faq header.
 msgid "Does it create database tables?"
-msgstr "Czy tworzy tabele w bazie danych?"
+msgstr "Crée-t-il des tables en base de données ?"
 
 #. Found in faq header.
 msgid "Does it respect the selected quantity?"
-msgstr "Czy uwzględnia wybraną ilość?"
+msgstr "Respecte-t-il la quantité sélectionnée ?"
 
 #. Found in faq header.
 msgid "Can the Buy Now button empty the cart first?"
-msgstr "Czy przycisk Kup teraz może najpierw opróżnić koszyk?"
+msgstr "Le bouton Acheter maintenant peut-il vider le panier au préalable ?"
 
 #. Found in faq header.
 msgid "Does it skip the cart?"
-msgstr "Czy pomija koszyk?"
+msgstr "Saute-t-il le panier ?"
 
 #. Found in faq header.
 msgid "Where does the Buy Now button appear?"
-msgstr "Gdzie pojawia się przycisk Kup teraz?"
+msgstr "Où apparaît le bouton Acheter maintenant ?"
 
 #. Found in faq header.
 msgid "Does it require WooCommerce?"
-msgstr "Czy wymaga WooCommerce?"
+msgstr "Nécessite-t-il WooCommerce ?"
 
 #. Found in installation list item.
 msgid "Visit <strong>WooCommerce > Swift Quick Buy</strong> to configure the button label, placement and redirect target."
-msgstr "Przejdź do <strong>WooCommerce > Swift Quick Buy</strong>, aby skonfigurować etykietę przycisku, jego umiejscowienie i cel przekierowania."
+msgstr "Rendez-vous dans <strong>WooCommerce > Swift Quick Buy</strong> pour configurer le libellé du bouton, son emplacement et la destination de redirection."
 
 #. Found in installation list item.
 msgid "Activate it. WooCommerce must be active."
-msgstr "Aktywuj ją. WooCommerce musi być aktywny."
+msgstr "Activez-la. WooCommerce doit être actif."
 
 #. Found in installation list item.
 msgid "Upload the plugin to <code>/wp-content/plugins/plogins-swift</code>, or install via Plugins > Add New."
-msgstr "Prześlij wtyczkę do <code>/wp-content/plugins/plogins-swift</code> lub zainstaluj przez Wtyczki > Dodaj nową."
+msgstr "Téléversez l'extension dans <code>/wp-content/plugins/plogins-swift</code>, ou installez-la via Extensions > Ajouter."
 
 #. Found in description paragraph.
 msgid "Swift is fully translatable and ships the <code>plogins-swift.pot</code> template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files."
-msgstr "Swift jest w pełni przetłumaczalny i zawiera szablon <code>plogins-swift.pot</code>. Tłumaczenia są dostarczane przez pakiety językowe WordPress.org z translate.wordpress.org, gdzie powstają wersje polska, niemiecka i hiszpańska; sam pakiet nie zawiera skompilowanych plików tłumaczeń."
+msgstr "Swift est entièrement traduisible et fournit le modèle <code>plogins-swift.pot</code>. Les traductions sont livrées par les packs de langue de WordPress.org depuis translate.wordpress.org, où le polonais, l'allemand et l'espagnol sont en cours de contribution ; le paquet lui-même ne contient aucun fichier de traduction compilé."
 
 #. Found in description paragraph.
 msgid "All of Swift's work happens on your server. It reads and writes a single settings option (<code>swift_settings</code>) and a schema-version marker (<code>swift_db_version</code>), and creates no custom database tables and no product meta. The Buy Now button adds the chosen product to the visitor's own WooCommerce cart and redirects them within your site to your checkout or cart page; nothing about the product, the cart or the shopper leaves your installation."
-msgstr "Cała praca Swift odbywa się na Twoim serwerze. Wtyczka odczytuje i zapisuje jedną opcję ustawień (<code>swift_settings</code>) oraz znacznik wersji schematu (<code>swift_db_version</code>), i nie tworzy żadnych własnych tabel w bazie danych ani meta danych produktu. Przycisk Kup teraz dodaje wybrany produkt do koszyka WooCommerce odwiedzającego i przekierowuje go w obrębie Twojej witryny na stronę kasy lub koszyka; żadne dane o produkcie, koszyku ani kliencie nie opuszczają Twojej instalacji."
+msgstr "Tout le travail de Swift se déroule sur votre serveur. Il lit et écrit une seule option de réglages (<code>swift_settings</code>) et un marqueur de version de schéma (<code>swift_db_version</code>), et ne crée aucune table de base de données personnalisée ni méta de produit. Le bouton Acheter maintenant ajoute le produit choisi au propre panier WooCommerce du visiteur et le redirige, au sein de votre site, vers votre page de paiement ou de panier ; rien concernant le produit, le panier ou le client ne quitte votre installation."
 
 #. Found in description paragraph.
 msgid "Swift does not connect to, send data to, or load anything from any external service. There is no SDK, no API client, no remote font, CDN or analytics endpoint, and no phone-home or licensing check, its CSS and JavaScript are bundled with the plugin and enqueued from your own site."
-msgstr "Swift nie łączy się z żadną usługą zewnętrzną, nie wysyła do niej danych ani niczego z niej nie wczytuje. Nie ma tu SDK, klienta API, zdalnej czcionki, CDN ani punktu końcowego analityki, ani żadnego mechanizmu phone-home czy sprawdzania licencji, jego CSS i JavaScript są dołączone do wtyczki i wczytywane z Twojej własnej witryny."
+msgstr "Swift ne se connecte à aucun service externe, ne lui envoie aucune donnée et n'en charge rien. Il n'y a ni SDK, ni client API, ni police distante, CDN ou point de terminaison analytique, ni vérification de licence ou d'appel à un serveur distant : son CSS et son JavaScript sont fournis avec l'extension et chargés depuis votre propre site."
 
 #. Found in description paragraph.
 msgid "If Elementor is active, the same button is available as a \"Buy Now Button\" widget. The Product ID control is the shortcode's <code>id</code> argument: leave it at 0 on a product page."
-msgstr "Jeśli Elementor jest aktywny, ten sam przycisk jest dostępny jako widget \"Buy Now Button\". Pole ID produktu odpowiada argumentowi <code>id</code> shortcode'a: na stronie produktu pozostaw je jako 0."
+msgstr "Si Elementor est actif, le même bouton est disponible sous forme de widget « Bouton Acheter maintenant ». Le champ ID du produit correspond à l'argument <code>id</code> du shortcode : laissez-le à 0 sur une page produit."
 
 #. Found in description paragraph.
 msgid "Use <code>[swift_buy_now]</code> to render the Buy Now button anywhere, inside a page, post or block. It targets the current product by default; add an id to target a specific simple product:"
-msgstr "Użyj <code>[swift_buy_now]</code>, aby wyświetlić przycisk Kup teraz w dowolnym miejscu: na stronie, we wpisie lub w bloku. Domyślnie dotyczy bieżącego produktu; dodaj id, aby wskazać konkretny produkt prosty:"
+msgstr "Utilisez <code>[swift_buy_now]</code> pour afficher le bouton Acheter maintenant n'importe où, dans une page, un article ou un bloc. Il cible le produit en cours par défaut ; ajoutez un id pour cibler un produit simple spécifique :"
 
 #. Found in description paragraph.
 msgid "A simple WooCommerce settings page (WooCommerce > Swift Quick Buy) lets you:"
-msgstr "Prosta strona ustawień WooCommerce (WooCommerce > Swift Quick Buy) pozwala:"
+msgstr "Une simple page de réglages WooCommerce (WooCommerce > Swift Quick Buy) vous permet de :"
 
 #. Found in description paragraph.
 msgid "Swift is stateless: it stores no per-product data and creates no database tables. It handles the button hooks, nonce verification, cart handling and redirect, and nothing else."
-msgstr "Swift jest bezstanowy: nie przechowuje żadnych danych dotyczących poszczególnych produktów i nie tworzy tabel w bazie danych. Obsługuje jedynie hooki przycisku, weryfikację nonce, obsługę koszyka i przekierowanie, i nic poza tym."
+msgstr "Swift est sans état : il ne stocke aucune donnée par produit et ne crée aucune table en base de données. Il gère les hooks du bouton, la vérification du nonce, la gestion du panier et la redirection, et rien d'autre."
 
 #. Found in description paragraph.
 msgid "The button can appear on single product pages, on shop and archive loops, or both. You choose the label, where it redirects (checkout or cart), and whether the cart is emptied first so the buyer checks out with only the product they clicked."
-msgstr "Przycisk może pojawiać się na stronach pojedynczych produktów, na listach sklepu i archiwum, albo w obu miejscach. Wybierasz etykietę, cel przekierowania (kasa lub koszyk) oraz to, czy koszyk ma być najpierw opróżniony, tak aby kupujący finalizował zakup tylko z produktem, który kliknął."
+msgstr "Le bouton peut apparaître sur les pages produit, dans les listes de la boutique et des archives, ou les deux. Vous choisissez le libellé, la destination de la redirection (paiement ou panier), et si le panier doit être vidé au préalable pour que l'acheteur paie uniquement le produit sur lequel il a cliqué."
 
 #. Found in description paragraph.
 msgid "Swift adds a \"Buy Now\" quick buy button to your WooCommerce products. One click adds the product to the cart and sends the shopper straight to checkout, skipping the cart page so a purchase takes one click instead of three."
-msgstr "Swift dodaje do Twoich produktów WooCommerce przycisk szybkiego zakupu \"Kup teraz\". Jedno kliknięcie dodaje produkt do koszyka i przenosi klienta prosto do kasy, z pominięciem strony koszyka, dzięki czemu zakup wymaga jednego kliknięcia zamiast trzech."
+msgstr "Swift ajoute un bouton d'achat rapide « Acheter maintenant » à vos produits WooCommerce. Un seul clic ajoute le produit au panier et envoie le client directement au paiement, en sautant la page du panier, si bien qu'un achat ne prend qu'un clic au lieu de trois."
 
 #. Found in description list item.
 msgid "Pick a button style (theme, solid, outline) and an optional accent colour."
-msgstr "Wybierz styl przycisku (motyw, wypełniony, konturowy) oraz opcjonalny kolor akcentu."
+msgstr "Choisissez un style de bouton (thème, plein, contour) et une couleur d'accentuation facultative."
 
 #. Found in description list item.
 msgid "Choose whether to respect the quantity selected on the product page."
-msgstr "Wybierz, czy uwzględniać ilość wybraną na stronie produktu."
+msgstr "Choisissez de respecter ou non la quantité sélectionnée sur la page produit."
 
 #. Found in description list item.
 msgid "Choose whether to empty the cart before adding."
-msgstr "Wybierz, czy opróżniać koszyk przed dodaniem."
+msgstr "Choisissez de vider ou non le panier avant l'ajout."
 
 #. Found in description list item.
 msgid "Choose where it redirects (checkout or cart)."
-msgstr "Wybierz, dokąd następuje przekierowanie (kasa lub koszyk)."
+msgstr "Choisissez la destination de la redirection (paiement ou panier)."
 
 #. Found in description list item.
 msgid "Choose whether it sits before or after the add-to-cart button on single products."
-msgstr "Wybierz, czy ma znajdować się przed czy po przycisku dodania do koszyka na stronach pojedynczych produktów."
+msgstr "Choisissez s'il se place avant ou après le bouton d'ajout au panier sur les produits simples."
 
 #. Found in description list item.
 msgid "Choose where the button appears (single product, shop loops, or both)."
-msgstr "Wybierz, gdzie pojawia się przycisk (pojedynczy produkt, listy sklepu lub oba miejsca)."
+msgstr "Choisissez où le bouton apparaît (page produit, listes de la boutique, ou les deux)."
 
 #. Found in description list item.
 msgid "Set the button label."
-msgstr "Ustaw etykietę przycisku."
+msgstr "Définissez le libellé du bouton."
 
 #. Found in description list item.
 msgid "Enable or disable the Buy Now button."
-msgstr "Włącz lub wyłącz przycisk Kup teraz."
+msgstr "Activez ou désactivez le bouton Acheter maintenant."
 
 #. Found in description list item.
 msgid "Honours stock and purchasability, the button is hidden for out-of-stock or non-purchasable products, and is not shown for variable products."
-msgstr "Uwzględnia stan magazynowy i możliwość zakupu, przycisk jest ukrywany dla produktów niedostępnych lub niemożliwych do kupienia i nie jest wyświetlany dla produktów zmiennych."
+msgstr "Respecte le stock et l'achetabilité : le bouton est masqué pour les produits en rupture de stock ou non achetables, et n'est pas affiché pour les produits variables."
 
 #. Found in description list item.
 msgid "Pick a button <strong>style</strong>, theme default, solid, or outline, with an optional accent colour."
-msgstr "Wybierz <strong>styl</strong> przycisku: domyślny dla motywu, wypełniony lub konturowy, z opcjonalnym kolorem akcentu."
+msgstr "Choisissez un <strong>style</strong> de bouton, par défaut du thème, plein ou contour, avec une couleur d'accentuation facultative."
 
 #. Found in description list item.
 msgid "Optionally <strong>respects the quantity</strong> chosen on the product page (simple products)."
-msgstr "Opcjonalnie <strong>uwzględnia ilość</strong> wybraną na stronie produktu (produkty proste)."
+msgstr "Peut <strong>respecter la quantité</strong> choisie sur la page produit (produits simples)."
 
 #. Found in description list item.
 msgid "Optionally empties the cart first so checkout shows only the chosen product."
-msgstr "Opcjonalnie najpierw opróżnia koszyk, dzięki czemu kasa pokazuje tylko wybrany produkt."
+msgstr "Peut vider le panier au préalable pour que le paiement n'affiche que le produit choisi."
 
 #. Found in description list item.
 msgid "Redirects to the <strong>checkout</strong> (skip the cart) or to the <strong>cart</strong>, whichever you prefer."
-msgstr "Przekierowuje do <strong>kasy</strong> (z pominięciem koszyka) lub do <strong>koszyka</strong>, zależnie od preferencji."
+msgstr "Redirige vers le <strong>paiement</strong> (en sautant le panier) ou vers le <strong>panier</strong>, selon votre préférence."
 
 #. Found in description list item.
 msgid "Drop the button anywhere with the <code>[swift_buy_now]</code> shortcode or the Elementor \"Buy Now Button\" widget (optionally targeting a product by id)."
-msgstr "Umieść przycisk w dowolnym miejscu za pomocą shortcode'a <code>[swift_buy_now]</code> lub widgetu Elementora \"Buy Now Button\" (opcjonalnie wskazując produkt po id)."
+msgstr "Placez le bouton n'importe où avec le shortcode <code>[swift_buy_now]</code> ou le widget Elementor « Bouton Acheter maintenant » (en ciblant éventuellement un produit par id)."
 
 #. Found in description list item.
 msgid "Place the button <strong>before or after</strong> the native add-to-cart button on single product pages."
-msgstr "Umieść przycisk <strong>przed lub po</strong> natywnym przycisku dodania do koszyka na stronach pojedynczych produktów."
+msgstr "Placez le bouton <strong>avant ou après</strong> le bouton d'ajout au panier natif sur les pages produit."
 
 #. Found in description list item.
 msgid "Works on single product pages and/or shop and archive loops."
-msgstr "Działa na stronach pojedynczych produktów i/lub na listach sklepu i archiwum."
+msgstr "Fonctionne sur les pages produit et/ou dans les listes de la boutique et des archives."
 
 #. Found in description list item.
 msgid "Adds a \"Buy Now\" button that adds-to-cart and redirects in one click."
-msgstr "Dodaje przycisk \"Kup teraz\", który jednym kliknięciem dodaje do koszyka i przekierowuje."
+msgstr "Ajoute un bouton « Acheter maintenant » qui ajoute au panier et redirige en un clic."
 
 #. Found in description header.
 msgid "Translations"
-msgstr "Tłumaczenia"
+msgstr "Traductions"
 
 #. Found in description header.
 msgid "External Services"
-msgstr "Usługi zewnętrzne"
+msgstr "Services externes"
 
 #. Found in description header.
 msgid "Shortcode and Elementor"
-msgstr "Shortcode i Elementor"
+msgstr "Shortcode et Elementor"
 
 #. Found in description header.
 msgid "Settings"
-msgstr "Ustawienia"
+msgstr "Réglages"
 
 #. Found in description header.
 msgid "What it does"
-msgstr "Co robi wtyczka"
+msgstr "Ce que fait l'extension"
 
 #. Found in description header.
 msgid "Documentation and links"
-msgstr "Dokumentacja i linki"
+msgstr "Documentation et liens"
 
 #. Screenshot description.
 msgid "The Swift Quick Buy settings screen."
-msgstr "Ekran ustawień Swift Quick Buy."
+msgstr "L'écran de réglages Swift Quick Buy."
 
 #. Screenshot description.
 msgid "The Buy Now button on a single product page."
-msgstr "Przycisk Kup teraz na stronie pojedynczego produktu."
+msgstr "Le bouton Acheter maintenant sur une page produit."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fixed: the plugin reported an older version number internally than the one it was released under. That number versions the stylesheets and scripts the admin screen loads, so a browser holding the previous files kept them after an update instead of fetching the corrected ones."
-msgstr "Naprawiono: wtyczka wewnętrznie zgłaszała starszy numer wersji niż ten, pod którym została wydana. Ten numer wersjonuje arkusze stylów i skrypty wczytywane przez ekran administracyjny, więc przeglądarka przechowująca poprzednie pliki zachowywała je po aktualizacji zamiast pobrać poprawione."
+msgstr "Correction : l'extension indiquait en interne un numéro de version antérieur à celui sous lequel elle avait été publiée. Ce numéro sert à versionner les feuilles de style et scripts chargés par l'écran d'administration, si bien qu'un navigateur ayant conservé les anciens fichiers les gardait après une mise à jour au lieu de récupérer les fichiers corrigés."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Declared compatibility with WooCommerce 11.0."
-msgstr "Zadeklarowano zgodność z WooCommerce 11.0."
+msgstr "Compatibilité déclarée avec WooCommerce 11.0."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fixed the PRO promo on the settings screen quoting a price in PLN. PRO is priced and charged in EUR, so an admin on a Polish site was shown a zloty amount and then billed in euro, and the zloty figure was a fixed conversion that drifted from the real charge as the rate moved. The promo now shows the euro price that is actually taken."
-msgstr "Naprawiono promocję PRO na ekranie ustawień, która podawała cenę w PLN. PRO jest wyceniane i rozliczane w EUR, więc administrator na polskiej witrynie widział kwotę w złotówkach, a następnie był obciążany w euro, a kwota w złotówkach była stałym przeliczeniem, które oddalało się od rzeczywistej opłaty wraz ze zmianą kursu. Promocja pokazuje teraz cenę w euro, która jest faktycznie pobierana."
+msgstr "Correction de la promotion PRO sur l'écran de réglages qui indiquait un prix en PLN. PRO est tarifée et facturée en EUR, si bien qu'un administrateur sur un site polonais voyait un montant en zloty puis était facturé en euros, et ce montant en zloty était une conversion fixe qui s'éloignait du montant réel facturé à mesure que le taux évoluait. La promotion affiche désormais le prix en euros réellement prélevé."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Initial release: a Buy Now button for WooCommerce that adds to cart and redirects straight to checkout (or cart), with a settings page for the label, placement and redirect target."
-msgstr "Pierwsze wydanie: przycisk Kup teraz dla WooCommerce, który dodaje do koszyka i przekierowuje prosto do kasy (lub koszyka), wraz ze stroną ustawień dla etykiety, umiejscowienia i celu przekierowania."
+msgstr "Version initiale : un bouton Acheter maintenant pour WooCommerce qui ajoute au panier et redirige directement vers le paiement (ou le panier), avec une page de réglages pour le libellé, l'emplacement et la destination de redirection."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Improved: robustness, the button never renders in a broken state for unpurchasable products, and the accent colour is scoped to Swift's own buttons."
-msgstr "Ulepszono: stabilność, przycisk nigdy nie renderuje się w uszkodzonym stanie dla produktów niemożliwych do kupienia, a kolor akcentu jest ograniczony wyłącznie do własnych przycisków Swift."
+msgstr "Amélioration : robustesse, le bouton ne s'affiche plus jamais dans un état cassé pour les produits non achetables, et la couleur d'accentuation est restreinte aux boutons propres à Swift."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Improved: accessibility, keyboard-operable help tooltips, visible focus styles, and ARIA roles throughout the admin."
-msgstr "Ulepszono: dostępność, dymki pomocy obsługiwane z klawiatury, widoczne style fokusu oraz role ARIA w całym panelu administracyjnym."
+msgstr "Amélioration : accessibilité, infobulles d'aide utilisables au clavier, styles de focus visibles, et rôles ARIA dans toute l'administration."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Improved: modern, themeable storefront button styles (CSS custom properties, dark-mode support, reduced-motion-safe transitions) with no layout shift."
-msgstr "Ulepszono: nowoczesne, konfigurowalne style przycisku w witrynie sklepowej (niestandardowe właściwości CSS, obsługa trybu ciemnego, przejścia bezpieczne dla ograniczonych animacji) bez przesunięć układu strony."
+msgstr "Amélioration : styles de bouton modernes et personnalisables côté boutique (propriétés CSS personnalisées, prise en charge du mode sombre, transitions respectueuses du mode « mouvement réduit ») sans décalage de mise en page."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Improved: redesigned settings page with grouped cards, a live button preview, a Live/Off status indicator, and accessible \"?\" help tooltips on every option."
-msgstr "Ulepszono: przeprojektowana strona ustawień z pogrupowanymi kartami, podglądem przycisku na żywo, wskaźnikiem statusu Aktywny/Wyłączony oraz dostępnymi dymkami pomocy \"?\" przy każdej opcji."
+msgstr "Amélioration : page de réglages repensée avec des cartes regroupées, un aperçu du bouton en direct, un indicateur de statut Actif/Inactif, et des infobulles d'aide accessibles « ? » sur chaque option."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "New: uninstall cleanup removes the plugin's options (multisite-aware)."
-msgstr "Nowość: czyszczenie przy odinstalowaniu usuwa opcje wtyczki (z obsługą multisite)."
+msgstr "Nouveau : le nettoyage à la désinstallation supprime les options de l'extension (compatible multisite)."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "New: \"Settings\" link in the plugins list row."
-msgstr "Nowość: link \"Ustawienia\" w wierszu listy wtyczek."
+msgstr "Nouveau : lien « Réglages » dans la ligne de la liste des extensions."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "New: button style options, theme default, solid, or outline, with an optional accent colour."
-msgstr "Nowość: opcje stylu przycisku, domyślny dla motywu, wypełniony lub konturowy, z opcjonalnym kolorem akcentu."
+msgstr "Nouveau : options de style de bouton, par défaut du thème, plein ou contour, avec une couleur d'accentuation facultative."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "New: optionally respect the quantity chosen on the product page (simple products)."
-msgstr "Nowość: opcjonalne uwzględnianie ilości wybranej na stronie produktu (produkty proste)."
+msgstr "Nouveau : possibilité de respecter la quantité choisie sur la page produit (produits simples)."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "New: choose whether the button sits before or after the add-to-cart button on single product pages."
-msgstr "Nowość: możliwość wyboru, czy przycisk znajduje się przed czy po przycisku dodania do koszyka na stronach pojedynczych produktów."
+msgstr "Nouveau : possibilité de choisir si le bouton se place avant ou après le bouton d'ajout au panier sur les pages produit."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "New: <code>[swift_buy_now]</code> shortcode to place the Buy Now button anywhere (optionally targeting a product by id)."
-msgstr "Nowość: shortcode <code>[swift_buy_now]</code> umożliwiający umieszczenie przycisku Kup teraz w dowolnym miejscu (opcjonalnie wskazując produkt po id)."
+msgstr "Nouveau : shortcode <code>[swift_buy_now]</code> pour placer le bouton Acheter maintenant n'importe où (en ciblant éventuellement un produit par id)."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Renamed to Plogins Swift for WooCommerce for a more distinctive plugin name."
-msgstr "Zmieniono nazwę na Plogins Swift for WooCommerce, aby nazwa wtyczki była bardziej wyróżniająca się."
+msgstr "Renommé en Plogins Swift for WooCommerce pour un nom d'extension plus distinctif."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "First stable release."
-msgstr "Pierwsze stabilne wydanie."
+msgstr "Première version stable."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Added bundled Polish, German and Spanish translations for the plugin interface."
-msgstr "Dodano dołączone tłumaczenia interfejsu wtyczki na polski, niemiecki i hiszpański."
+msgstr "Ajout de traductions polonaise, allemande et espagnole intégrées pour l'interface de l'extension."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Fixed low-contrast admin headings under an OS dark-mode preference."
-msgstr "Naprawiono niski kontrast nagłówków w panelu administracyjnym przy włączonym trybie ciemnym systemu."
+msgstr "Correction des titres d'administration à faible contraste sous une préférence système de mode sombre."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Translations: completed Polish, German and Spanish for the PRO upgrade panel."
-msgstr "Tłumaczenia: uzupełniono wersje polską, niemiecką i hiszpańską panelu uaktualnienia do PRO."
+msgstr "Traductions : polonais, allemand et espagnol complétés pour le panneau de mise à niveau PRO."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "The build now names the package folder from the plugin's Text Domain instead of the local checkout directory, so the artifact is plogins-swift rather than swift."
-msgstr "Proces budowania nazywa teraz folder pakietu na podstawie Text Domain wtyczki zamiast lokalnego katalogu roboczego, dzięki czemu artefakt nazywa się plogins-swift, a nie swift."
+msgstr "Le build nomme désormais le dossier du paquet d'après le Text Domain de l'extension plutôt que d'après le répertoire local, si bien que l'archive s'appelle plogins-swift au lieu de swift."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Corrected the Translations section. It said the package bundles Polish, German and Spanish files; it does not, and must not: .distignore strips every .po and .mo because WordPress.org serves translations from translate.wordpress.org. The .pot template ships as before."
-msgstr "Poprawiono sekcję Tłumaczenia. Twierdziła ona, że pakiet zawiera pliki polski, niemiecki i hiszpański; tak nie jest i nie powinno być: .distignore usuwa każdy plik .po i .mo, ponieważ WordPress.org dostarcza tłumaczenia z translate.wordpress.org. Szablon .pot jest dołączany tak jak wcześniej."
+msgstr "Correction de la section Traductions. Elle indiquait que le paquet intègre des fichiers polonais, allemand et espagnol ; ce n'est pas le cas, et cela ne doit pas l'être : .distignore exclut tous les fichiers .po et .mo car WordPress.org sert les traductions depuis translate.wordpress.org. Le modèle .pot est fourni comme auparavant."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "The accent colour is re-validated when it is written into the stylesheet, instead of being trusted from storage. The settings screen already sanitised it on save, but an option can also be set by a migration, WP-CLI or another plugin."
-msgstr "Kolor akcentu jest ponownie walidowany w momencie zapisu do arkusza stylów, zamiast być bezkrytycznie pobierany z bazy. Ekran ustawień już oczyszczał go przy zapisie, ale opcję może też ustawić migracja, WP-CLI lub inna wtyczka."
+msgstr "La couleur d'accentuation est de nouveau validée au moment où elle est écrite dans la feuille de style, au lieu d'être considérée comme fiable depuis le stockage. L'écran de réglages la nettoyait déjà à l'enregistrement, mais une option peut aussi être définie par une migration, WP-CLI ou une autre extension."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Removed variation handling that this plugin had no way to reach. The bundled checkout engine accepted a <code>variation_id</code> on the request while nothing here could choose a variation, and the code said the capability belonged to the paid edition. Swift is a Buy Now button for simple products and the package now contains only that."
-msgstr "Usunięto obsługę wariantów, do której ta wtyczka nie miała żadnego dostępu. Dołączony mechanizm kasy akceptował <code>variation_id</code> w żądaniu, mimo że nic tutaj nie pozwalało wybrać wariantu, a w kodzie zaznaczono, że ta funkcja należy do płatnej edycji. Swift to przycisk Kup teraz dla produktów prostych i pakiet zawiera teraz wyłącznie to."
+msgstr "Suppression de la gestion des variations que cette extension n'avait aucun moyen d'atteindre. Le moteur de paiement intégré acceptait un <code>variation_id</code> dans la requête alors que rien ici ne permettait de choisir une variation, et le code indiquait que cette capacité appartenait à l'édition payante. Swift est un bouton Acheter maintenant pour les produits simples, et le paquet ne contient désormais que cela."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "The Buy Now button no longer appears on variable product pages, where it could not work. Clicking it gave the shopper an error notice instead of a checkout, because a variation has to be chosen first. The placement setting and the FAQ now say plainly that Swift covers simple products."
-msgstr "Przycisk Kup teraz nie pojawia się już na stronach produktów zmiennych, gdzie i tak nie mógł działać. Kliknięcie go pokazywało klientowi komunikat o błędzie zamiast kasy, ponieważ najpierw trzeba wybrać wariant. Ustawienie umiejscowienia i FAQ jasno mówią teraz, że Swift obsługuje produkty proste."
+msgstr "Le bouton Acheter maintenant n'apparaît plus sur les pages de produits variables, où il ne pouvait pas fonctionner. Cliquer dessus affichait au client un message d'erreur au lieu du paiement, car une variation doit d'abord être choisie. Le réglage d'emplacement et la FAQ précisent désormais clairement que Swift couvre les produits simples."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "Clearing the button label now works. The field says leaving it empty restores the default \"Buy now\", but the old label was quietly kept and your storefront went on showing it. Empty means \"Buy now\" again."
-msgstr "Czyszczenie etykiety przycisku teraz działa. Pole informuje, że pozostawienie go pustym przywraca domyślną wartość \"Kup teraz\", ale stara etykieta była po cichu zachowywana i witryna sklepowa nadal ją wyświetlała. Puste pole ponownie oznacza \"Kup teraz\"."
+msgstr "Vider le libellé du bouton fonctionne désormais. Le champ indique que le laisser vide restaure le libellé par défaut « Acheter maintenant », mais l'ancien libellé était silencieusement conservé et votre boutique continuait à l'afficher. Vide signifie de nouveau « Acheter maintenant »."
 
 #. Found in changelog list item.
 #, gp-priority: low
 msgid "New: Elementor \"Buy Now Button\" widget. Same output as the <code>[swift_buy_now]</code> shortcode, loaded only when Elementor is active."
-msgstr "Nowość: widget Elementora \"Buy Now Button\". Ten sam efekt co shortcode <code>[swift_buy_now]</code>, wczytywany tylko wtedy, gdy Elementor jest aktywny."
+msgstr "Nouveau : widget Elementor « Bouton Acheter maintenant ». Même résultat que le shortcode <code>[swift_buy_now]</code>, chargé uniquement lorsque Elementor est actif."

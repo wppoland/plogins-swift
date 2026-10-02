@@ -21,8 +21,7 @@ defined('ABSPATH') || exit;
  *
  * On top of that it adds presentation controls: single-product placement
  * (before/after the add-to-cart button), a `[swift_buy_now]` shortcode, button
- * style/accent options and an opt-in "respect the on-page quantity" behaviour
- * driven by a tiny vanilla script. None of this touches variable products,
+ * style/accent options and an opt-in "respect the on-page quantity" behaviour. None of this touches variable products,
  * sticky bars or per-product rules.
  */
 final class SwiftService implements HasHooks
@@ -130,10 +129,9 @@ final class SwiftService implements HasHooks
 
     /**
      * Enqueue the (tiny) button stylesheet on the front end when the feature is
-     * enabled and we are on a page that can show the button. When the merchant
-     * has opted to respect the on-page quantity, also enqueue a small vanilla
-     * script that mirrors the quantity input into the Buy Now form on single
-     * product pages, and pass the chosen accent colour as a CSS variable.
+     * enabled, and pass the chosen accent colour as a CSS variable. The on-page
+     * quantity needs no script: the single-product button submits the cart
+     * form it sits in.
      */
     public function enqueueAssets(): void
     {
@@ -161,16 +159,6 @@ final class SwiftService implements HasHooks
             // derive a readable contrast colour for the solid variant.
             $css = '.swift-buy-now{--swift-accent:' . $accent . ';}';
             wp_add_inline_style(self::HANDLE, $css);
-        }
-
-        if (! empty($settings['respect_quantity'])) {
-            wp_enqueue_script(
-                self::HANDLE,
-                \Swift\Plugin::instance()->url('assets/js/buy-now.js'),
-                [],
-                \Swift\VERSION,
-                true,
-            );
         }
     }
 
@@ -204,17 +192,24 @@ final class SwiftService implements HasHooks
     }
 
     /**
-     * @param array<string, mixed> $context
+     * The variables are extracted into the template's scope, so this method's
+     * own locals must not share a name with any key. It used to take `$context`,
+     * which EXTR_SKIP then refused to overwrite, so every template saw the
+     * whole array instead of 'single', 'loop' or 'shortcode'.
+     *
+     * @param array<string, mixed> $vars
      */
-    private function renderTemplate(string $template, array $context): void
+    private function renderTemplate(string $template, array $vars): void
     {
-        $file = SWIFT_DIR . 'templates/' . $template . '.php';
+        $swiftTemplateFile = SWIFT_DIR . 'templates/' . $template . '.php';
 
-        if (! is_readable($file)) {
+        if (! is_readable($swiftTemplateFile)) {
             return;
         }
 
-        extract($context, EXTR_SKIP);
-        require $file;
+        unset($template);
+        extract($vars, EXTR_SKIP);
+        unset($vars);
+        require $swiftTemplateFile;
     }
 }

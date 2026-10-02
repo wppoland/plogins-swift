@@ -116,7 +116,14 @@ final class DirectCheckoutEngine
             return;
         }
 
-        $quantity = isset($_REQUEST['quantity']) ? max(1, absint(wp_unslash($_REQUEST['quantity']))) : 1;
+        // On a product page the button submits WooCommerce's own cart form, so
+        // `quantity` is the shopper's quantity box. It counts only when the
+        // merchant asked for it; otherwise Buy Now buys exactly one.
+        $quantity = 1;
+
+        if (! empty($this->getSettings()['respect_quantity']) && isset($_REQUEST['quantity'])) {
+            $quantity = max(1, absint(wp_unslash($_REQUEST['quantity'])));
+        }
 
         if (! WC()->cart instanceof \WC_Cart) {
             return;

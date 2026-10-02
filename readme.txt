@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.20
+Stable tag: 1.0.21
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -136,6 +136,11 @@ All of Swift's work happens on your server. It reads and writes a single setting
 Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs built from translate.wordpress.org, and none has been published for Swift yet, so the interface is currently English in every locale. The package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.21 =
+* Fixed: on a product page the native Add to cart button acted as Buy Now. The Buy Now button was a form nested inside WooCommerce's cart form, which browsers flatten, so its fields went out with every Add to cart click: the cart was emptied, the quantity reset to 1 and the shopper was sent to checkout.
+* Fixed: with the button placed before Add to cart, the nested form closed the cart form early and Add to cart did nothing.
+* Fixed: "Respect quantity" never applied. The template never received its context, so the quantity script had no form to attach to. The button now submits the cart form itself, so the quantity box is read directly and the script is gone.
 
 = 1.0.20 =
 * The upgrade notice's "Coming soon" and "Get notified" labels are English source strings for every language; Polish sites used to get their own Polish source text, which translators in other languages then saw untranslated.

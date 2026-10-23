@@ -3,7 +3,8 @@
  * Buy Now button.
  *
  * Rendered on `woocommerce_after_add_to_cart_button` (single product) and
- * `woocommerce_after_shop_loop_item` (shop loop), and by the
+ * `woocommerce_after_shop_loop_item` (shop loop), after the Add to cart block
+ * of block product grids, and by the
  * `[swift_buy_now]` shortcode.
  *
  * In the loop and the shortcode a plain GET form sends the product id under

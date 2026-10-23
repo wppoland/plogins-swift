@@ -36,8 +36,43 @@ final class Migrator
         }
 
         $this->clearUntranslatableTexts();
+        $this->keepQuantityOffOnUpgrade($current);
 
         update_option(self::OPTION, VERSION, false);
+    }
+
+    /**
+     * 1.1.0 turned "Respect quantity" on for new installs. A shop that ran an
+     * older version and never saved that setting got it off from the old
+     * default, so it is written down as off here and its behaviour does not
+     * change under it. A setting the merchant saved is left alone.
+     *
+     * A fresh install has no version marker and no settings, and gets the new
+     * default. An install older than 1.0.16 (no marker yet) that never saved
+     * its settings cannot be told apart from a fresh one.
+     */
+    private function keepQuantityOffOnUpgrade(string $from): void
+    {
+        if (version_compare($from, '1.1.0', '>=')) {
+            return;
+        }
+
+        $stored = get_option(self::SETTINGS, null);
+
+        if (! is_array($stored)) {
+            if ($from === '0') {
+                return;
+            }
+
+            $stored = [];
+        }
+
+        if (array_key_exists('respect_quantity', $stored)) {
+            return;
+        }
+
+        $stored['respect_quantity'] = false;
+        update_option(self::SETTINGS, $stored, null);
     }
 
     /**

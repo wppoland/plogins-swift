@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.0.21
+Stable tag: 1.1.0
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -15,7 +15,7 @@ Add a Buy Now / quick buy button that takes shoppers straight to checkout, skipp
 
 Swift adds a "Buy Now" quick buy button to your WooCommerce products. One click adds the product to the cart and sends the shopper straight to checkout, skipping the cart page so a purchase takes one click instead of three.
 
-The button can appear on single product pages, on shop and archive loops, or both. You choose the label, where it redirects (checkout or cart), and whether the cart is emptied first so the buyer checks out with only the product they clicked.
+The button can appear on single product pages, on shop and archive loops, or both. You choose the label, where it redirects (checkout, cart or another page on your site), and whether the cart is emptied first so the buyer checks out with only the product they clicked.
 
 Swift is stateless: it stores no per-product data and creates no database tables. It handles the button hooks, nonce verification, cart handling and redirect, and nothing else.
 
@@ -35,7 +35,7 @@ Swift is developed in the open. Source code, bug reports and feature requests li
 * Works on single product pages and/or shop and archive loops.
 * Place the button **before or after** the native add-to-cart button on single product pages.
 * Drop the button anywhere with the `[swift_buy_now]` shortcode or the Elementor "Buy Now Button" widget (optionally targeting a product by id).
-* Redirects to the **checkout** (skip the cart) or to the **cart**, whichever you prefer.
+* Redirects to the **checkout** (skip the cart), the **cart**, or a **custom page** on your own site.
 * Optionally empties the cart first so checkout shows only the chosen product.
 * Optionally **respects the quantity** chosen on the product page (simple products).
 * Pick a button **style**, theme default, solid, or outline, with an optional accent colour.
@@ -49,7 +49,7 @@ A simple WooCommerce settings page (WooCommerce > Buy Now Button) lets you:
 * Set the button label.
 * Choose where the button appears (single product, shop loops, or both).
 * Choose whether it sits before or after the add-to-cart button on single products.
-* Choose where it redirects (checkout or cart).
+* Choose where it redirects (checkout, cart, or a custom page on your own site).
 * Choose whether to empty the cart before adding.
 * Choose whether to respect the quantity selected on the product page.
 * Pick a button style (theme, solid, outline) and an optional accent colour.
@@ -98,7 +98,7 @@ On single product pages and/or shop and archive product loops; you choose which 
 
 = Does it skip the cart? =
 
-Yes, if you set the redirect target to "Checkout". The product is added to the cart and the shopper is taken straight to the checkout page. You can also choose to redirect to the cart instead.
+Yes, if you set the redirect target to "Checkout". The product is added to the cart and the shopper is taken straight to the checkout page. You can also choose to redirect to the cart, or to a custom page on your own site, instead.
 
 = Can the Buy Now button empty the cart first? =
 
@@ -106,7 +106,7 @@ Yes. Swift can clear the cart before adding the selected product, so direct chec
 
 = Does it respect the selected quantity? =
 
-Yes for simple products on single product pages, when the "respect quantity" setting is enabled.
+Yes for simple products on single product pages, when the "respect quantity" setting is enabled. It is on by default for new installs; shops that ran an older version keep the setting they had.
 
 = Does it create database tables? =
 
@@ -129,13 +129,19 @@ Yes. Use `[swift_buy_now]` for the current product or `[swift_buy_now id="123"]`
 
 Swift does not connect to, send data to, or load anything from any external service. There is no SDK, no API client, no remote font, CDN or analytics endpoint, and no phone-home or licensing check, its CSS and JavaScript are bundled with the plugin and enqueued from your own site.
 
-All of Swift's work happens on your server. It reads and writes a single settings option (`swift_settings`) and a schema-version marker (`swift_db_version`), and creates no custom database tables and no product meta. The Buy Now button adds the chosen product to the visitor's own WooCommerce cart and redirects them within your site to your checkout or cart page; nothing about the product, the cart or the shopper leaves your installation.
+All of Swift's work happens on your server. It reads and writes a single settings option (`swift_settings`) and a schema-version marker (`swift_db_version`), and creates no custom database tables and no product meta. The Buy Now button adds the chosen product to the visitor's own WooCommerce cart and redirects them within your site to your checkout, your cart or a page on your site you chose; nothing about the product, the cart or the shopper leaves your installation.
 
 == Translations ==
 
 Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs built from translate.wordpress.org, and none has been published for Swift yet, so the interface is currently English in every locale. The package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.0 =
+* New: a third redirect target, a custom page on your own site. Addresses on other sites are refused when saving, and anything that fails the same check at checkout time sends the shopper to the checkout.
+* Changed: "Respect quantity" is on by default for new installs. Existing shops keep the value they had.
+* Fixed: a Buy Now click from a cached page with an expired security token did nothing. It now shows a notice and the page it lands on works on the next click.
+* Fixed: with "Empty the cart first" on, a Buy Now that could not add the product (out of stock, validation) still emptied the shopper's cart. The cart and its coupons are now put back.
 
 = 1.0.21 =
 * Fixed: on a product page the native Add to cart button acted as Buy Now. The Buy Now button was a form nested inside WooCommerce's cart form, which browsers flatten, so its fields went out with every Add to cart click: the cart was emptied, the quantity reset to 1 and the shopper was sent to checkout.

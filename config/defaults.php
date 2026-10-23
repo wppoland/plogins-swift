@@ -35,16 +35,20 @@ return [
     // `after` (default) or `before`.
     'single_position' => 'after',
 
-    // Where the buyer lands: `checkout` or `cart`.
+    // Where the buyer lands: `checkout`, `cart` or `custom`.
     'redirect_target' => 'checkout',
+
+    // Same-site URL used when `redirect_target` is `custom`.
+    'redirect_url' => '',
 
     // Empty the cart before adding (single-item buy-now) so checkout shows only
     // the chosen product.
     'clear_cart' => true,
 
     // Carry the on-page quantity selector value into the Buy Now purchase on
-    // single product pages (simple products). Off keeps a quantity of 1.
-    'respect_quantity' => false,
+    // single product pages (simple products). Off keeps a quantity of 1. On for
+    // new installs since 1.1.0; Migrator keeps it off on older installs.
+    'respect_quantity' => true,
 
     // Visual style for the button: `theme` (inherit), `solid` or `outline`.
     'button_style' => 'theme',

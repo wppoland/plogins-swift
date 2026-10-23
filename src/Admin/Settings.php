@@ -124,6 +124,7 @@ final class Settings implements HasHooks
 
         $settings = $this->settings();
         $target   = (string) ($settings['redirect_target'] ?? 'checkout');
+        $redirect = (string) ($settings['redirect_url'] ?? '');
         $position = (string) ($settings['single_position'] ?? 'after');
         $style    = (string) ($settings['button_style'] ?? 'theme');
         $enabled  = (bool) ($settings['enabled'] ?? false);
@@ -151,6 +152,12 @@ final class Settings implements HasHooks
                     </span>
                 <?php endif; ?>
             </h1>
+
+            <?php
+            // A WooCommerce submenu page does not print settings errors on its
+            // own, so a refused custom redirect URL would otherwise go unseen.
+            settings_errors(self::OPTION);
+            ?>
 
             <?php $this->proUpsell()->banner(); ?>
 
@@ -276,7 +283,7 @@ final class Settings implements HasHooks
                             <tr>
                                 <th scope="row">
                                     <?php esc_html_e('Redirect to', 'plogins-swift'); ?>
-                                    <?php $this->help('redirect-target', __('Where the shopper lands after clicking. "Checkout" is the fast path that skips the cart entirely; "Cart" sends them to the cart page to review first.', 'plogins-swift')); ?>
+                                    <?php $this->help('redirect-target', __('Where the shopper lands after clicking. "Checkout" is the fast path that skips the cart entirely; "Cart" sends them to the cart page to review first; "Custom page" sends them to a page you choose on this site.', 'plogins-swift')); ?>
                                 </th>
                                 <td>
                                     <fieldset>
@@ -302,6 +309,29 @@ final class Settings implements HasHooks
                                             />
                                             <?php esc_html_e('Cart', 'plogins-swift'); ?>
                                         </label>
+                                        <br />
+                                        <label for="swift_target_custom">
+                                            <input
+                                                type="radio"
+                                                id="swift_target_custom"
+                                                name="<?php echo esc_attr(self::OPTION); ?>[redirect_target]"
+                                                value="custom"
+                                                <?php checked($target, 'custom'); ?>
+                                            />
+                                            <?php esc_html_e('Custom page on this site', 'plogins-swift'); ?>
+                                        </label>
+                                        <br />
+                                        <label for="swift_redirect_url" class="screen-reader-text"><?php esc_html_e('Custom page URL', 'plogins-swift'); ?></label>
+                                        <input
+                                            type="url"
+                                            id="swift_redirect_url"
+                                            class="regular-text"
+                                            name="<?php echo esc_attr(self::OPTION); ?>[redirect_url]"
+                                            value="<?php echo esc_attr($redirect); ?>"
+                                            placeholder="<?php echo esc_attr(home_url('/')); ?>"
+                                            aria-describedby="swift_redirect_url_desc"
+                                        />
+                                        <p class="description" id="swift_redirect_url_desc"><?php esc_html_e('Used when "Custom page on this site" is chosen. Only addresses on this site are accepted; anything else sends the shopper to the checkout.', 'plogins-swift'); ?></p>
                                     </fieldset>
                                 </td>
                             </tr>
@@ -475,8 +505,21 @@ final class Settings implements HasHooks
         $style      = isset($raw['button_style']) ? sanitize_key((string) $raw['button_style']) : 'theme';
         $accent     = isset($raw['accent_color']) ? sanitize_hex_color((string) $raw['accent_color']) : '';
 
-        if (! in_array($target, ['checkout', 'cart'], true)) {
+        if (! in_array($target, ['checkout', 'cart', 'custom'], true)) {
             $target = 'checkout';
+        }
+
+        // Same site only, the same check the storefront applies before it
+        // redirects. A URL that fails it is not stored.
+        $redirectUrl = isset($raw['redirect_url']) ? esc_url_raw(trim((string) $raw['redirect_url'])) : '';
+        if ($redirectUrl !== '' && wp_validate_redirect($redirectUrl, '') === '') {
+            $redirectUrl = '';
+            add_settings_error(self::OPTION, 'swift_redirect_url', __('The custom redirect must be a page on this site. It was not saved.', 'plogins-swift'));
+        }
+
+        if ($target === 'custom' && $redirectUrl === '') {
+            $target = 'checkout';
+            add_settings_error(self::OPTION, 'swift_redirect_target', __('Custom page needs a URL on this site, so Buy now redirects to the checkout.', 'plogins-swift'), 'warning');
         }
 
         if (! in_array($position, ['after', 'before'], true)) {
@@ -501,6 +544,7 @@ final class Settings implements HasHooks
             'show_on_loop'     => ! empty($raw['show_on_loop']),
             'single_position'  => $position,
             'redirect_target'  => $target,
+            'redirect_url'     => $redirectUrl,
             'clear_cart'       => ! empty($raw['clear_cart']),
             'respect_quantity' => ! empty($raw['respect_quantity']),
             'button_style'     => $style,

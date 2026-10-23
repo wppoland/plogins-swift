@@ -47,6 +47,7 @@ final class SwiftService implements HasHooks
             labels: [
                 'button'     => __('Buy now', 'plogins-swift'),
                 'add_failed' => __('Sorry, this product could not be added to your cart.', 'plogins-swift'),
+                'nonce_failed' => __('This page had been open too long, so Buy now did not go through. Please try again.', 'plogins-swift'),
             ],
             isEnabled: fn (): bool => $this->isEnabled(),
             settings: fn (): array => $this->settings(),

@@ -29,11 +29,12 @@ final class DirectCheckoutEngine
      * @param \Closure(): bool $isEnabled
      * @param \Closure(): array<string, mixed> $settings Resolved settings:
      *        `button_text`, `show_on_single`, `show_on_loop`,
-     *        `redirect_target` (`checkout`|`cart`), `clear_cart`.
+     *        `redirect_target` (`checkout`|`cart`|`custom`), `redirect_url`
+     *        (same-site URL for `custom`), `clear_cart`.
      * @param \Closure(string, array<string, mixed>): void $renderTemplate
      *        Echoes the button template.
      * @param array<string, string> $labels Fallback strings keyed by
-     *        `button`, `add_failed`.
+     *        `button`, `add_failed`, `nonce_failed`.
      */
     public function __construct(
         private readonly string $requestKey,
@@ -97,7 +98,13 @@ final class DirectCheckoutEngine
 
         $nonce = isset($_REQUEST['_wpnonce']) ? sanitize_text_field((string) wp_unslash($_REQUEST['_wpnonce'])) : '';
 
+        // A cached page can serve a nonce that has since expired. Say so and
+        // let the page render: it carries a fresh nonce, so the next click works.
         if (! wp_verify_nonce($nonce, $this->nonceAction)) {
+            if (($this->labels['nonce_failed'] ?? '') !== '') {
+                wc_add_notice($this->labels['nonce_failed'], 'error');
+            }
+
             return;
         }
 
@@ -129,16 +136,29 @@ final class DirectCheckoutEngine
             return;
         }
 
-        if ((bool) ($this->getSettings()['clear_cart'] ?? true)) {
-            WC()->cart->empty_cart();
+        $cart    = WC()->cart;
+        $cleared = (bool) ($this->getSettings()['clear_cart'] ?? true);
+        $before  = $cart->get_cart_contents();
+        $coupons = $cart->get_applied_coupons();
+
+        if ($cleared) {
+            $cart->empty_cart();
         }
 
         // Simple products only. This plugin has no way to choose a variation, so
         // it does not accept one: carrying variation handling it could not reach
         // is what WordPress.org reads as a locked feature.
-        $added = WC()->cart->add_to_cart($productId, $quantity);
+        $added = $cart->add_to_cart($productId, $quantity);
 
         if ($added === false) {
+            // The add failed (stock, validation), so the shopper's cart must not
+            // be lost to it. Totals are recalculated so the session stores it.
+            if ($cleared) {
+                $cart->set_cart_contents($before);
+                $cart->set_applied_coupons($coupons);
+                $cart->calculate_totals();
+            }
+
             wc_add_notice($this->message('add_failed_text', 'add_failed'), 'error');
 
             return;
@@ -146,16 +166,25 @@ final class DirectCheckoutEngine
 
         $redirectUrl = $this->getRedirectUrl();
         $redirectUrl = (string) apply_filters('wppoland_direct_checkout_redirect_url', $redirectUrl, $product, $this->requestKey);
-        wp_safe_redirect($redirectUrl);
+        wp_safe_redirect(wp_validate_redirect($redirectUrl, wc_get_checkout_url()));
         exit;
     }
 
     public function getRedirectUrl(): string
     {
-        $target = (string) ($this->getSettings()['redirect_target'] ?? 'checkout');
+        $settings = $this->getSettings();
+        $target   = (string) ($settings['redirect_target'] ?? 'checkout');
 
         if ($target === 'cart') {
             return wc_get_cart_url();
+        }
+
+        if ($target === 'custom') {
+            // Same site only: anything wp_validate_redirect() refuses, or an
+            // empty URL, falls back to the checkout.
+            $url = trim((string) ($settings['redirect_url'] ?? ''));
+
+            return $url !== '' ? wp_validate_redirect($url, wc_get_checkout_url()) : wc_get_checkout_url();
         }
 
         return wc_get_checkout_url();

@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -136,6 +136,9 @@ All of Swift's work happens on your server. It reads and writes a single setting
 Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs built from translate.wordpress.org, and none has been published for Swift yet, so the interface is currently English in every locale. The package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.2 =
+* Fix: with "Shop & archive loops" on, the Buy Now button now also appears in block product grids that do not follow the shop query, such as a Product Collection on the homepage. It sits after the grid's Add to cart button and never shows twice on shop and category pages.
 
 = 1.1.1 =
 * Fix: saving the settings page now shows the "Settings saved." confirmation. Before, a successful save gave no feedback at all.

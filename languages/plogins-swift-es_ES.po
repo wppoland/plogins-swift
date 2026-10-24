@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Swift - Buy Now Button for WooCommerce 1.0.14\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plogins-swift\n"
-"POT-Creation-Date: 2026-09-08T13:42:18+00:00\n"
+"POT-Creation-Date: 2026-10-23T12:19:21+00:00\n"
 "PO-Revision-Date: 2026-09-02T13:14:10+00:00\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -51,48 +51,40 @@ msgid ""
 msgstr ""
 "Swift - Buy Now Button for WooCommerce requiere que WooCommerce esté activo."
 
-#: src/Admin/ProUpsell.php:78
-msgid "Wkrótce"
-msgstr "Próximamente"
-
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Próximamente"
 
 #. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:84
+#: src/Admin/ProUpsell.php:91
 #, php-format
 msgid "from %1$s%2$d/yr"
 msgstr "desde %1$s%2$d/año"
 
-#: src/Admin/ProUpsell.php:93
+#: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Mejora a PRO"
 
-#: src/Admin/ProUpsell.php:94
-msgid "Powiadom mnie"
-msgstr "Avísame"
-
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Get notified"
 msgstr "Avísame"
 
-#: src/Admin/ProUpsell.php:124
+#: src/Admin/ProUpsell.php:131
 msgid "Permission denied."
 msgstr "Permiso denegado."
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:154
+#: src/Admin/ProUpsell.php:161
 #, php-format
 msgid "Do more with %s"
 msgstr "Haz más con %s"
 
-#: src/Admin/ProUpsell.php:161
+#: src/Admin/ProUpsell.php:168
 msgid "Dismiss this notice"
 msgstr "Descartar este aviso"
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:179
+#: src/Admin/ProUpsell.php:186
 #, php-format
 msgid "What %s adds"
 msgstr "Lo que añade %s"
@@ -106,15 +98,15 @@ msgstr "Ajustes"
 msgid "Buy Now Button"
 msgstr "Botón Comprar ahora"
 
-#: src/Admin/Settings.php:145
+#: src/Admin/Settings.php:146
 msgid "Live"
 msgstr "Activo"
 
-#: src/Admin/Settings.php:150
+#: src/Admin/Settings.php:151
 msgid "Off"
 msgstr "Apagado"
 
-#: src/Admin/Settings.php:158
+#: src/Admin/Settings.php:165
 msgid ""
 "Swift adds a \"Buy now\" button so shoppers can go straight to checkout and "
 "skip the cart, fewer clicks, more completed orders. Configure where it "
@@ -126,15 +118,15 @@ msgstr ""
 "completados. Configura a continuación dónde aparece y cómo se comporta; los "
 "cambios se aplican a tu tienda en cuanto guardes."
 
-#: src/Admin/Settings.php:165
+#: src/Admin/Settings.php:172
 msgid "Basics"
 msgstr "Lo esencial"
 
-#: src/Admin/Settings.php:170
+#: src/Admin/Settings.php:177
 msgid "Enable Buy Now"
 msgstr "Activar Comprar ahora"
 
-#: src/Admin/Settings.php:171
+#: src/Admin/Settings.php:178
 msgid ""
 "The master switch. When off, Swift adds no button, scripts or styles to your "
 "storefront at all, a clean, zero-footprint disable."
@@ -142,15 +134,15 @@ msgstr ""
 "El interruptor maestro. Cuando está apagado, Swift no añade ningún botón, "
 "script ni estilo a tu tienda, una desactivación limpia y sin rastro."
 
-#: src/Admin/Settings.php:182
+#: src/Admin/Settings.php:189
 msgid "Show the Buy Now button on your store."
 msgstr "Muestra el botón Comprar ahora en tu tienda."
 
-#: src/Admin/Settings.php:188
+#: src/Admin/Settings.php:195
 msgid "Button label"
 msgstr "Etiqueta del botón"
 
-#: src/Admin/Settings.php:189
+#: src/Admin/Settings.php:196
 msgid ""
 "The wording on the button. Short, action-led labels convert best, try \"Buy "
 "now\", \"Get it now\" or \"Express checkout\"."
@@ -159,36 +151,36 @@ msgstr ""
 "con \"Comprar ahora\", \"Consíguelo ahora\" o \"Pago exprés\"."
 
 #. translators: %s: the translated default button label, e.g. "Buy now".
-#: src/Admin/Settings.php:205
+#: src/Admin/Settings.php:212
 #, php-format
 msgid ""
 "Text shown on the Buy Now button. Leave empty to use the default (%s), which "
 "follows your site language."
 msgstr ""
 
-#: src/Admin/Settings.php:216
+#: src/Admin/Settings.php:223
 msgid "Live preview:"
 msgstr "Vista previa en vivo:"
 
-#: src/Admin/Settings.php:222
+#: src/Admin/Settings.php:229
 msgid "Placement"
 msgstr "Ubicación"
 
-#: src/Admin/Settings.php:223
+#: src/Admin/Settings.php:230
 msgid "Choose where the button shows up across your store."
 msgstr "Elige dónde aparece el botón en tu tienda."
 
-#: src/Admin/Settings.php:227
+#: src/Admin/Settings.php:234
 msgid "Single product page"
 msgstr "Página de producto individual"
 
-#: src/Admin/Settings.php:227
+#: src/Admin/Settings.php:234
 msgid "Show the button on single product pages (simple products only)."
 msgstr ""
 "Muestra el botón en las páginas de producto individual (solo productos "
 "simples)."
 
-#: src/Admin/Settings.php:227
+#: src/Admin/Settings.php:234
 msgid ""
 "The product detail page. This is the highest-intent spot, the shopper is "
 "already looking at the item. Simple products only; a variable product needs "
@@ -199,18 +191,18 @@ msgstr ""
 "variable necesita que se elija una variación, así que Swift deja esos casos "
 "al botón normal de añadir al carrito."
 
-#: src/Admin/Settings.php:228
+#: src/Admin/Settings.php:235
 msgid "Shop & archive loops"
 msgstr "Bucles de tienda y archivo"
 
-#: src/Admin/Settings.php:228
+#: src/Admin/Settings.php:235
 msgid ""
 "Show the button on shop and archive product loops (simple products only)."
 msgstr ""
 "Muestra el botón en los bucles de producto de tienda y archivo (solo "
 "productos simples)."
 
-#: src/Admin/Settings.php:228
+#: src/Admin/Settings.php:235
 msgid ""
 "Product grids on the shop and category pages. Lets shoppers buy without "
 "opening each product. Simple products only; variable products need a chosen "
@@ -220,11 +212,11 @@ msgstr ""
 "compradores comprar sin abrir cada producto. Solo productos simples; los "
 "productos variables necesitan una variación elegida."
 
-#: src/Admin/Settings.php:232 src/Admin/Settings.php:237
+#: src/Admin/Settings.php:239 src/Admin/Settings.php:244
 msgid "Position on single product"
 msgstr "Posición en producto individual"
 
-#: src/Admin/Settings.php:233
+#: src/Admin/Settings.php:240
 msgid ""
 "Whether Swift's button sits above or below WooCommerce's own \"Add to cart\" "
 "button on the product page."
@@ -232,57 +224,68 @@ msgstr ""
 "Si el botón de Swift aparece encima o debajo del botón \"Añadir al carrito\" "
 "de WooCommerce en la página de producto."
 
-#: src/Admin/Settings.php:246
+#: src/Admin/Settings.php:253
 msgid "After the add-to-cart button"
 msgstr "Después del botón añadir al carrito"
 
-#: src/Admin/Settings.php:257
+#: src/Admin/Settings.php:264
 msgid "Before the add-to-cart button"
 msgstr "Antes del botón añadir al carrito"
 
-#: src/Admin/Settings.php:261
+#: src/Admin/Settings.php:268
 msgid "Tip: you can also drop the button anywhere with the"
 msgstr "Consejo: también puedes colocar el botón donde quieras con el"
 
-#: src/Admin/Settings.php:263
+#: src/Admin/Settings.php:270
 msgid "shortcode, add id=\"123\" to target a specific product."
 msgstr "shortcode, añade id=\"123\" para apuntar a un producto concreto."
 
-#: src/Admin/Settings.php:272
+#: src/Admin/Settings.php:279
 msgid "Behaviour"
 msgstr "Comportamiento"
 
-#: src/Admin/Settings.php:273
+#: src/Admin/Settings.php:280
 msgid "What happens when a shopper clicks Buy now."
 msgstr "Qué sucede cuando un comprador hace clic en Comprar ahora."
 
-#: src/Admin/Settings.php:278 src/Admin/Settings.php:283
+#: src/Admin/Settings.php:285 src/Admin/Settings.php:290
 msgid "Redirect to"
 msgstr "Redirigir a"
 
-#: src/Admin/Settings.php:279
+#: src/Admin/Settings.php:286
 msgid ""
 "Where the shopper lands after clicking. \"Checkout\" is the fast path that "
 "skips the cart entirely; \"Cart\" sends them to the cart page to review "
-"first."
+"first; \"Custom page\" sends them to a page you choose on this site."
 msgstr ""
-"Adónde va el comprador después de hacer clic. \"Pagar\" es el camino rápido "
-"que se salta el carrito por completo; \"Carrito\" lo lleva primero a la "
-"página del carrito para revisar la compra."
 
-#: src/Admin/Settings.php:292
+#: src/Admin/Settings.php:299
 msgid "Checkout (skip the cart)"
 msgstr "Pagar (saltar el carrito)"
 
-#: src/Admin/Settings.php:303
+#: src/Admin/Settings.php:310
 msgid "Cart"
 msgstr "Carrito"
 
-#: src/Admin/Settings.php:309
+#: src/Admin/Settings.php:321
+msgid "Custom page on this site"
+msgstr ""
+
+#: src/Admin/Settings.php:324
+msgid "Custom page URL"
+msgstr ""
+
+#: src/Admin/Settings.php:334
+msgid ""
+"Used when \"Custom page on this site\" is chosen. Only addresses on this "
+"site are accepted; anything else sends the shopper to the checkout."
+msgstr ""
+
+#: src/Admin/Settings.php:339
 msgid "Empty the cart first"
 msgstr "Vaciar primero el carrito"
 
-#: src/Admin/Settings.php:309
+#: src/Admin/Settings.php:339
 msgid ""
 "Clear the cart before adding, so the buyer checks out with only the chosen "
 "product."
@@ -290,7 +293,7 @@ msgstr ""
 "Vacía el carrito antes de añadir, para que el comprador pague solo con el "
 "producto elegido."
 
-#: src/Admin/Settings.php:309
+#: src/Admin/Settings.php:339
 msgid ""
 "Recommended for a true \"buy just this\" flow. If a shopper already has "
 "items in their cart, this removes them so the Buy now purchase stands alone. "
@@ -301,11 +304,11 @@ msgstr ""
 "con Comprar ahora quede sola. Desactívala para añadir al carrito existente "
 "en su lugar."
 
-#: src/Admin/Settings.php:310
+#: src/Admin/Settings.php:340
 msgid "Respect quantity"
 msgstr "Respetar la cantidad"
 
-#: src/Admin/Settings.php:310
+#: src/Admin/Settings.php:340
 msgid ""
 "Carry the quantity chosen on the product page into the Buy Now purchase "
 "(single, simple products)."
@@ -313,7 +316,7 @@ msgstr ""
 "Traslada la cantidad elegida en la página de producto a la compra con "
 "Comprar ahora (productos individuales y simples)."
 
-#: src/Admin/Settings.php:310
+#: src/Admin/Settings.php:340
 msgid ""
 "When on, the quantity the shopper picks in the product's quantity box is "
 "used for the Buy now purchase. When off, exactly one unit is bought. Single, "
@@ -324,21 +327,21 @@ msgstr ""
 "apagado, se compra exactamente una unidad. Solo productos individuales y "
 "simples."
 
-#: src/Admin/Settings.php:317
+#: src/Admin/Settings.php:347
 msgid "Appearance"
 msgstr "Apariencia"
 
-#: src/Admin/Settings.php:318
+#: src/Admin/Settings.php:348
 msgid "How the button looks. Use the live preview above to check your choices."
 msgstr ""
 "El aspecto del botón. Usa la vista previa en vivo de arriba para comprobar "
 "tus opciones."
 
-#: src/Admin/Settings.php:323 src/Admin/Settings.php:328
+#: src/Admin/Settings.php:353 src/Admin/Settings.php:358
 msgid "Button style"
 msgstr "Estilo del botón"
 
-#: src/Admin/Settings.php:324
+#: src/Admin/Settings.php:354
 msgid ""
 "\"Theme default\" inherits your theme's button look (safest, blends in). "
 "\"Solid\" and \"Outline\" use the accent colour below so the button stands "
@@ -349,23 +352,23 @@ msgstr ""
 "de abajo para que el botón destaque frente al botón estándar de añadir al "
 "carrito."
 
-#: src/Admin/Settings.php:337
+#: src/Admin/Settings.php:367
 msgid "Theme default"
 msgstr "Predeterminado del tema"
 
-#: src/Admin/Settings.php:348
+#: src/Admin/Settings.php:378
 msgid "Solid (accent colour)"
 msgstr "Sólido (color de acento)"
 
-#: src/Admin/Settings.php:359
+#: src/Admin/Settings.php:389
 msgid "Outline (accent colour)"
 msgstr "Contorno (color de acento)"
 
-#: src/Admin/Settings.php:366
+#: src/Admin/Settings.php:396
 msgid "Accent colour"
 msgstr "Color de acento"
 
-#: src/Admin/Settings.php:367
+#: src/Admin/Settings.php:397
 msgid ""
 "A hex colour used by the Solid and Outline styles. Leave empty to use "
 "Swift's velocity violet (#5b3df5). Pick a high-contrast brand colour so the "
@@ -376,7 +379,7 @@ msgstr ""
 "de alto contraste para que el botón sea fácil de ver y tocar. Se ignora con "
 "el estilo \"Predeterminado del tema\"."
 
-#: src/Admin/Settings.php:380
+#: src/Admin/Settings.php:410
 msgid ""
 "Hex colour for the Solid / Outline styles. Leave empty for Swift's velocity "
 "violet (#5b3df5)."
@@ -384,9 +387,18 @@ msgstr ""
 "Color hexadecimal para los estilos Sólido/Contorno. Déjalo vacío para el "
 "violeta velocidad de Swift (#5b3df5)."
 
-#: src/Admin/Settings.php:412
+#: src/Admin/Settings.php:442
 msgid "Help"
 msgstr "Ayuda"
+
+#: src/Admin/Settings.php:517
+msgid "The custom redirect must be a page on this site. It was not saved."
+msgstr ""
+
+#: src/Admin/Settings.php:522
+msgid ""
+"Custom page needs a URL on this site, so Buy now redirects to the checkout."
+msgstr ""
 
 #: src/Elementor/BuyNowWidget.php:80
 msgid "Buy Now button"
@@ -400,14 +412,35 @@ msgstr "ID del producto"
 msgid "Leave 0 to use the current product on a product page."
 msgstr "Deja 0 para usar el producto actual en una página de producto."
 
-#: src/Service/SwiftService.php:49 src/Service/Texts.php:33
-#: templates/buy-now-button.php:43
+#: src/Service/SwiftService.php:48 src/Service/Texts.php:33
+#: templates/buy-now-button.php:42
 msgid "Buy now"
 msgstr "Comprar ahora"
 
-#: src/Service/SwiftService.php:50 src/Service/Texts.php:34
+#: src/Service/SwiftService.php:49 src/Service/Texts.php:34
 msgid "Sorry, this product could not be added to your cart."
 msgstr "Lo sentimos, no se pudo añadir este producto a tu carrito."
+
+#: src/Service/SwiftService.php:50
+msgid ""
+"This page had been open too long, so Buy now did not go through. Please try "
+"again."
+msgstr ""
+
+#~ msgid "Wkrótce"
+#~ msgstr "Próximamente"
+
+#~ msgid "Powiadom mnie"
+#~ msgstr "Avísame"
+
+#~ msgid ""
+#~ "Where the shopper lands after clicking. \"Checkout\" is the fast path "
+#~ "that skips the cart entirely; \"Cart\" sends them to the cart page to "
+#~ "review first."
+#~ msgstr ""
+#~ "Adónde va el comprador después de hacer clic. \"Pagar\" es el camino "
+#~ "rápido que se salta el carrito por completo; \"Carrito\" lo lleva primero "
+#~ "a la página del carrito para revisar la compra."
 
 #~ msgid ""
 #~ "Text shown on the Buy Now button. Leave empty to use the default (\"Buy "

@@ -51,6 +51,7 @@ final class DirectCheckoutEngine
     {
         add_action('woocommerce_after_add_to_cart_button', [$this, 'renderSingleButton'], 15);
         add_action('woocommerce_after_shop_loop_item', [$this, 'renderLoopButton'], 15);
+        add_filter('render_block_woocommerce/product-button', [$this, 'appendLoopButtonToBlock'], 10, 3);
         add_action('template_redirect', [$this, 'handleBuyNow'], 5);
     }
 
@@ -79,15 +80,52 @@ final class DirectCheckoutEngine
     {
         global $product;
 
-        if (! $product instanceof \WC_Product || ! $this->isEnabled() || ! ($this->getSettings()['show_on_loop'] ?? false)) {
-            return;
-        }
-
-        if (! $product->is_purchasable() || ! $product->is_in_stock() || $product->is_type('variable')) {
+        if (! $this->showsLoopButton($product)) {
             return;
         }
 
         $this->renderButton($product, 'loop');
+    }
+
+    /**
+     * Product grids built from blocks (a Product Collection on the homepage or
+     * any page) never fire `woocommerce_after_shop_loop_item`, so the loop
+     * button sits after each grid's Add to cart block instead. On a shop or
+     * category template WooCommerce marks an inherited grid's blocks with
+     * `isInherited` and fires the classic hook itself; those are skipped so the
+     * button never shows twice.
+     *
+     * @param array<string, mixed> $block
+     */
+    public function appendLoopButtonToBlock(string $content, array $block, mixed $instance = null): string
+    {
+        if (! empty($block['attrs']['isInherited']) || ! $instance instanceof \WP_Block) {
+            return $content;
+        }
+
+        $productId = absint($instance->context['postId'] ?? 0);
+        $product   = $productId > 0 ? wc_get_product($productId) : null;
+
+        if (! $this->showsLoopButton($product)) {
+            return $content;
+        }
+
+        ob_start();
+        $this->renderButton($product, 'loop');
+
+        return $content . (string) ob_get_clean();
+    }
+
+    /**
+     * @phpstan-assert-if-true \WC_Product $product
+     */
+    private function showsLoopButton(mixed $product): bool
+    {
+        if (! $product instanceof \WC_Product || ! $this->isEnabled() || ! ($this->getSettings()['show_on_loop'] ?? false)) {
+            return false;
+        }
+
+        return $product->is_purchasable() && $product->is_in_stock() && ! $product->is_type('variable');
     }
 
     public function handleBuyNow(): void

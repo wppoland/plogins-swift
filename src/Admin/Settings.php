@@ -156,7 +156,10 @@ final class Settings implements HasHooks
             <?php
             // A WooCommerce submenu page does not print settings errors on its
             // own, so a refused custom redirect URL would otherwise go unseen.
+            // The second call prints core's "Settings saved." that options.php
+            // queues under 'general' after a successful save.
             settings_errors(self::OPTION);
+            settings_errors('general');
             ?>
 
             <?php $this->proUpsell()->banner(); ?>

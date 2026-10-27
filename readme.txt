@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -27,6 +27,7 @@ Swift is developed in the open. Source code, bug reports and feature requests li
 * **Plugin page**: [plogins.com/plogins-swift/](https://plogins.com/plogins-swift/)
 * **Source code**: [github.com/wppoland/plogins-swift](https://github.com/wppoland/plogins-swift)
 * **Bug reports and feature requests**: [github.com/wppoland/plogins-swift/issues](https://github.com/wppoland/plogins-swift/issues)
+* **Swift Pro**: [plogins.com/plogins-swift-pro/](https://plogins.com/plogins-swift-pro/)
 
 
 = What it does =
@@ -62,23 +63,22 @@ Use `[swift_buy_now]` to render the Buy Now button anywhere, inside a page, post
 
 If Elementor is active, the same button is available as a "Buy Now Button" widget. The Product ID control is the shortcode's `id` argument: leave it at 0 on a product page.
 
-== Plogins Swift PRO ==
+== Swift Pro ==
 
-The free plugin is complete for what it does: a Buy Now button that skips the
-cart, on simple products, with nothing time-limited and no account to create.
-**Plogins Swift PRO** is a separate add-on for stores that want the rest:
+Swift Pro is a separate paid plugin that works on top of Swift. It adds:
 
-* **Buy Now on variable products** - on the product page and in shop loops, with a compact attribute picker that stays disabled until a purchasable variation is chosen
-* **Sticky Buy Now bar** - a fixed bar that slides in on scroll, mirroring the selected variation
-* **Per-product rules** - hide the button, change its label, or send that product to the cart instead of checkout
-* **Express checkout shortcuts** - place Apple Pay and Google Pay buttons beside Buy Now when WooCommerce Payments or Stripe already provides them
-* **Buy Now analytics** - clicks, direct-checkout conversions, conversion rate and attributed revenue per product, with CSV export
+* Buy Now for variations
+* Sticky Buy Now bar
+* Per-product rules
+* Express checkout
+* Loop variable Buy Now
+* Buy Now analytics
 
-Swift PRO requires the free plugin and does not replace it. If the free plugin
-is missing or disabled, PRO stays dormant and says so rather than half-working.
+The free edition is not a trial and its features stay available without a time limit.
 
-* **Plogins Swift PRO** - [plogins.com/swift-pro/](https://plogins.com/swift-pro/)
-* **Pricing** - [plogins.com/swift-pro/pricing/](https://plogins.com/swift-pro/pricing/)
+* **Swift Pro** - [plogins.com/plogins-swift-pro/](https://plogins.com/plogins-swift-pro/)
+* **Compare editions and pricing** - [plogins.com/plogins-swift-pro/pricing/](https://plogins.com/plogins-swift-pro/pricing/)
+* **PRO documentation** - [plogins.com/plogins-swift-pro/docs/](https://plogins.com/plogins-swift-pro/docs/)
 
 == Installation ==
 
@@ -136,6 +136,9 @@ All of Swift's work happens on your server. It reads and writes a single setting
 Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs built from translate.wordpress.org, and none has been published for Swift yet, so the interface is currently English in every locale. The package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.3 =
+* Readme only: a PRO section with links to the paid edition.
 
 = 1.1.2 =
 * Fix: with "Shop & archive loops" on, the Buy Now button now also appears in block product grids that do not follow the shop query, such as a Product Collection on the homepage. It sits after the grid's Add to cart button and never shows twice on shop and category pages.

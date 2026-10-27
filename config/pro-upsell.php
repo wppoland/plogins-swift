@@ -12,6 +12,8 @@ defined('ABSPATH') || exit;
 return [
     'name'       => 'Swift Pro',
     'url'        => 'https://plogins.com/plogins-swift-pro/pricing/',
+    'campaign'   => 'plogins-swift',
+    'locales'    => ['pl', 'de', 'es'],
     'sellable'   => true,
     'price_from' => 29,
     'currency'   => 'EUR',

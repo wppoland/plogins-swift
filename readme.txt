@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -65,21 +65,24 @@ If Elementor is active, the same button is available as a "Buy Now Button" widge
 
 == Swift Pro ==
 
-Swift Pro is a separate paid plugin that extends Swift:
+Swift Pro is a separate paid plugin that extends Swift.
 
-| Feature | Free | Pro |
-|:--- |:---:|:---:|
-| Buy Now button | Yes | Yes |
-| Cart skipping | Yes | Yes |
-| Cart clearing | Yes | Yes |
-| Configurable label | Yes | Yes |
-| Redirect target | Yes | Yes |
-| Buy Now for variations | - | Yes |
-| Sticky Buy Now bar | - | Yes |
-| Per-product rules | - | Yes |
-| Express checkout | - | Yes |
-| Loop variable Buy Now | - | Yes |
-| Buy Now analytics | - | Yes |
+Included in Swift:
+
+* Buy Now button
+* Cart skipping
+* Cart clearing
+* Configurable label
+* Redirect target
+
+Swift Pro adds:
+
+* Buy Now for variations
+* Sticky Buy Now bar
+* Per-product rules
+* Express checkout
+* Loop variable Buy Now
+* Buy Now analytics
 
 The free edition is not a trial and its features stay available without a time limit.
 
@@ -143,6 +146,10 @@ All of Swift's work happens on your server. It reads and writes a single setting
 Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs built from translate.wordpress.org, and none has been published for Swift yet, so the interface is currently English in every locale. The package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.4 =
+* The Upgrade to PRO links open the pricing page in the admin's language where plogins.com has one, and tell plogins.com which plugin the visit came from (utm_source, utm_medium and utm_campaign in the link). Nothing is sent from your site.
+* Readme: the PRO section lists what the free plugin includes and what the paid edition adds as two lists, which WordPress.org can display (it does not display tables).
 
 = 1.1.3 =
 * Readme only: a PRO section with links to the paid edition.

@@ -65,14 +65,21 @@ If Elementor is active, the same button is available as a "Buy Now Button" widge
 
 == Swift Pro ==
 
-Swift Pro is a separate paid plugin that works on top of Swift. It adds:
+Swift Pro is a separate paid plugin that extends Swift:
 
-* Buy Now for variations
-* Sticky Buy Now bar
-* Per-product rules
-* Express checkout
-* Loop variable Buy Now
-* Buy Now analytics
+| Feature | Free | Pro |
+|:--- |:---:|:---:|
+| Buy Now button | Yes | Yes |
+| Cart skipping | Yes | Yes |
+| Cart clearing | Yes | Yes |
+| Configurable label | Yes | Yes |
+| Redirect target | Yes | Yes |
+| Buy Now for variations | - | Yes |
+| Sticky Buy Now bar | - | Yes |
+| Per-product rules | - | Yes |
+| Express checkout | - | Yes |
+| Loop variable Buy Now | - | Yes |
+| Buy Now analytics | - | Yes |
 
 The free edition is not a trial and its features stay available without a time limit.
 

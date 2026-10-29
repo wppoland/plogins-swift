@@ -63,6 +63,11 @@ Use `[swift_buy_now]` to render the Buy Now button anywhere, inside a page, post
 
 If Elementor is active, the same button is available as a "Buy Now Button" widget. The Product ID control is the shortcode's `id` argument: leave it at 0 on a product page.
 
+= Works with other Plogins plugins =
+
+* [Cartdock - Sticky Add to Cart for WooCommerce](https://plogins.com/cartdock/) - Cartdock's sticky bar can show the Buy Now button next to Add to cart on simple products, switched in the Cartdock settings under Ecosystem integrations.
+* [Peek - Product Preview for WooCommerce](https://plogins.com/plogins-peek/) - in Peek's quick view (Peek 1.1.4 or later), Buy Now goes straight to checkout as on the product page.
+
 == Swift Pro ==
 
 Swift Pro is a separate paid plugin that extends Swift.
@@ -129,6 +134,10 @@ The free version is designed for simple products. The button is shown for simple
 = Can I place the button with a shortcode or Elementor? =
 
 Yes. Use `[swift_buy_now]` for the current product or `[swift_buy_now id="123"]` for a specific simple product. The same control is the Elementor "Buy Now Button" widget when Elementor is active.
+
+= Does it work with Cartdock and Peek? =
+
+Yes. In Cartdock, tick its Swift checkbox and the sticky bar shows Buy Now next to Add to cart on simple products. In Peek 1.1.4 or later, Buy Now in the quick view goes to checkout as on the product page, while Add to cart still adds through the quick view. Peek needs no setting.
 
 == Screenshots ==
 

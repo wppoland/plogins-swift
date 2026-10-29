@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Swift\Service;
 
 use Swift\Contract\HasHooks;
-use WPPoland\StorefrontKit\Checkout\DirectCheckoutEngine;
+use Swift\Vendor\StorefrontKit\Checkout\DirectCheckoutEngine;
 
 defined('ABSPATH') || exit;
 

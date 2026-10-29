@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WPPoland\StorefrontKit\Checkout;
+namespace Swift\Vendor\StorefrontKit\Checkout;
 
 /**
  * Namespace-neutral "Buy Now" / direct-checkout engine (powers the Swift, 
@@ -13,8 +13,8 @@ namespace WPPoland\StorefrontKit\Checkout;
  * engine is stateless, no DB, no product meta, and every text-domain string,
  * option key, asset handle/URL and template name is constructor-injected via
  * plain values and closures, exactly like
- * {@see \WPPoland\StorefrontKit\Waitlist\WaitlistEngine} and
- * {@see \WPPoland\StorefrontKit\Compare\CompareEngine}. Do NOT hard-code
+ * {@see \Swift\Vendor\StorefrontKit\Waitlist\WaitlistEngine} and
+ * {@see \Swift\Vendor\StorefrontKit\Compare\CompareEngine}. Do NOT hard-code
  * text-domains, option keys or asset handles here.
  *
  * Flow: the button is a plain submit that posts the product id under

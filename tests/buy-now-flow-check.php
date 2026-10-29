@@ -71,7 +71,7 @@ namespace {
     require $dir . 'src/Migrator.php';
 
     $settings = ['clear_cart' => true, 'redirect_target' => 'checkout', 'redirect_url' => ''];
-    $engine = new WPPoland\StorefrontKit\Checkout\DirectCheckoutEngine(
+    $engine = new Swift\Vendor\StorefrontKit\Checkout\DirectCheckoutEngine(
         requestKey: 'swift_buy_now',
         nonceAction: 'swift_buy_now',
         buttonTemplate: 'buy-now-button',

@@ -16,7 +16,7 @@
     "autoload": {
         "psr-4": {
             "Swift\\": "src/",
-            "WPPoland\\StorefrontKit\\": "lib/storefront-kit/"
+            "Swift\\Vendor\\StorefrontKit\\": "lib/storefront-kit/"
         }
     },
     "scripts": {

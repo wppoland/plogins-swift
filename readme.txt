@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -146,6 +146,9 @@ All of Swift's work happens on your server. It reads and writes a single setting
 Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs built from translate.wordpress.org, and none has been published for Swift yet, so the interface is currently English in every locale. The package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.5 =
+* Settings: a new Ecosystem integrations card shows whether Cartdock is active, which can show the Buy Now button in its sticky add-to-cart bar.
 
 = 1.1.4 =
 * The Upgrade to PRO links open the pricing page in the admin's language where plogins.com has one, and tell plogins.com which plugin the visit came from (utm_source, utm_medium and utm_campaign in the link). Nothing is sent from your site.

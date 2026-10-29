@@ -417,6 +417,28 @@ final class Settings implements HasHooks
                     </table>
                 </div>
 
+                <div class="swift-card">
+                    <h2><?php esc_html_e('Ecosystem integrations', 'plogins-swift'); ?></h2>
+                    <table class="form-table" role="presentation">
+                        <tbody>
+                            <tr>
+                                <th scope="row"><?php esc_html_e('Cartdock (Sticky Bar)', 'plogins-swift'); ?></th>
+                                <td>
+                                    <?php if (class_exists('\Anchor\Plugin')) : ?>
+                                        <p class="description" style="color:#007017;font-weight:600;">
+                                            <?php esc_html_e('Cartdock is active. The sticky add-to-cart bar includes a 1-click Buy Now button powered by Swift.', 'plogins-swift'); ?>
+                                        </p>
+                                    <?php else : ?>
+                                        <p class="description">
+                                            <?php esc_html_e('Install Cartdock (Sticky Add to Cart Bar for WooCommerce) to keep the Buy Now button in view on long product pages.', 'plogins-swift'); ?>
+                                        </p>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <?php submit_button(); ?>
             </form>
 

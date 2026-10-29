@@ -38,7 +38,7 @@ function wc_get_product($id) { return $id === 7 ? new WC_Product(7, 'variable') 
 require dirname(__DIR__) . '/lib/storefront-kit/Checkout/DirectCheckoutEngine.php';
 
 $GLOBALS['loop'] = true;
-$engine = new WPPoland\StorefrontKit\Checkout\DirectCheckoutEngine(
+$engine = new Swift\Vendor\StorefrontKit\Checkout\DirectCheckoutEngine(
     'swift_buy_now',
     'swift_buy_now',
     'buy-now-button',

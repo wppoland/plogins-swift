@@ -4,7 +4,7 @@ Tags: woocommerce, buy now, direct checkout, skip cart, quick buy
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -146,6 +146,9 @@ All of Swift's work happens on your server. It reads and writes a single setting
 Swift is fully translatable and ships the `plogins-swift.pot` template. Translations are delivered by WordPress.org language packs built from translate.wordpress.org, and none has been published for Swift yet, so the interface is currently English in every locale. The package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.6 =
+* The Cartdock line under Ecosystem integrations uses Cartdock's real name, says the Buy Now button in its sticky bar is a Cartdock setting for simple products, and links to the plugin search on the Add Plugins screen when Cartdock is not installed.
 
 = 1.1.5 =
 * Settings: a new Ecosystem integrations card shows whether Cartdock is active, which can show the Buy Now button in its sticky add-to-cart bar.

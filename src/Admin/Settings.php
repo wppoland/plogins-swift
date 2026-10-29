@@ -426,11 +426,17 @@ final class Settings implements HasHooks
                                 <td>
                                     <?php if (class_exists('\Anchor\Plugin')) : ?>
                                         <p class="description" style="color:#007017;font-weight:600;">
-                                            <?php esc_html_e('Cartdock is active. The sticky add-to-cart bar includes a 1-click Buy Now button powered by Swift.', 'plogins-swift'); ?>
+                                            <?php esc_html_e('Cartdock is active. Its sticky bar can show the Buy Now button next to Add to cart on simple products, switched in the Cartdock settings under Ecosystem integrations.', 'plogins-swift'); ?>
                                         </p>
                                     <?php else : ?>
                                         <p class="description">
-                                            <?php esc_html_e('Install Cartdock (Sticky Add to Cart Bar for WooCommerce) to keep the Buy Now button in view on long product pages.', 'plogins-swift'); ?>
+                                            <?php
+                                            printf(
+                                                /* translators: %s: partner plugin name, linked to its search on the Add Plugins screen. */
+                                                esc_html__('Install %s to keep the Buy Now button in view on long product pages.', 'plogins-swift'),
+                                                '<a href="' . esc_url(admin_url('plugin-install.php?s=' . rawurlencode('Cartdock - Sticky Add to Cart for WooCommerce') . '&tab=search&type=term')) . '">' . esc_html('Cartdock - Sticky Add to Cart for WooCommerce') . '</a>'
+                                            );
+                                            ?>
                                         </p>
                                     <?php endif; ?>
                                 </td>

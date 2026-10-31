@@ -209,7 +209,9 @@ final class SwiftService implements HasHooks
      */
     private function renderTemplate(string $template, array $vars): void
     {
-        wp_enqueue_style(self::HANDLE);
+        if (function_exists('wp_enqueue_style')) {
+            wp_enqueue_style(self::HANDLE);
+        }
         $swiftTemplateFile = SWIFT_DIR . 'templates/' . $template . '.php';
 
         if (! is_readable($swiftTemplateFile)) {

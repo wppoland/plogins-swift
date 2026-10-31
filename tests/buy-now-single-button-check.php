@@ -25,6 +25,7 @@ function __($text, $domain = null) { return $text; }
 function esc_attr($text) { return htmlspecialchars((string) $text, ENT_QUOTES); }
 function esc_html($text) { return htmlspecialchars((string) $text, ENT_QUOTES); }
 function esc_url($url) { return htmlspecialchars((string) $url, ENT_QUOTES); }
+function wp_enqueue_style($handle) {}
 
 require SWIFT_DIR . 'src/Contract/HasHooks.php';
 require SWIFT_DIR . 'src/Service/SwiftService.php';

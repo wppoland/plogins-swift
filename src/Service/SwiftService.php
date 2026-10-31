@@ -140,12 +140,19 @@ final class SwiftService implements HasHooks
             return;
         }
 
-        wp_enqueue_style(
+        wp_register_style(
             self::HANDLE,
             \Swift\Plugin::instance()->url('assets/css/buy-now.css'),
             [],
             \Swift\VERSION,
         );
+
+        // Head load only on shop screens; a button rendered anywhere else (the
+        // shortcode or a product block on a plain page) enqueues it from
+        // renderTemplate(), so plain pages and posts stay clean.
+        if (function_exists('is_woocommerce') && (is_woocommerce() || is_cart() || is_checkout())) {
+            wp_enqueue_style(self::HANDLE);
+        }
 
         $settings = $this->settings();
 
@@ -202,6 +209,7 @@ final class SwiftService implements HasHooks
      */
     private function renderTemplate(string $template, array $vars): void
     {
+        wp_enqueue_style(self::HANDLE);
         $swiftTemplateFile = SWIFT_DIR . 'templates/' . $template . '.php';
 
         if (! is_readable($swiftTemplateFile)) {

@@ -617,6 +617,7 @@ final class Settings implements HasHooks
     private function renderCompanionCard(): void
     {
         $isBumpActive = defined('Bump\\VERSION') || (function_exists('is_plugin_active') && (is_plugin_active('bump/propono.php') || is_plugin_active('propono/propono.php')));
+        $isCartdockActive = defined('\\Anchor\\VERSION') || (function_exists('is_plugin_active') && (is_plugin_active('anchor/cartdock.php') || is_plugin_active('cartdock/cartdock.php')));
 
         ?>
         <div class="card swift-card swift-companion-card" style="margin-top: 24px; padding: 18px 22px;">
@@ -633,6 +634,25 @@ final class Settings implements HasHooks
                 <p style="margin-bottom: 0;">
                     <a href="<?php echo esc_url(admin_url('plugin-install.php?s=' . rawurlencode('Propono - Checkout Order Bump for WooCommerce') . '&tab=search&type=term')); ?>" class="button button-secondary">
                         <?php esc_html_e('Explore Propono Order Bump', 'plogins-swift'); ?> &rarr;
+                    </a>
+                </p>
+            <?php endif; ?>
+        </div>
+
+        <div class="card swift-card swift-companion-card" style="margin-top: 16px; padding: 18px 22px;">
+            <h2 class="title" style="margin-top: 0; font-size: 15px;"><?php esc_html_e('Complementary integration: Cartdock - Sticky Add to Cart for WooCommerce', 'plogins-swift'); ?></h2>
+            <p style="color: #50575e; line-height: 1.5;">
+                <?php esc_html_e('Keep the Buy Now button within reach on mobile and long product pages with an unobtrusive sticky bottom bar that integrates seamlessly with Swift.', 'plogins-swift'); ?>
+            </p>
+            <?php if ($isCartdockActive) : ?>
+                <p style="color: #007017; font-weight: 600; margin-bottom: 0;">
+                    <span class="dashicons dashicons-yes-alt" style="vertical-align: text-bottom;"></span>
+                    <?php esc_html_e('Cartdock Sticky Add to Cart is active.', 'plogins-swift'); ?>
+                </p>
+            <?php else : ?>
+                <p style="margin-bottom: 0;">
+                    <a href="<?php echo esc_url(admin_url('plugin-install.php?s=' . rawurlencode('Cartdock - Sticky Add to Cart for WooCommerce') . '&tab=search&type=term')); ?>" class="button button-secondary">
+                        <?php esc_html_e('Explore Cartdock Sticky Add to Cart', 'plogins-swift'); ?> &rarr;
                     </a>
                 </p>
             <?php endif; ?>

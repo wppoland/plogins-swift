@@ -448,7 +448,10 @@ final class Settings implements HasHooks
                 <?php submit_button(); ?>
             </form>
 
-            <?php $this->proUpsell()->cards(); ?>
+            <?php
+            $this->renderCompanionCard();
+            $this->proUpsell()->cards();
+            ?>
         </div>
         <?php
     }
@@ -605,5 +608,35 @@ final class Settings implements HasHooks
         $defaults = require SWIFT_DIR . 'config/defaults.php';
 
         return array_merge($defaults, $stored);
+    }
+
+    /**
+     * Cross-recommendation card for sister plugins (Propono Order Bump).
+     * Strictly scoped to the Swift settings screen per WordPress.org Guideline 11.
+     */
+    private function renderCompanionCard(): void
+    {
+        $isBumpActive = defined('Bump\\VERSION') || (function_exists('is_plugin_active') && (is_plugin_active('bump/propono.php') || is_plugin_active('propono/propono.php')));
+
+        ?>
+        <div class="card swift-card swift-companion-card" style="margin-top: 24px; padding: 18px 22px;">
+            <h2 class="title" style="margin-top: 0; font-size: 15px;"><?php esc_html_e('Complementary integration: Propono Checkout Order Bump', 'plogins-swift'); ?></h2>
+            <p style="color: #50575e; line-height: 1.5;">
+                <?php esc_html_e('Swift sends buyers straight to the checkout. Pair it with Propono to offer a complementary one-click order bump on the checkout page and increase your average order value (AOV).', 'plogins-swift'); ?>
+            </p>
+            <?php if ($isBumpActive) : ?>
+                <p style="color: #007017; font-weight: 600; margin-bottom: 0;">
+                    <span class="dashicons dashicons-yes-alt" style="vertical-align: text-bottom;"></span>
+                    <?php esc_html_e('Propono Checkout Order Bump is active.', 'plogins-swift'); ?>
+                </p>
+            <?php else : ?>
+                <p style="margin-bottom: 0;">
+                    <a href="<?php echo esc_url(admin_url('plugin-install.php?s=' . rawurlencode('Propono - Checkout Order Bump for WooCommerce') . '&tab=search&type=term')); ?>" class="button button-secondary">
+                        <?php esc_html_e('Explore Propono Order Bump', 'plogins-swift'); ?> &rarr;
+                    </a>
+                </p>
+            <?php endif; ?>
+        </div>
+        <?php
     }
 }

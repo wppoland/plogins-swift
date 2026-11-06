@@ -38,18 +38,38 @@ if ($swift_product_id <= 0 || $swift_action_url === '') {
     return;
 }
 
+// Normalise the injected context once: a non-scalar (e.g. array) would emit an
+// "Array to string conversion" warning when cast below.
+$swift_context = is_scalar($context) ? (string) $context : '';
+
+/**
+ * Filters whether the Buy Now button renders for a product.
+ *
+ * @param bool        $show    True to render the button.
+ * @param \WC_Product $product The product.
+ * @param string      $context 'single', 'loop' or 'shortcode'.
+ */
+if (! apply_filters('swift_buy_now_should_render', true, $product, $swift_context)) {
+    return;
+}
+
 $swift_label = isset($button['label']) && (string) $button['label'] !== ''
     ? (string) $button['label']
     : __('Buy now', 'plogins-swift');
+
+/**
+ * Filters the Buy Now button label for a product.
+ *
+ * @param string      $label   The label.
+ * @param \WC_Product $product The product.
+ * @param string      $context 'single', 'loop' or 'shortcode'.
+ */
+$swift_label = (string) apply_filters('swift_buy_now_button_label', $swift_label, $product, $swift_context);
 
 $swift_style = isset($settings['button_style']) ? (string) $settings['button_style'] : 'theme';
 if (! in_array($swift_style, ['theme', 'solid', 'outline'], true)) {
     $swift_style = 'theme';
 }
-
-// Normalise the injected context once: a non-scalar (e.g. array) would emit an
-// "Array to string conversion" warning when cast below.
-$swift_context = is_scalar($context) ? (string) $context : '';
 
 $swift_button_classes = 'button swift-buy-now-button swift-buy-now-button--' . $swift_style;
 

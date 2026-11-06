@@ -26,6 +26,13 @@ function esc_attr($text) { return htmlspecialchars((string) $text, ENT_QUOTES); 
 function esc_html($text) { return htmlspecialchars((string) $text, ENT_QUOTES); }
 function esc_url($url) { return htmlspecialchars((string) $url, ENT_QUOTES); }
 function wp_enqueue_style($handle) {}
+// Minimal filter bus: callbacks receive every argument, like add_filter(..., 3).
+function add_filter($hook, $cb) { $GLOBALS['wp_filters'][$hook][] = $cb; }
+function apply_filters($hook, $value, ...$args) {
+    $GLOBALS['fired'][$hook][] = $args;
+    foreach ($GLOBALS['wp_filters'][$hook] ?? [] as $cb) { $value = $cb($value, ...$args); }
+    return $value;
+}
 
 require SWIFT_DIR . 'src/Contract/HasHooks.php';
 require SWIFT_DIR . 'src/Service/SwiftService.php';
@@ -34,7 +41,7 @@ $service = (new ReflectionClass(Swift\Service\SwiftService::class))->newInstance
 $render  = new ReflectionMethod($service, 'renderTemplate');
 
 $vars = static fn (string $context): array => [
-    'product'     => null,
+    'product'     => 'product-13',
     'context'     => $context,
     'settings'    => ['button_style' => 'theme'],
     'button'      => ['product_id' => 13, 'action_url' => 'https://shop.test/p/?swift_buy_now=13&_wpnonce=abc', 'nonce_field' => 'abc', 'label' => 'Buy now'],
@@ -68,9 +75,32 @@ if (! str_contains($loop, 'swift-buy-now--loop') || ! str_contains($loop, '<form
     $failures[] = 'loop: expected a standalone form marked swift-buy-now--loop';
 }
 
+// Extension points: PRO per-product Hide and Label rules hang on these.
+foreach (['swift_buy_now_should_render', 'swift_buy_now_button_label'] as $hook) {
+    if (($GLOBALS['fired'][$hook][0] ?? null) !== ['product-13', 'single']) {
+        $failures[] = $hook . ': not fired with (product, context)';
+    }
+}
+
+add_filter('swift_buy_now_button_label', static fn ($label, $product, $context) => 'Grab it ' . $context);
+ob_start();
+$render->invoke($service, 'buy-now-button', $vars('loop'));
+$labelled = (string) ob_get_clean();
+if (! str_contains($labelled, '>Grab it loop<')) {
+    $failures[] = 'swift_buy_now_button_label: the filtered label is not rendered';
+}
+
+add_filter('swift_buy_now_should_render', static fn ($show, $product, $context) => $context !== 'shortcode');
+ob_start();
+$render->invoke($service, 'buy-now-button', $vars('shortcode'));
+$hidden = (string) ob_get_clean();
+if (trim($hidden) !== '') {
+    $failures[] = 'swift_buy_now_should_render: returning false still renders the button';
+}
+
 if ($failures !== []) {
     fwrite(STDERR, "FAIL\n - " . implode("\n - ", $failures) . "\n");
     exit(1);
 }
 
-echo "OK: single Buy Now rides the cart form, loop keeps its own form\n";
+echo "OK: single Buy Now rides the cart form, loop keeps its own form, render and label filters fire\n";

@@ -185,17 +185,26 @@
 
 /* Dark mode: lift the accent slightly and keep the outline readable. Only the
    self-styled variants are touched; the `theme` style follows the theme. */
-@media (prefers-color-scheme: dark) {
-	/* The accent stays mid-violet in dark mode, so the solid variant must keep
-	   white text: #fff on #5b3df5 = 6.12:1 (WCAG AA). Flipping the contrast to a
-	   near-black ink here would drop it to 3.14:1 and fail, so the solid fill
-	   pins #fff rather than inheriting the contrast token. */
-	.swift-buy-now-button--solid {
-		color: var(--swift-accent-contrast-color, #fff);
-	}
-
+@supports (color: light-dark(white, black)) {
 	.swift-buy-now-button--outline {
-		color: var(--swift-accent);
-		border-color: color-mix(in srgb, var(--swift-accent) 70%, #fff 30%);
+		border-color: light-dark(var(--swift-accent), color-mix(in srgb, var(--swift-accent) 70%, #fff 30%));
+	}
+}
+
+/* Fallback for browsers without light-dark(): keep the OS-based dark styling. */
+@supports not (color: light-dark(white, black)) {
+	@media (prefers-color-scheme: dark) {
+		/* The accent stays mid-violet in dark mode, so the solid variant must keep
+		   white text: #fff on #5b3df5 = 6.12:1 (WCAG AA). Flipping the contrast to a
+		   near-black ink here would drop it to 3.14:1 and fail, so the solid fill
+		   pins #fff rather than inheriting the contrast token. */
+		.swift-buy-now-button--solid {
+			color: var(--swift-accent-contrast-color, #fff);
+		}
+
+		.swift-buy-now-button--outline {
+			color: var(--swift-accent);
+			border-color: color-mix(in srgb, var(--swift-accent) 70%, #fff 30%);
+		}
 	}
 }
